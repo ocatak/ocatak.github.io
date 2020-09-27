@@ -25,7 +25,7 @@
 }
 
 html {
-  font-family: 'Fauna One', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
@@ -65,7 +65,7 @@ ul, ol, dl {
 
 /* Navigation bar text */
 .navbar-default {
-  font-family: 'Fauna One', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -73,7 +73,7 @@ ul, ol, dl {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   margin-bottom: .5rem;
   line-height: 1.25;
@@ -134,7 +134,7 @@ figcaption {
   line-height: 1.25;
   font-size: 1rem;
   margin-bottom: 1.65rem;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   counter-increment: captions;
 }
 
