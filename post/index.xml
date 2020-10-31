@@ -13,6 +13,20 @@
     
     
     <item>
+      <title>Autoencoder Based Adversarial Machine Learning Attack Mitigation</title>
+      <link>https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/</link>
+      <pubDate>Sat, 17 Oct 2020 19:26:10 +0200</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/</guid>
+      <description>A GENERATIVE MODEL BASED ADVERSARIAL SECURITY OF DEEP LEARNING AND LINEAR CLASSIfiER MODELS____________________ A PREPRINT
+Ferhat Ozgur Catak Simula Research laboratory Oslo, Norway ozgur@simula.no
+Samed Sivaslioglu TUBITAK BILGEM, Kocaeli, Turkey samedsivaslioglu@gmail.com
+Kevser Sahinbas
+Department of Management Information System Istanbul Medipol University Istanbul, Turkey ksahinbas@medipol.edu.tr
+ October 17, 2020  ABSTRACT  In recent years, machine learning algorithms have been applied widely in various fields such as health, transportation, and the autonomous car.</description>
+    </item>
+    
+    <item>
       <title>Adversarial Machine Learning Mitigation: Adversarial Learning</title>
       <link>https://www.ozgurcatak.org/post/adversarial-ai-mitigation/</link>
       <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
@@ -494,6 +508,20 @@ import numpy as np from keras import backend import tensorflow as tf from keras.
       <guid>https://www.ozgurcatak.org/post/13-lab-3/</guid>
       <description>13. Hafta Lab-3: Adversarial Machine Learning: DeepFool ve Virtual Adversarial Method (VAM) BGM 565: Siber Güvenlik için Makine Öğrenme Yöntemleri İstanbul Şehir Üni. - Bilgi Güvenliği Müh. Dr. Ferhat Özgür Çatak Bu lab çalışması kapsamında mnist veri kümesi kullanılarak DeepFool ve Virtual Adversarial Method (VAM) yöntemleri ile adversarial veri kümesi oluşturulacaktır.
 import numpy as np from keras import backend import tensorflow as tf from keras.callbacks import ModelCheckpoint from matplotlib import gridspec from cleverhans.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.ozgurcatak.org/post/ss-paper/model-poission/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/post/ss-paper/model-poission/</guid>
+      <description>A Generative Model based Adversarial Security of Deep Learning and Linear Classifier Models _________________________________________________________________________________________ A GENERATIVE MODEL BASED ADVERSARIAL SECURITY OF DEEP LEARNING AND LINEAR CLASSIfiER MODELS____________________ A PREPRINT
+Ferhat Ozgur Catak Simula Research laboratory Oslo, Norway ozgur@simula.no
+Samed Sivaslioglu TUBITAK BILGEM, Kocaeli, Turkey samedsivaslioglu@gmail.com
+Kevser Sahinbas
+Department of Management Information System Istanbul Medipol University Istanbul, Turkey ksahinbas@medipol.edu.tr
+ October 17, 2020  ABSTRACT  In recent years, machine learning algorithms have been applied widely in various fields such as health, transportation, and the autonomous car.</description>
     </item>
     
   </channel>

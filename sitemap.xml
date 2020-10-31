@@ -49,8 +49,8 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/post/adversarial-ai-mitigation/</loc>
-      <lastmod>2020-07-17T00:00:00+00:00</lastmod>
+      <loc>https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/</loc>
+      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
     </url>
     
   
@@ -59,8 +59,57 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/</loc>
-      <lastmod>2020-07-17T00:00:00+00:00</lastmod>
+      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
       <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/</loc>
+      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/adversatial-machine-learning/</loc>
+      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/cyber-security/</loc>
+      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/machine-learning/</loc>
+      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/post/adversarial-ai-mitigation/</loc>
+      <lastmod>2020-07-17T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -289,27 +338,7 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/tags/</loc>
-      <lastmod>2018-02-04T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://www.ozgurcatak.org/tags/deep-learning/</loc>
-      <lastmod>2018-02-04T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/tags/machine-learning/</loc>
       <lastmod>2018-02-04T00:00:00+00:00</lastmod>
       <priority>1.00</priority>
     </url>
@@ -852,6 +881,15 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/post/13-lab-3/</loc>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/post/ss-paper/model-poission/</loc>
       <priority>1.00</priority>
     </url>
     

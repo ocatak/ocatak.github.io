@@ -1,0 +1,3063 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>A Generative Model based Adversarial Security of Deep Learning and Linear Classifier Models</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+ 
+<meta name="src" content="model-poission.tex"> 
+<link rel="stylesheet" type="text/css" href="model-poission.css"> 
+</head><body 
+>
+<div class="maketitle">
+_________________________________________________________________________________________
+
+<h2 class="titleHead">A GENERATIVE MODEL BASED ADVERSARIAL SECURITY OF
+DEEP LEARNING AND LINEAR CLASSIfiER MODELS</h2>____________________
+<span 
+class="ptmrc8t-">A P<span 
+class="small-caps">R</span><span 
+class="small-caps">E</span><span 
+class="small-caps">P</span><span 
+class="small-caps">R</span><span 
+class="small-caps">I</span><span 
+class="small-caps">N</span><span 
+class="small-caps">T</span></span><br />
+    <div class="author" > <span 
+class="ptmb8t-">Ferhat Ozgur Catak</span>
+<br />Simula Research laboratory
+<br />           Oslo, Norway
+<br />      <span 
+class="ectt-1000">ozgur@simula.no</span><br />
+<br />
+       <span 
+class="ptmb8t-">Samed Sivaslioglu</span>
+<br />TUBITAK BILGEM, Kocaeli, Turkey
+<br />   <span 
+class="ectt-1000">samedsivaslioglu@gmail.com</span><br />
+<br />
+            <span 
+class="ptmb8t-">Kevser Sahinbas</span><br />Department of Management Information System
+<br />                Istanbul Medipol University
+<br />                          Istanbul, Turkey
+<br />              <span 
+class="ectt-1000">ksahinbas@medipol.edu.tr</span><br /> </div>
+<br />
+October 17, 2020
+</div>
+<div 
+class="abstract" 
+>
+<div  
+class="centerline">                                       <span 
+class="ptmbc8t-x-x-120">A<span 
+class="small-caps">B</span><span 
+class="small-caps">S</span><span 
+class="small-caps">T</span><span 
+class="small-caps">R</span><span 
+class="small-caps">A</span><span 
+class="small-caps">C</span><span 
+class="small-caps">T</span></span>                                       </div>
+       <div class="quote">
+       <p class="noindent" >In  recent  years,  machine  learning  algorithms  have  been  applied  widely  in  various  fields  such  as
+       health,  transportation,  and  the  autonomous  car.  With  the  rapid  developments  of  deep  learning
+       techniques, it is critical to take the security concern into account for the application of the algorithms.
+       While machine learning offers significant advantages in terms of the application of algorithms, the
+       issue of security is ignored. Since it has many applications in the real world, security is a vital part of
+       the algorithms. In this paper, we have proposed a mitigation method for adversarial attacks against
+       machine learning models with an autoencoder model that is one of the generative ones. The main
+       idea  behind  adversarial  attacks  against  machine  learning  models  is  to  produce  erroneous  results
+       by manipulating trained models. We have also presented the performance of autoencoder models
+       to various attack methods from deep neural networks to traditional algorithms by using different
+       methods such as non-targeted and targeted attacks to multi-class logistic regression, a fast gradient
+       sign  method,  a  targeted  fast  gradient  sign  method  and  a  basic  iterative  method  attack  to  neural
+       networks for the MNIST dataset. </div>
+                                                                                         
+                                                                                         
+</div>
+<p class="noindent" ><span 
+class="ptmbi8t-">K</span><span 
+class="ptmb8t-">eywords  </span>First keyword&#x00A0;<span 
+class="cmsy-10">&#x22C5; </span>Second keyword&#x00A0;<span 
+class="cmsy-10">&#x22C5; </span>More
+<h3 class="sectionHead"><span class="titlemark">1    </span> <a 
+ id="x1-10001"></a>Introduction</h3>
+<p class="noindent" >With the help of artificial intelligence technology, machine learning has been widely used in classification, decision making,
+voice and face recognition, games, financial assessment, and other fields [<a 
+href="#Xpaper18">1</a>,&#x00A0;<a 
+href="#Xpaper17">2</a>]. The machine learning methods consider
+player&#8217;s choices in the animation industry for games and analyze diseases to contribute to the decision-making mechanism
+[<a 
+href="#Xpaper20">3</a>&#8211;<a 
+href="#Xpaper31">6</a>]. With the successful implementations of machine learning, attacks on the machine learning process and counter-attack
+methods and incrementing robustness of learning have become hot research topics in recent years [<a 
+href="#Xpaper22">7</a>&#8211;<a 
+href="#Xpaper42">11</a>]. The presence of
+negative data samples or an attack on the model can lead to producing incorrect results in the predictions and classifications
+even in the advanced models.
+<p class="noindent" >It is more challenging to recognize the attack because of using big data in machine learning applications compared to other
+cybersecurity fields. Therefore, it is essential to create components for machine learning that are resistant to this type of attack.
+In contrast, recent works have conducted in this area and demonstrated that the resistance is not very robust to attacks [<a 
+href="#Xpaper1">12</a>,&#x00A0;<a 
+href="#Xpaper2">13</a>].
+These methods have shown success against a specific set of attack methods and have generally failed to provide complete and
+generic protection[<a 
+href="#Xpaper3">14</a>].
+<p class="noindent" >Previous methods have shown success against a specific set of attack methods and have generally failed to provide complete
+and generic protection [14]. This field has been spreading rapidly, and, in this field, lots of dangers have attracted increasing
+attention from escaping the filters of unwanted and phishing e-mails, to poisoning the sensor data of a car or
+aircraft that drives itself [<a 
+href="#Xpaper25">15</a>,&#x00A0;<a 
+href="#Xpaper26">16</a>]. Disaster scenarios can occur if any precautions are not taken in these systems
+[<a 
+href="#Xpaper27">17</a>].
+<p class="noindent" >The main contribution of this work is to explore the autoencoder based generative models against adversarial machine learning
+attacks to the models. Adversarial Machine Learning has been used to study these attacks and reduce their effects [<a 
+href="#Xpaper4">18</a>,&#x00A0;<a 
+href="#Xpaper40">19</a>].
+Previous works point out the fundamental equilibrium to design the algorithms and to create new algorithms and methods that
+are resistant and robust against attacks that will negatively affect this balance. However, most of these works
+have been implemented successfully for specific situations. In Section <a 
+href="#x1-30003">3</a>, we present some applications of these
+works.
+<p class="noindent" >This work aims to propose a method that not only presents a generic resistance to specific attack methods but also provides
+robustness to machine learning models in general. Our goal is to find an effective method that can be used by model trainers.
+For this purpose, we have processed the data with autoencoder before reaching to the machine learning model. In our
+previous works [<a 
+href="#Xourpaper1">20</a>,&#x00A0;<a 
+href="#Xourpaper2">21</a>] we applied generative model based mitigation approach for the deep learning model
+attacks.
+<p class="noindent" >We have used non-targeted and targeted attacks to multiclass logistic regression machine learning models for observing the
+change and difference between attack methods as well as various attack methods to neural networks such as fast gradient sign
+method (FGSM), targeted fast gradient sign method (T-FGSM) and basic iterative method (BIM). We have selected MNIST
+dataset that consists of numbers from people&#8217;s handwriting to provide people to understand and see changes in the
+data.
+<p class="noindent" >The study is organized as follows. In Section <a 
+href="#x1-20002">2</a>, we first present the related works. In Section <a 
+href="#x1-30003">3</a>, we introduce several adversarial
+attack types, environments, and autoencoder. In Section <a 
+href="#x1-110004">4</a>, we present selection of autoencoder model, activation
+function and tuning parameters. In Section <a 
+href="#x1-150005">5</a>, we provide some observation on the robustness of autoencoder for
+adversarial machine learning with different machine learning algorithms and models. In Section <a 
+href="#x1-290006">6</a>, we conclude this
+study.
+<p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">2    </span> <a 
+ id="x1-20002"></a>Related Work</h3>
+<p class="noindent" >In recent years, with the increase of the machine learning attacks, various studies have been proposed to create defensive
+measures against these attacks. Data sterility and learning endurance are recommended as countermeasures in defining a
+machine learning process [<a 
+href="#Xpaper4">18</a>]. Most of the studies in these fields have been focused on specific adversarial attacks and
+                                                                                         
+                                                                                         
+generally, presented the theoretical discussion of adversarial machine learning area [<a 
+href="#Xpaper28">22</a>,&#x00A0;<a 
+href="#Xpaper29">23</a>].
+<p class="noindent" >Bo Li and Yevgeniy Vorobeychik present binary domains and classifications. In their work, the approach starts with
+mixed-integer linear programming (MILP) with constraint generation and gives suggestions on top of this. They also use the
+Stackelberg game multi-adversary model algorithm and the other algorithm that feeds back the generated adversarial examples
+to the training model, which is called as RAD (Retraining with Adversarial Examples) [<a 
+href="#Xpaper5">24</a>]. On the other hand, their work
+is particular and works only in specific methods, even though it is presented as a general protection method.
+They have proposed a method that implements successful results. Similarly, Xiao et al. provide a method to
+increase the speed of resistance training against the rectified linear unit (RELU) [<a 
+href="#Xpaper6">25</a>]. They use weight sparsity
+and RELU stability for robust verification. It can be said that their methodology does not provide a general
+approach.
+<p class="noindent" >Yu et al. propose a study that can evaluate the neural network&#8217;s features under hostile attacks. In their study, the connection
+between the input space and hostile examples is presented. Also, the connection between the network strength and the decision
+surface geometry as an indicator of the hostile strength of the neural network is shown. By extending the loss surface to
+decision surface and other various methods, they provide adversarial robustness by decision surface. The geometry of the
+decision surface cannot be demonstrated most of the time, and there is no explicit decision boundary between correct or wrong
+prediction. Robustness can be increased by constructing a good model, but it can change with attack intensity
+[<a 
+href="#Xpaper7">26</a>].
+<p class="noindent" >Mardy et al. investigate artificial neural networks resistant with adversity and increase accuracy rates with different methods,
+mainly with optimization and prove that there can be more robust machine learning models [<a 
+href="#Xpaper3">14</a>].
+<p class="noindent" >Pinto et al. provide a method to solve this problem with the supported learning method. In their study, they
+formulate learning as a zero-sum, minimax objective function. They present machine learning models that are more
+resistant to disturbances are hard to model during the training and are better affected by changes in training
+and test conditions. They generalize reinforced learning on machine learning models. They propose a "Robust
+Adversarial Reinforced Learning" (RARL), where they train an agent to operate in the presence of a destabilizing
+adversary that applies disturbance forces to the system. However, in their work, Robust Adversarial Reinforced
+Learning may overfit itself, and sometimes it can miss predicting without any adversarial being in presence
+[<a 
+href="#Xpaper8">27</a>].
+<p class="noindent" >Carlini and Wagner propose a model that the self-logic and the strength of the machine learning model with a strong
+attack can be affected. They prove that these types of attacks can often be used to evaluate the effectiveness of
+potential defenses. They propose defensive distillation as a general-purpose procedure to increase robustness
+[<a 
+href="#Xpaper1">12</a>].
+<p class="noindent" >Harding et al. similarly investigate the effects of hostile samples produced from targeted and non-targeted attacks in decision
+making. They provide that non-targeted samples are more effective than targeted samples in human perception and
+categorization of decisions [<a 
+href="#Xpaper9">28</a>].
+<p class="noindent" >Bai et al. present a convolutional autoencoder model with the adversarial decoders to automate the generation of adversarial
+samples. They produce adversary examples by a convolutional autoencoder model. They use pooling computations and
+sampling tricks to achieve these results. After this process, an adversarial decoder automates the generation of adversarial
+samples. Adversarial sampling is useful, but it cannot provide adversarial robustness on its own, and sampling tricks are too
+specific [<a 
+href="#Xpaper12">29</a>].
+<p class="noindent" >Sahay et al. propose FGSM attack and use an autoencoder to denoise the test data. They have also used an autoencoder to
+denoise the test data, which is trained with both corrupted and healthy data. Then they reduce the dimension of the denoised
+data. These autoencoders are specifically designed to compress data effectively and reduce dimensions. Hence, it may not
+be wholly generalized, and training with corrupted data requires a lot of adjustments to get better test results
+[<a 
+href="#Xpaper13">30</a>].
+<p class="noindent" >I-Ting Chen et al. also provide with FGSM attack on denoising autoencoders. They analyze the attacks from the perspective
+that attacks can be applied stealthily. They use autoencoders to filter data before applied to the model and compare it with the
+model without an autoencoder filter. They use autoencoders mainly focused on the stealth aspect of these attacks and used them
+specifically against FGSM with specific parameters [<a 
+href="#Xpaper15">31</a>].
+<p class="noindent" >Gondim-Ribeiro et al. propose autoencoders attacks. In their work, they attack 3 types of autoencoders: Simple variational
+autoencoders, convolutional variational autoencoders, and DRAW (Deep Recurrent AttentiveWriter). They propose to scheme
+an attack on autoencoders. As they accept that "No attack can both convincingly reconstruct the target while keeping the
+distortions on the input imperceptible.". This method cannot be used to achieve robustness against adversarial attacks
+[<a 
+href="#Xpaper14">32</a>].
+                                                                                         
+                                                                                         
+<p class="noindent" >Table <a 
+href="#x1-20002">2</a> shows the strength and the weakness of the each paper.
+                                                                                         
+                                                                                         
+<p class="noindent" ><a 
+ id="x1-2001r1"></a><hr class="float"><div class="float" 
+>
+                                                                                         
+                                                                                         
+ <div class="caption" 
+><span class="id">Table&#x00A0;1: </span><span  
+class="content">Related Work Summary</span></div>
+<div class="tabular"> <table id="TBL-4" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-4-1g"><col 
+id="TBL-4-1"></colgroup><colgroup id="TBL-4-2g"><col 
+id="TBL-4-2"></colgroup><colgroup id="TBL-4-3g"><col 
+id="TBL-4-3"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-1-"><td  style="white-space:normal; text-align:left;" id="TBL-4-1-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmb8t-x-x-70">Research Study</span>                                      </td><td  style="white-space:normal; text-align:left;" id="TBL-4-1-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmb8t-x-x-70">Strength</span>                                                                                   </td><td  style="white-space:normal; text-align:left;" id="TBL-4-1-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmb8t-x-x-70">Weakness</span>                                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-2-"><td  style="white-space:normal; text-align:left;" id="TBL-4-2-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Adversarial Machine Learning [</span><a 
+href="#Xpaper4"><span 
+class="ptmr8t-x-x-70">18</span></a><span 
+class="ptmr8t-x-x-70">]</span>         </td><td  style="white-space:normal; text-align:left;" id="TBL-4-2-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Introduces   the   emerging   field   of   Adversarial   Machine</span>
+<span 
+class="ptmr8t-x-x-70">Learning.</span>                                                                                  </td><td  style="white-space:normal; text-align:left;" id="TBL-4-2-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Discusses   the   countermeasures   against   attacks   without</span>
+<span 
+class="ptmr8t-x-x-70">suggesting a method.</span>                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-3-"><td  style="white-space:normal; text-align:left;" id="TBL-4-3-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Evasion-Robust </span><br 
+class="newline" /><span 
+class="ptmr8t-x-x-70">Classification on Binary Domains [</span><a 
+href="#Xpaper5"><span 
+class="ptmr8t-x-x-70">24</span></a><span 
+class="ptmr8t-x-x-70">]</span>    </td><td  style="white-space:normal; text-align:left;" id="TBL-4-3-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Demonstrates  some  methods  that  can  be  used  on  Binary</span>
+<span 
+class="ptmr8t-x-x-70">Domains, which are based on MILP.</span>                                       </td><td  style="white-space:normal; text-align:left;" id="TBL-4-3-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Very specific about the robustness, even though it is presented</span>
+<span 
+class="ptmr8t-x-x-70">as a general method.</span>                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-4-"><td  style="white-space:normal; text-align:left;" id="TBL-4-4-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Training                   for                   Faster</span>
+<span 
+class="ptmr8t-x-x-70">Adversarial  Robustness  Verification  via</span>
+<span 
+class="ptmr8t-x-x-70">Inducing ReLU </span><br 
+class="newline" /><span 
+class="ptmr8t-x-x-70">Stability [</span><a 
+href="#Xpaper6"><span 
+class="ptmr8t-x-x-70">25</span></a><span 
+class="ptmr8t-x-x-70">]</span>                                             </td><td  style="white-space:normal; text-align:left;" id="TBL-4-4-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Using   weight   sparsity   and   RELU   stability   for   robust</span>
+<span 
+class="ptmr8t-x-x-70">verification.</span>                                                                              </td><td  style="white-space:normal; text-align:left;" id="TBL-4-4-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Does not provide a general approach, or universality as it is</span>
+<span 
+class="ptmr8t-x-x-70">suggested in paper.</span>                                                                   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-5-"><td  style="white-space:normal; text-align:left;" id="TBL-4-5-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Interpreting  Adversarial  Robustness:  A</span>
+<span 
+class="ptmr8t-x-x-70">View  from  Decision  Surface  in  Input</span>
+<span 
+class="ptmr8t-x-x-70">Space [</span><a 
+href="#Xpaper7"><span 
+class="ptmr8t-x-x-70">26</span></a><span 
+class="ptmr8t-x-x-70">]</span>                                                 </td><td  style="white-space:normal; text-align:left;" id="TBL-4-5-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">By extending the loss surface to decision surface and other</span>
+<span 
+class="ptmr8t-x-x-70">various  methods,  they  provide  adversarial  robustness  by</span>
+<span 
+class="ptmr8t-x-x-70">decision surface.</span>                                                                       </td><td  style="white-space:normal; text-align:left;" id="TBL-4-5-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">The geometry of the decision surface cannot be shown most</span>
+<span 
+class="ptmr8t-x-x-70">of  the  times  and  there  is  no  explicit  decision  boundary</span>
+<span 
+class="ptmr8t-x-x-70">between  correct  or  wrong  prediction.  Robustness  can  be</span>
+<span 
+class="ptmr8t-x-x-70">increased by constructing a good model but it can change with</span>
+<span 
+class="ptmr8t-x-x-70">attack intensity.</span>                                                                        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-6-"><td  style="white-space:normal; text-align:left;" id="TBL-4-6-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Robust Adversarial </span><br 
+class="newline" /><span 
+class="ptmr8t-x-x-70">Reinforcement Learning [</span><a 
+href="#Xpaper8"><span 
+class="ptmr8t-x-x-70">27</span></a><span 
+class="ptmr8t-x-x-70">]</span>                   </td><td  style="white-space:normal; text-align:left;" id="TBL-4-6-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">They have tried to generalize reinforced learning on machine</span>
+<span 
+class="ptmr8t-x-x-70">learning   models.   They   suggested   a   Robust   Adversarial</span>
+<span 
+class="ptmr8t-x-x-70">Reinforced  Learning  (RARL)  where  they  have  trained  an</span>
+<span 
+class="ptmr8t-x-x-70">agent to operate in the presence of a destabilizing adversary</span>
+<span 
+class="ptmr8t-x-x-70">that applies disturbance forces to the system.</span>                          </td><td  style="white-space:normal; text-align:left;" id="TBL-4-6-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Robust  Adversarial  Reinforced  Learning  may  overfit  itself</span>
+<span 
+class="ptmr8t-x-x-70">and  sometimes  it  may  mispredict  without  any  adversarial</span>
+<span 
+class="ptmr8t-x-x-70">being in presence.</span>                                                                     </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-7-"><td  style="white-space:normal; text-align:left;" id="TBL-4-7-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Alleviating    Adversarial    Attacks    via</span>
+<span 
+class="ptmr8t-x-x-70">Convolutional Autoencoder [</span><a 
+href="#Xpaper12"><span 
+class="ptmr8t-x-x-70">29</span></a><span 
+class="ptmr8t-x-x-70">]</span>              </td><td  style="white-space:normal; text-align:left;" id="TBL-4-7-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">They have produced adversary examples via a convolutional</span>
+<span 
+class="ptmr8t-x-x-70">autoencoder   model.   Pooling   computations   and   sampling</span>
+<span 
+class="ptmr8t-x-x-70">tricks  are  used.  Then  an  adversarial  decoder  automate  the</span>
+<span 
+class="ptmr8t-x-x-70">generation of adversarial samples.</span>                                           </td><td  style="white-space:normal; text-align:left;" id="TBL-4-7-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Adversarial   sampling   is   useful   but   it   cannot   provide</span>
+<span 
+class="ptmr8t-x-x-70">adversarial  robustness  on  its  own.  Sampling  tricks  are  also</span>
+<span 
+class="ptmr8t-x-x-70">too specified.</span>                                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-8-"><td  style="white-space:normal; text-align:left;" id="TBL-4-8-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Combatting Adversarial Attacks through</span>
+<span 
+class="ptmr8t-x-x-70">Denoising                                           and</span>
+<span 
+class="ptmr8t-x-x-70">Dimensionality  Reduction:  A  Cascaded</span>
+<span 
+class="ptmr8t-x-x-70">Autoencoder Approach [</span><a 
+href="#Xpaper13"><span 
+class="ptmr8t-x-x-70">30</span></a><span 
+class="ptmr8t-x-x-70">]</span>                     </td><td  style="white-space:normal; text-align:left;" id="TBL-4-8-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">They have used an autoencoder to denoise the test data which</span>
+<span 
+class="ptmr8t-x-x-70">is  trained  with  both  corrupted  and  normal  data.  Then  they</span>
+<span 
+class="ptmr8t-x-x-70">reduce the dimension of the denoised data.</span>                             </td><td  style="white-space:normal; text-align:left;" id="TBL-4-8-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Autoencoders    specifically    designed    to    compress    data</span>
+<span 
+class="ptmr8t-x-x-70">effectively  and  reduce  dimensions.  Therefore  it  may  not</span>
+<span 
+class="ptmr8t-x-x-70">be completely generalized and training with corrupted data</span>
+<span 
+class="ptmr8t-x-x-70">requires a lot of adjustments for test results.</span>                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-9-"><td  style="white-space:normal; text-align:left;" id="TBL-4-9-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">A  Comparative  Study  of  Autoencoders</span>
+<span 
+class="ptmr8t-x-x-70">against Adversarial Attacks [</span><a 
+href="#Xpaper15"><span 
+class="ptmr8t-x-x-70">31</span></a><span 
+class="ptmr8t-x-x-70">]</span>              </td><td  style="white-space:normal; text-align:left;" id="TBL-4-9-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">They have used autoencoders to filter data before applying</span>
+<span 
+class="ptmr8t-x-x-70">into  the  model  and  compare  it  with  the  model  without</span>
+<span 
+class="ptmr8t-x-x-70">autoencoder filter.</span>                                                                     </td><td  style="white-space:normal; text-align:left;" id="TBL-4-9-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">They have used autoencoders mainly focused on the stealth</span>
+<span 
+class="ptmr8t-x-x-70">aspect  of  these  attacks  and  use  them  specifically  against</span>
+<span 
+class="ptmr8t-x-x-70">FGSM with specific parameters.</span>                                              </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-10-"><td  style="white-space:normal; text-align:left;" id="TBL-4-10-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Adversarial    Attacks    on    Variational</span>
+<span 
+class="ptmr8t-x-x-70">Autoencoders [</span><a 
+href="#Xpaper14"><span 
+class="ptmr8t-x-x-70">32</span></a><span 
+class="ptmr8t-x-x-70">]</span>                                    </td><td  style="white-space:normal; text-align:left;" id="TBL-4-10-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">They  propose  a  scheme  to  attack  on  autoencoders  and</span>
+<span 
+class="ptmr8t-x-x-70">validate  experiments  to  three  autoencoder  models:  Simple,</span>
+<span 
+class="ptmr8t-x-x-70">convolutional and DRAW (Deep Recurrent Attentive Writer).</span></td><td  style="white-space:normal; text-align:left;" id="TBL-4-10-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">As  they  have  accepted  "No  attack  can  both  convincingly</span>
+<span 
+class="ptmr8t-x-x-70">reconstruct  the  target  while  keeping  the  distortions  on  the</span>
+<span 
+class="ptmr8t-x-x-70">input  imperceptible.".  it  cannot  provide  robustness  against</span>
+<span 
+class="ptmr8t-x-x-70">adversarial attacks.</span>                                                                   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-11-"><td  style="white-space:normal; text-align:left;" id="TBL-4-11-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Understanding      Autoencoders      with</span>
+<span 
+class="ptmr8t-x-x-70">Information Theoretic Concepts [</span><a 
+href="#Xpaper10"><span 
+class="ptmr8t-x-x-70">33</span></a><span 
+class="ptmr8t-x-x-70">]</span>       </td><td  style="white-space:normal; text-align:left;" id="TBL-4-11-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">They   examine   data   processing   inequality   with   stacked</span>
+<span 
+class="ptmr8t-x-x-70">autoencoders  and  two  types  of  information  planes  with</span>
+<span 
+class="ptmr8t-x-x-70">autoencoders.  They  have  analyzed  DNNs  learning  from  a</span>
+<span 
+class="ptmr8t-x-x-70">joint  geometric  and  information  theoretic  perspective,  thus</span>
+<span 
+class="ptmr8t-x-x-70">emphasizing the role that pair-wise mutual information plays</span>
+<span 
+class="ptmr8t-x-x-70">important role in understanding DNNs with autoencoders.</span>     </td><td  style="white-space:normal; text-align:left;" id="TBL-4-11-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">The   accurate   and   tractable   estimation   of   information</span>
+<span 
+class="ptmr8t-x-x-70">quantities  from  large  data  seems  to  be  a  problem  due  to</span>
+<span 
+class="ptmr8t-x-x-70">Shannon&#8217;s definition and other information theories are hard</span>
+<span 
+class="ptmr8t-x-x-70">to  estimate,  which  severely  limits  its  powers  to  analyze</span>
+<span 
+class="ptmr8t-x-x-70">machine learning algorithms.</span>                                                   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-12-"><td  style="white-space:normal; text-align:left;" id="TBL-4-12-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Adversarial     Attacks     and     Defences</span>
+<span 
+class="ptmr8t-x-x-70">Competition [</span><a 
+href="#Xpaper11"><span 
+class="ptmr8t-x-x-70">34</span></a><span 
+class="ptmr8t-x-x-70">]</span>                                      </td><td  style="white-space:normal; text-align:left;" id="TBL-4-12-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Google  Brain  organized  NIPS  2017  to  accelerate  research</span>
+<span 
+class="ptmr8t-x-x-70">on adversarial examples and robustness of machine learning</span>
+<span 
+class="ptmr8t-x-x-70">classifiers. Alexey Kurakin and Ian Goodfellow et al. present</span>
+<span 
+class="ptmr8t-x-x-70">some of the structure and organization of the competition and</span>
+<span 
+class="ptmr8t-x-x-70">the solutions developed by several of the top-placing teams.</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-4-12-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">We   experimented   with   the   proposed   methods   of   this</span>
+<span 
+class="ptmr8t-x-x-70">competition bu these methods do not provide a generalized</span>
+<span 
+class="ptmr8t-x-x-70">solution   for   the   robustness   against   adversarial   machine</span>
+<span 
+class="ptmr8t-x-x-70">learning model attacks.</span>                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-13-"><td  style="white-space:normal; text-align:left;" id="TBL-4-13-1"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Explaining And </span><br 
+class="newline" /><span 
+class="ptmr8t-x-x-70">Harnessing Adversarial Examples [</span><a 
+href="#Xpaper16"><span 
+class="ptmr8t-x-x-70">35</span></a><span 
+class="ptmr8t-x-x-70">]</span>    </td><td  style="white-space:normal; text-align:left;" id="TBL-4-13-2"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Ian Goodfellow et al. makes considerable observations about</span>
+<span 
+class="ptmr8t-x-x-70">Gradient-based optimization and introduce FGSM.</span>                </td><td  style="white-space:normal; text-align:left;" id="TBL-4-13-3"  
+class="td11"><p class="noindent" ><span 
+class="ptmr8t-x-x-70">Models  may  mislead  for  the  efficiency  of  optimization.</span>
+<span 
+class="ptmr8t-x-x-70">The paper focuses explicitly on identifying similar types of</span>
+<span 
+class="ptmr8t-x-x-70">problematic points in the model.</span>                                              </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-14-"><td  style="white-space:normal; text-align:left;" id="TBL-4-14-1"  
+class="td11">                               </td></tr></table></div>
+                                                                                         
+                                                                                         
+</div><hr class="endfloat" />
+<h3 class="sectionHead"><span class="titlemark">3    </span> <a 
+ id="x1-30003"></a>Preliminaries</h3>
+<p class="noindent" >In this section, we consider attack types, data poisoning attacks, model attacks, attack environments, and autoencoder.
+<h4 class="subsectionHead"><span class="titlemark">3.1    </span> <a 
+ id="x1-40003.1"></a>Attack Types</h4>
+<p class="noindent" >Machine Learning attacks can be categorized into data poisoning attacks and model attacks. The difference between the two
+attacks lies in the influencing type. Data poisoning attacks mainly focus on influencing the data, while model evasion attacks
+influencing the model for desired attack outcomes. Both attacks aim to disrupt the machine learning structure, evasion from
+filters, causing wrong predictions, misdirection, and other problems for the machine learning process. In this paper, we mainly
+focus on machine learning model attacks.
+<p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">3.1.1    </span> <a 
+ id="x1-50003.1.1"></a>Data Poisoning Attacks</h5>
+<p class="noindent" >According to machine learning methods, algorithms are trained and tested with datasets. Data poisoning in machine learning
+algorithms has a significant impact on a dataset and can cause problems for algorithm and confusion for developers. With
+poisoning the data, adversaries can compromise the whole machine learning process. Hence, data poisoning can cause
+problems in machine learning algorithms.
+<p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">3.1.2    </span> <a 
+ id="x1-60003.1.2"></a>Model Attacks</h5>
+<p class="noindent" >Machine learning model attacks have been applied mostly in adversarial attacks, and evasion attacks being have
+been used most extensively in this category. For spam emails, phishing attacks, and executing malware code,
+adversaries apply model evasion attacks. There are also some benefits to adversaries in misclassification and
+misdirection. In this type of attack, the attacker does not change training data but disrupts or changes its data and
+diverse this data from the training dataset or make this data seem safe. This study mainly concentrates on model
+attacks.
+<p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">3.2    </span> <a 
+ id="x1-70003.2"></a>Attack Environments</h4>
+<p class="noindent" >There are two significant threat models for adversarial attacks: the white-box and black-box models.
+<p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">3.2.1    </span> <a 
+ id="x1-80003.2.1"></a>White Box Attacks</h5>
+<p class="noindent" >Under the white-box setting, the internal structure, design, and application of the tested item are accessible
+to the adversaries. In this model, attacks are based on an analysis of the internal structure. It is also known as
+open box attacks. Programming knowledge and application knowledge are essential. White-box tests provide a
+comprehensive assessment of both internal and external vulnerabilities and are the best choice for computational
+tests.
+                                                                                         
+                                                                                         
+<p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">3.2.2    </span> <a 
+ id="x1-90003.2.2"></a>Black Box Attacks</h5>
+<p class="noindent" >In the black-box model, internal structure and software testing are secrets to the adversaries. It is also known as behavioral
+attacks. In these tests, the internal structure does not have to be known by the tester. They provide a comprehensive assessment
+of errors. Without changing the learning process, black box attacks provide changes to be observed as external effects on the
+learning process rather than changes in the learning algorithm. In this study, the main reason behind the selection of this method
+is the observation of the learning process.
+<p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">3.3    </span> <a 
+ id="x1-100003.3"></a>Autoencoder</h4>
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-10001r1"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/autoencoder1-.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;1: </span><span  
+class="content">Autoencoder Layer Structure</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >An autoencoder neural network is an unsupervised learning algorithm that takes inputs and sets target values to be equals of the
+input values [<a 
+href="#Xpaper10">33</a>]. Autoencoders are generative models that apply backpropagation. They can work without the
+results of these inputs. While the use of a learning model is in the form of <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">model.fit(X,Y)</span></span></span>, autoencoders work
+as <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">model.fit(X,X)</span></span></span>. The autoencoder works with the ID function to get the output <span 
+class="cmbx-10">x</span> that corresponds to <span 
+class="cmbx-10">x</span>
+entries. The identity function seems to be a particularly insignificant function to try to learn; however, there is an
+interesting structure related to the data, putting restrictions such as limiting the number of hidden units on the
+network[<a 
+href="#Xpaper10">33</a>]. They are neural networks which work as neural networks with an input layer, hidden layers and an
+output layer but instead of predicting <span 
+class="cmmi-10">Y </span>as in <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">model.fit(X,Y)</span></span></span>, they reconstruct <span 
+class="cmmi-10">X </span>as in <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">model.fit(X,X)</span></span></span>.
+Due to this reconstruction being unsupervised, autoencoders are unsupervised learning models. This structure
+consists of an encoder and a decoder part. We will define the encoding transition as <span 
+class="cmmi-10">&#x03D5; </span>and decoding transition as
+<span 
+class="cmmi-10">&#x03C8;</span>.
+<p class="noindent" ><span 
+class="cmmi-10">&#x03D5; </span><span 
+class="cmr-10">: </span><span 
+class="cmmi-10">X </span><span 
+class="cmsy-10">&#x2192; </span><span 
+class="cmmi-10">F </span><br 
+class="newline" /><span 
+class="cmmi-10">&#x03C8; </span><span 
+class="cmr-10">: </span><span 
+class="cmmi-10">F </span><span 
+class="cmsy-10">&#x2192; </span><span 
+class="cmmi-10">X </span><br 
+class="newline" /><span 
+class="cmmi-10">&#x03D5;,&#x03C8; </span><span 
+class="cmr-10">= </span><span 
+class="cmmi-10">argmin</span><sub><span 
+class="cmmi-7">&#x03D5;,&#x03C8;</span></sub><span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">X </span><span 
+class="cmsy-10">- </span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">&#x03C8; </span><span 
+class="cmsy-10">&#x2218; </span><span 
+class="cmmi-10">&#x03D5;</span><span 
+class="cmr-10">)</span><span 
+class="cmmi-10">X</span><span 
+class="cmsy-10">||</span><sup><span 
+class="cmr-7">2</span></sup>
+<p class="noindent" >With one hidden layer, encoder will take the input <span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="msbm-10">&#x211D;</span><sup><span 
+class="cmmi-7">d</span></sup> <span 
+class="cmr-10">= </span><span 
+class="cmmi-10">&#x03C7; </span>and map it to <span 
+class="cmmi-10">h </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="msbm-10">&#x211D;</span><sup><span 
+class="cmmi-7">p</span></sup> <span 
+class="cmr-10">= </span><span 
+class="cmmi-10">F </span>. The <span 
+class="cmmi-10">h </span>below is referred to as
+latent variables. <span 
+class="cmmi-10">&#x03C3; </span>is an activation function such as ReLU or sigmoid which were used in this study[<a 
+href="#Xpaper32">36</a>,&#x00A0;<a 
+href="#Xpaper33">37</a>]. <span 
+class="cmmi-10">b </span>is
+bias vector, <span 
+class="cmmi-10">W </span>is weight matrix which both are usually initialized randomly then updated iteratively through
+training[<a 
+href="#Xpaper30">38</a>].
+<p class="noindent" ><span 
+class="cmmi-10">h </span><span 
+class="cmr-10">= </span><span 
+class="cmmi-10">&#x03C3;</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">Wx </span><span 
+class="cmr-10">+ </span><span 
+class="cmmi-10">b</span><span 
+class="cmr-10">)</span>
+<p class="noindent" >After the encoder transition is completed, decoder transition maps <span 
+class="cmmi-10">h </span>to reconstruct <span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">&#x2032;</span>.
+<p class="noindent" ><span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">&#x2032; </span><span 
+class="cmr-10">= </span><span 
+class="cmmi-10">&#x03C3;</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">W</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmmi-10">h </span><span 
+class="cmr-10">+ </span><span 
+class="cmmi-10">b</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">) </span>where <span 
+class="cmmi-10">&#x03C3;</span><span 
+class="cmsy-10">&#x2032;</span>, <span 
+class="cmmi-10">W</span><span 
+class="cmsy-10">&#x2032;</span>, <span 
+class="cmmi-10">b</span><span 
+class="cmsy-10">&#x2032; </span>of decoder are unrelated to <span 
+class="cmmi-10">&#x03C3;</span>, <span 
+class="cmmi-10">W </span>, <span 
+class="cmmi-10">b </span>of encoder. Loss of autoencoders are trained to be
+minimal, showed as <span 
+class="cmmi-10">L </span>below.
+<p class="noindent" ><span 
+class="cmmi-10">L</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x,x</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">) = </span><span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">&#x2032;||</span><sup><span 
+class="cmr-7">2</span></sup> <span 
+class="cmr-10">= </span><span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03C3;</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">W</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">&#x03C3;</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">Wx </span><span 
+class="cmr-10">+ </span><span 
+class="cmmi-10">b</span><span 
+class="cmr-10">)) + </span><span 
+class="cmmi-10">b</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">)</span><span 
+class="cmsy-10">||</span><sup><span 
+class="cmr-7">2</span></sup>
+<p class="noindent" >So the loss function shows the reconstruction errors, which need to be minimal. After some iterations with input training set <span 
+class="cmmi-10">x</span>
+is averaged.
+<p class="noindent" >In conclusion, autoencoders can be seen as neural networks that reconstruct inputs instead of predicting them. In this paper, we
+will use them to reconstruct our dataset inputs.
+<h3 class="sectionHead"><span class="titlemark">4    </span> <a 
+ id="x1-110004"></a>System Model</h3>
+<p class="noindent" >This section presents the selection of autoencoder model, activation function, and tuning parameters.
+<p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">4.1    </span> <a 
+ id="x1-120004.1"></a>Creating Autoencoder Model</h4>
+<p class="noindent" >In this paper, we have selected the MNIST dataset to observe changes easily. Therefore, the size of the layer structure in the
+autoencoder model is selected as 28 and multipliers to match the MNIST datasets, which represents the numbers by 28 to 28
+matrixes. Figure <a 
+href="#x1-12001r2">2</a> presents the structure of matrixes. The modified MNIST data with autoencoder is presented in Figure <a 
+href="#x1-12002r3">3</a>. In
+the training of the model, the encoded data is used instead of using the MNIST datasets directly. As a training method, a
+multi-class logistic regression method is selected, and attacks are applied to this model. We train autoencoder for 35 epochs.
+Figure <a 
+href="#x1-12003r4">4</a> provides the process diagram.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-12001r2"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/autoencoder2-.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content">Autoencoder Activation Functions. Note that layer sizes given according to the dataset which is MNIST
+dataset</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-12002r3"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/autoencodedMnist.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;3: </span><span  
+class="content">Normal and Encoded Data Set of MNIST</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-12003r4"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/diyagram2-.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;4: </span><span  
+class="content">Process Diagram</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">4.2    </span> <a 
+ id="x1-130004.2"></a>Activation Function Selection</h4>
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-13005r5"></a>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-13001r1"></a>
+<div class="subfigure"><table><tr><td style="text-align:left"><img 
+src="./Imgs/AE/MCLR/allRelu.png" alt="PIC"  
+width="225" height="150" >
+<div class="subfigcaption"><span 
+class="ptmr8t-x-x-90">(a)</span>
+<span 
+class="ptmr8t-x-x-90">Relu</span>
+<span 
+class="ptmr8t-x-x-90">Loss</span>
+<span 
+class="ptmr8t-x-x-90">History</span></div></td></tr></table></div><a 
+ id="x1-13002r2"></a><div class="subfigure"><table><tr><td style="text-align:left"><img 
+src="./Imgs/AE/MCLR/allSigmoid.png" alt="PIC"  
+width="225" height="150" >
+<div class="subfigcaption"><span 
+class="ptmr8t-x-x-90">(b)</span>
+<span 
+class="ptmr8t-x-x-90">Sigmoid</span>
+<span 
+class="ptmr8t-x-x-90">Loss</span>
+<span 
+class="ptmr8t-x-x-90">History</span></div></td></tr></table></div><a 
+ id="x1-13003r3"></a><div class="subfigure"><table><tr><td style="text-align:left"><img 
+src="./Imgs/AE/MCLR/allSoftSign.png" alt="PIC"  
+width="225" height="150" >
+<div class="subfigcaption"><span 
+class="ptmr8t-x-x-90">(c)</span>
+<span 
+class="ptmr8t-x-x-90">Softsign</span>
+<span 
+class="ptmr8t-x-x-90">Loss</span>
+<span 
+class="ptmr8t-x-x-90">History</span></div></td></tr></table></div><a 
+ id="x1-13004r4"></a><div class="subfigure"><table><tr><td style="text-align:left"><img 
+src="./Imgs/AE/MCLR/allTanh.png" alt="PIC"  
+width="225" height="150" >
+<div class="subfigcaption"><span 
+class="ptmr8t-x-x-90">(d)</span>
+<span 
+class="ptmr8t-x-x-90">Tanh</span>
+<span 
+class="ptmr8t-x-x-90">Loss</span>
+<span 
+class="ptmr8t-x-x-90">History</span></div></td></tr></table></div>
+ <div class="caption" 
+><span class="id">Figure&#x00A0;5: </span><span  
+class="content">Loss histories of different activation functions</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >In machine learning and deep learning algorithms, the activation function is used for the computations between hidden and
+output layers[<a 
+href="#Xpaper34">39</a>]. The loss values are compared with different activation functions. Figure <a 
+href="#x1-13005r5">5</a> indicates the comparison results of
+loss value. <span 
+class="ectt-1000">Sigmoid </span>and <span 
+class="ectt-1000">ReLU </span>have the best performance among these values and gave the best results. <span 
+class="ectt-1000">Sigmoid </span>has more
+losses at lower epochs than <span 
+class="ectt-1000">ReLU</span>, but it has better results. Therefore, it is aimed to reach the best result of activation function in
+both layers. The model with the least loss value is to make the coding parts with the <span 
+class="ectt-1000">ReLU </span>function and to use the
+<span 
+class="ectt-1000">exponential </span>and <span 
+class="ectt-1000">softplus </span>functions in the analysis part respectively. These functions are used in our study. Figure <a 
+href="#x1-13006r6">6</a>
+illustrates the result of the loss function, and Figure <a 
+href="#x1-12001r2">2</a> presents the structure of the model with the activation
+functions.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-13006r6"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/allOptimizedRelu.png" alt="PIC"  
+width="234" height="156" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;6: </span><span  
+class="content">Optimized Relu Loss History</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">4.3    </span> <a 
+ id="x1-140004.3"></a>Tuning Parameters</h4>
+<p class="noindent" >The tuning parameters for autoencoders depend on the dataset we use and what we try to apply. As previously mentioned, <span 
+class="ectt-1000">ReLU</span>
+and sigmoid function are selected to be activation function for our model [<a 
+href="#Xpaper33">37</a>,&#x00A0;<a 
+href="#Xpaper34">39</a>]. <span 
+class="ectt-1000">ReLU </span>is the activation function
+through the whole autoencoder while exponential is the softplus being the output layer&#8217;s activation function
+which yields the minimal loss. Figure <a 
+href="#x1-12001r2">2</a> presents the input size as 784 due to our dataset and MNIST dataset
+contains 28x28 pixel images[<a 
+href="#Xpaper35">40</a>]. Encoding part for our autoencoder size is <span 
+class="cmr-10">784 </span><span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmr-10">504 </span><span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmr-10">28 </span>and decoding size is
+<span 
+class="cmr-10">28 </span><span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmr-10">504 </span><span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmr-10">784</span>.
+<p class="noindent" >This structure is selected by the various neural network structures that take the square of the size of the matrix, lower it, and
+give it to its dimension size lastly. The last hidden layer of the decoding part with the size of 504 uses <span 
+class="ectt-1000">exponential</span>
+activation function, and an output layer with the size of 784 uses <span 
+class="ectt-1000">softplus </span>activation function [<a 
+href="#Xpaper38">41</a>,&#x00A0;<a 
+href="#Xpaper39">42</a>]. We used
+<span 
+class="ectt-1000">adam </span>optimizer with categorical crossentropy[<a 
+href="#Xpaper37">43</a>,&#x00A0;<a 
+href="#Xpaper36">44</a>]. We see that a small number is enough for training, so
+we select epoch number for autoencoder as 35. This is the best epoch value to get meaningful results for both
+models with autoencoder and without autoencoder to see accuracy. In lower values, models get their accuracy
+scores too low for us to see the difference between them, even though some models are structurally stronger than
+others.
+<p class="noindent" >
+<h3 class="sectionHead"><span class="titlemark">5    </span> <a 
+ id="x1-150005"></a>Experiments with MNIST Dataset</h3>
+<p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">5.1    </span> <a 
+ id="x1-160005.1"></a>Introduction</h4>
+<p class="noindent" >We examine the robustness of autoencoder for adversarial machine learning with different machine learning algorithms and
+models to see that autoencoding can be a generalized solution and an easy to use defense mechanism for most adversarial
+attacks. We use various linear machine learning model algorithms and neural network model algorithms against adversarial
+attacks.
+<p class="noindent" >
+<h4 class="subsectionHead"><span class="titlemark">5.2    </span> <a 
+ id="x1-170005.2"></a>Autoencoding</h4>
+<p class="noindent" >In this section, we look at the robustness provided with auto-encoding. We select a linear model and a neural network model to
+demonstrate this effectiveness. In these models, we also observe the robustness of different attack methods. We also use the
+MNIST dataset for these examples.
+<p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">5.2.1    </span> <a 
+ id="x1-180005.2.1"></a>Multi-Class Logistic Regression</h5>
+<p class="noindent" >In linear machine learning model algorithms, we use mainly two attack methods: Non-Targeted and Targeted Attacks. The
+non-targeted attack does not concern with how the machine learning model makes its predictions and tries to force the machine
+learning model into misprediction. On the other hand, targeted attacks focus on leading some correct predictions into
+mispredictions. We have three methods for targeted attacks: Natural, Non-Natural, and one selected target. Firstly, natural
+targets are derived from the most common mispredictions made by the machine learning model. For example, guessing number
+5 as 8, and number 7 as 1 are common mispredictions. Natural targets take these non-targeted attack results into account and
+                                                                                         
+                                                                                         
+attack directly to these most common mispredictions. So, when number 5 is seen, an attack would try to make it
+guessed as number 8. Secondly, non-natural targeted attacks are the opposite of natural targeted attacks. It takes
+the minimum number of mispredictions made by the machine learning model with the feedback provided by
+non-natural attacks. For example, if number 1 is least mispredicted as 0, the non-natural target for number 1
+is 0. Therefore, we can see that how much the attack affects the machine learning model beyond its common
+mispredictions. Lastly, one targeted attack focuses on some random numbers. The aim is to make the machine
+learning model mispredict the same number for all numbers. For linear classifications, we select multi-class
+logistic regression to analyze the attacks. Because we do not interact with these linear classification algorithms
+aside from calling their defined functions from scikit-learn library, we use a black-box environment for these
+attacks. In our study, the attack method against multi-class classification models developed in NIPS 2017 is
+used [<a 
+href="#Xpaper11">34</a>]. An epsilon value is used to determine the severity of the attack, which we select 50 in this study to
+demonstrate the results better. We apply a non-targeted attack to a multi-class logistic regression trained model
+which is trained with MNIST dataset without an autoencoder. The confusion matrix of this attack is presented in
+<a 
+href="#x1-18003r9">9</a>.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18001r7"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/WithoutAttack_WOAE_MCLR-.png" alt="PIC"  
+width="375" height="375" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;7: </span><span  
+class="content">Confusion matrix of the model without any attack and without autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18002r8"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/WithoutAttack_AE_MCLR-.png" alt="PIC"  
+width="375" height="375" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;8: </span><span  
+class="content">Confusion matrix of the model without any attack and with autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18003r9"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/Non_Targeted_WO-.png" alt="PIC"  
+width="375" height="375" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;9: </span><span  
+class="content">Confusion matrix of non-targeted attack to model without autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18004r10"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/Non_Targeted_AE-.png" alt="PIC"  
+width="375" height="375" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;10: </span><span  
+class="content">Confusion matrix of non-targeted attack to model with autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >The findings from Figure <a 
+href="#x1-18003r9">9</a> and <a 
+href="#x1-18004r10">10</a> show that an autoencoder model provides robustness against non-targeted attacks. The
+accuracy value change with epsilon is presented in Figure <a 
+href="#x1-18007r13">13</a>. Figure <a 
+href="#x1-18005r11">11</a> illustrates the change and perturbation of the selected
+attack with epsilon value as 50.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18005r11"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/Perturbasyon.png" alt="PIC"  
+width="352" height="352" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;11: </span><span  
+class="content">Value change and perturbation of a non-targeted attack on model without autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18006r12"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/PerturbasyonUnsuccessful.png" alt="PIC"  
+width="352" height="352" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;12: </span><span  
+class="content">Value change and perturbation of a non-targeted attack on model with autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >We apply a non-targeted attack on the multi-class logistic regression model with autoencoder and without autoencoder. Figure
+<a 
+href="#x1-18007r13">13</a> provides a difference in accuracy metric. The detailed graph of the non-targeted attack on the model with autoencoder is
+presented in Figure <a 
+href="#x1-18008r14">14</a>. The changes in the MNIST dataset after autoencoder is provided in Figure <a 
+href="#x1-12002r3">3</a>. The value change and
+perturbation of an epsilon 50 value on data are indicated in Figure <a 
+href="#x1-18006r12">12</a>.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18007r13"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/nontargetedAttack.png" alt="PIC"  
+width="469" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;13: </span><span  
+class="content">Comparison of accuracy with and without autoencoder for non-targeted attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18008r14"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/nontargetedAttackOnlyAutoEncoder.png" alt="PIC"  
+width="469" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;14: </span><span  
+class="content">Details of accuracy with autoencoder for non-targeted attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >The following process is presented in Figure <a 
+href="#x1-12003r4">4</a>. In the examples with the autoencoder, data is passed through the autoencoder
+and then given to the training model, in our current case a classification model with multi-class logistic regression. Multi-class
+logistic regression uses the encoded dataset for training. Figure <a 
+href="#x1-18004r10">10</a> provides to see improvement as a confusion
+matrix. For the targeted attacks, we select three methods to use. The first one is natural targets for MNIST dataset,
+which is also defined in NIPS 2017 [<a 
+href="#Xpaper11">34</a>]. Natural targets take the non-targeted attack results into account and
+attack directly to these most common mispredictions. For example, the natural target for number 3 is 8. When
+we apply the non-targeted attack, we obtain these results. Heat map for these numbers is indicated in Figure
+<a 
+href="#x1-18009r15">15</a>.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18009r15"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/Heatmap.png" alt="PIC"  
+width="328" height="328" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;15: </span><span  
+class="content">Heatmap of actual numbers and mispredictions</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >The second method of targeted attacks is non-natural targets which is the opposite of natural targets. We select the least mis
+predicted numbers as the target. These numbers is indicated as the heat map in Figure <a 
+href="#x1-18009r15">15</a>. The third method
+is the selection one number and making all numbers predict it. We randomly choose 7 as that target number.
+Targets for these methods are presented in Figure <a 
+href="#x1-18010r16">16</a>. The confusion matrixes for these methods are presented
+below.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18010r16"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/targetValues-.png" alt="PIC"  
+width="32" height="32" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;16: </span><span  
+class="content">Actual numbers and their target values for each targeted attack method</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18011r17"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/Natural_WO-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;17: </span><span  
+class="content">Confusion matrix of <span 
+class="ptmb8t-">natural targeted attack </span>to model without autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18012r18"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/Natural_AE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;18: </span><span  
+class="content">Confusion matrix of <span 
+class="ptmb8t-">natural targeted attack </span>to model with autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18013r19"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/NonNatural_WO-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;19: </span><span  
+class="content">Confusion matrix of <span 
+class="ptmb8t-">non-natural targeted attack </span>to model without autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18014r20"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/NonNatural_AE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;20: </span><span  
+class="content">Confusion matrix of <span 
+class="ptmb8t-">non-natural targeted attack </span>to model with autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18015r21"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/One_Target_WO-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;21: </span><span  
+class="content">Confusion matrix of <span 
+class="ptmb8t-">one number targeted attack </span>to model without autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18016r22"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/MCLR/One_Target_AE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;22: </span><span  
+class="content">Confusion matrix of <span 
+class="ptmb8t-">one number targeted attack </span>to model with autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18017r23"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/AllInOneTargetedAttacks.png" alt="PIC"  
+width="469" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;23: </span><span  
+class="content">Comparison of accuracy with and without autoencoder for targeted attacks. <span 
+class="ptmri8t-">AE stands for the models with</span>
+<span 
+class="ptmri8t-">autoencoder, WO stands for models without autoencoder</span></span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-18018r24"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/AE/MCLR/AEInOneTargetedAttacks.png" alt="PIC"  
+width="469" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;24: </span><span  
+class="content">Details of accuracy with autoencoder for targeted attacks</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h5 class="subsubsectionHead"><span class="titlemark">5.2.2    </span> <a 
+ id="x1-190005.2.2"></a>Neural Networks</h5>
+<p class="noindent" >We use neural networks with the same principles as multi-class logistic regressions and make attacks to the
+machine learning model. We use the same structure, layer, activation functions and epochs for these neural
+networks as we use in our autoencoder for simplicity. Although this robustness will work with other neural
+network structures, we will not demonstrate them in this study due to structure designs that can vary for all
+developers. We also compare the results of these attacks with both the data from the MNIST dataset and the encoded
+data results of the MNIST dataset. As for attack methods, we select three methods: FGSM, T-FGSM and BIM.
+Cleverhans library is used for providing these attack methods to the neural network, which is from the Keras
+library.
+<p class="noindent" >We examine the differences between the neural network model that has autoencoder and the neural network model that takes
+data directly from the MNIST dataset with confusion matrixes and classification reports. Firstly, our model without
+autoencoder gives the following results, as seen in Figure <a 
+href="#x1-19001r25">25</a> for the confusion matrix and the classification report. The results
+with the autoencoder are presented in Figure <a 
+href="#x1-19002r26">26</a>. Note that these confusion matrixes and classification reports are indicated
+before any attack.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-19001r25"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/NN/CM/CM_WOAE-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/AE/NN/CR/CR_WOAE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;25: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-19002r26"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/NN/CM/CM_AE-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/AE/NN/CR/CR_AE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;26: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><span 
+class="ptmb8t-">Fast Gradient Sign Method:</span>
+<p class="noindent" >There is a slight difference between the neural network models with autoencoder and without autoencoder model. We apply the
+FGSM attack on both methods. The method uses the gradients of the loss accordingly for creating a new image that maximizes
+the loss. We can say the gradients are generated accordingly to input images. For these reasons, the FGSM causes a wide
+variety of models to misclassify their input [<a 
+href="#Xpaper16">35</a>].
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-19003r27"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/NN/CM/NN_AE_WOAE_FGSM_CM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/AE/NN/CR/NN_AE_WOAE_FGSM_CR-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;27: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without autoencoder after FGSM
+attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-19004r28"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/NN/CM/NN_AE_AE_FGSM_CM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/AE/NN/CR/NN_AE_AE_FGSM_CR-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;28: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with autoencoder after FGSM
+attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >As we expect due to results from multi-class logistic regression, autoencoder gives robustness to the neural network model too.
+After the DGSM, the neural network without an autoencoder suffers an immense drop in its accuracy, and the
+FGSM works as intended. But the neural network model with autoencoder only suffers a 0.01 percent accuracy
+drop.
+<p class="noindent" ><span 
+class="ptmb8t-">Targeted Fast Gradient Sign Method: </span>There is a directed type of FGSM, called T-FGSM. It uses the same principles to
+maximize the loss of the target. In this method, a gradient step is computed for giving the same misprediction for different
+inputs.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-19005r29"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/NN/CM/NN_AE_WOAE_TFGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/AE/NN/CR/NN_AE_WOAE_TFGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;29: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without autoencoder after T-FGSM
+attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-19006r30"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/NN/CM/NN_AE_AE_TFGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/AE/NN/CR/NN_AE_AE_TFGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;30: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with autoencoder after T-FGSM
+attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >In the confusion matrix, the target value for this attack is number 5. The neural network model with the autoencoder is still at
+the accuracy of 0.98. The individual differences are presented when compare with Figure <a 
+href="#x1-19002r26">26</a>.
+<p class="noindent" ><span 
+class="ptmb8t-">Basic Iterative Method:</span>
+<p class="noindent" >BIM is an extension of FGSM to apply it multiple times with iterations. It provides the recalculation of a gradient attack for
+each iteration.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-19007r31"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/NN/CM/NN_AE_WOAE_BIM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/AE/NN/CR/NN_AE_WOAE_BIM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;31: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without autoencoder after basic
+iterative method attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-19008r32"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/AE/NN/CM/NN_AE_AE_BIM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/AE/NN/CR/NN_AE_AE_BIM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;32:  </span><span  
+class="content">Confusion  matrix  and  classification  report  of  the  neural  network  model  with  autoencoder  after  basic
+iterative method attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >This is the most damaging attack for the neural network model that takes its inputs directly from the MNIST
+Dataset without an autoencoder. The findings from Figure <a 
+href="#x1-19007r31">31</a> show that the accuracy drops between 0.01 and
+0.02 percent. The neural network model with autoencoder&#8217;s accuracy stays as 0.97 percent, losing only 0.1
+percent.
+<p class="noindent" >Findings indicate that autoencoding before giving dataset as input to linear models and neural network models improve
+robustness against adversarial attacks significantly. We use vanilla autoencoders. They are the basic autoencoders without
+modification. In the other sections, we apply the same attacks with the same machine learning models with different
+autoencoder types.
+<h4 class="subsectionHead"><span class="titlemark">5.3    </span> <a 
+ id="x1-200005.3"></a>Sparse Autoencoder</h4>
+<p class="noindent" >Sparse autoencoders present improved performance on classification tasks. It includes more hidden layers than the input layer.
+The significant part is defining a small number of hidden layers to be active at once to encourage sparsity. This constraint forces
+the training model to respond uniquely to the characteristics of translation and uses the statistical features of the input
+data.
+<p class="noindent" >Because of this sparse autoencoders involve sparsity penalty <span 
+class="cmr-10">&#x03A9;(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">) </span>in their training. <span 
+class="cmmi-10">L</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x,x</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">) + &#x03A9;(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">)</span>
+<p class="noindent" >This penalty makes the model to activate specific areas of the network depending on the input data while making all other
+neurons inactive. We can create this sparsity by relative entropy, also known as Kullback-Leibler divergence.
+<p class="noindent" ><img 
+src="model-poission0x.png" alt="^&#x03C1;"  class="widehat" ><sub><span 
+class="cmmi-7">j</span></sub> <span 
+class="cmr-10">=</span> <img 
+src="model-poission1x.png" alt="1-
+m"  class="frac" align="middle"> <span 
+class="cmex-10">&#x2211;</span>
+   <sub><span 
+class="cmmi-7">i</span><span 
+class="cmr-7">=1</span></sub><sup><span 
+class="cmmi-7">m</span></sup><span 
+class="cmr-10">[</span><span 
+class="cmmi-10">h</span><sub><span 
+class="cmmi-7">j</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmr-10">)]</span> <img 
+src="model-poission2x.png" alt="^&#x03C1;"  class="widehat" > <sub><span 
+class="cmmi-7">j</span></sub> is our average activation function of the hidden layer <span 
+class="cmmi-10">j </span>which is averaged over <span 
+class="cmmi-10">m </span>training
+examples. For increasing the sparsity in terms of making the number of active neurons as smaller as it can be, we would want <span 
+class="cmmi-10">&#x03C1;</span>
+close to zero. The sparsity penalty term <span 
+class="cmr-10">&#x03A9;(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">) </span>will punish <img 
+src="model-poission3x.png" alt="^&#x03C1;"  class="widehat" > <sub><span 
+class="cmmi-7">j</span></sub> for deviating from <span 
+class="cmmi-10">&#x03C1;</span>, which will be basically exploiting
+Kullback-Leibler divergence. <span 
+class="cmmi-10">KL</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">p</span><span 
+class="cmsy-10">||</span><img 
+src="model-poission4x.png" alt="^&#x03C1;"  class="widehat" > <sub><span 
+class="cmmi-7">j</span></sub><span 
+class="cmr-10">) </span>is our Kullback-Leibler divergence between a random variable <span 
+class="cmmi-10">&#x03C1; </span>and random variable
+with mean <img 
+src="model-poission5x.png" alt="^&#x03C1;"  class="widehat" > <sub><span 
+class="cmmi-7">j</span></sub>.
+<p class="noindent" ><span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">j</span><span 
+class="cmr-7">=1</span></sub><sup><span 
+class="cmmi-7">s</span></sup><span 
+class="cmmi-10">KL</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">&#x03C1;</span><span 
+class="cmsy-10">||</span><img 
+src="model-poission6x.png" alt="^&#x03C1;"  class="widehat" > <sub><span 
+class="cmmi-7">j</span></sub><span 
+class="cmr-10">) =</span> <span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">j</span><span 
+class="cmr-7">=1</span></sub><sup><span 
+class="cmmi-7">s</span></sup><span 
+class="cmr-10">[</span><span 
+class="cmmi-10">&#x03C1;log</span><img 
+src="model-poission7x.png" alt=" &#x03C1;
+^&#x03C1;j"  class="frac" align="middle"> <span 
+class="cmr-10">+ (1 </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03C1;</span><span 
+class="cmr-10">)</span><span 
+class="cmmi-10">log</span><img 
+src="model-poission8x.png" alt="1-&#x03C1;
+1--^&#x03C1;j-"  class="frac" align="middle"><span 
+class="cmr-10">]</span>
+<p class="noindent" >Sparsity can be achieved with other ways, such as applying L1 and L2 regularization terms on the activation of the hidden layer.
+<span 
+class="cmmi-10">L </span>is our loss function and <span 
+class="cmmi-10">&#x03BB; </span>is our scale parameter.
+<p class="noindent" ><span 
+class="cmmi-10">L</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x,x</span><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">) + </span><span 
+class="cmmi-10">&#x03BB;</span><span 
+class="cmex-10">&#x2211;</span>
+  <sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">h</span><sub><span 
+class="cmmi-7">i</span></sub><span 
+class="cmsy-10">|</span>
+<p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">5.3.1    </span> <a 
+ id="x1-210005.3.1"></a>Multi-Class Logistic Regression of Sparse Autoencoder</h5>
+<p class="noindent" >This section presents multi-class logistic regressions with sparse autoencoders. The difference from the autoencoder section is
+the autoencoder type. The findings from Figure <a 
+href="#x1-13006r6">6</a> and Figure <a 
+href="#x1-21001r33">33</a> show that loss is higher compared to the autoencoders in sparse
+autoencoder.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-21001r33"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/SAE/MCLR/Loss.png" alt="PIC"  
+width="234" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;33: </span><span  
+class="content">Optimized Relu Loss History for Sparse Autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-21002r34"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/SAE/MCLR/NonTargetedAttackComp.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;34: </span><span  
+class="content">Comparison of accuracy with and without sparse autoencoder for non-targeted attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >The difference between perturbation is presented in Figure <a 
+href="#x1-21003r35">35</a> and Figure <a 
+href="#x1-21004r36">36</a> compared to the perturbation in Figure <a 
+href="#x1-18005r11">11</a> and
+Figure <a 
+href="#x1-18006r12">12</a>. The perturbation is sharper in sparse autoencoder.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-21003r35"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/SAE/MCLR/PerturbationSuccess.png" alt="PIC"  
+width="352" height="352" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;35: </span><span  
+class="content">Value change and perturbation of a non-targeted attack on model without sparse autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-21004r36"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/SAE/MCLR/perturbationUnsuccess.png" alt="PIC"  
+width="352" height="352" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;36: </span><span  
+class="content">Value change and perturbation of a non-targeted attack on model with sparse autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >Figure <a 
+href="#x1-21005r37">37</a> indicates that sparse autoencoders performs poorly compared to autoencoders in multi-class logistic
+regression.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-21005r37"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/SAE/MCLR/AllTargeted.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;37:  </span><span  
+class="content">Comparison  of  accuracy  with  and  without  sparse  autoencoder  for  targeted  attacks.  <span 
+class="ptmri8t-">AE  stands  for  the</span>
+<span 
+class="ptmri8t-">models with sparse autoencoder, WO stands for models without autoencoder</span></span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h5 class="subsubsectionHead"><span class="titlemark">5.3.2    </span> <a 
+ id="x1-220005.3.2"></a>Neural Network of Sparse Autoencoder</h5>
+<p class="noindent" >Sparse autoencoder results for neural networks indicate that vanilla autoencoder seems to be slightly better than sparse
+autoencoders for neural networks. Sparse autoencoders do not perform as well in linear machine learning models, in our case,
+multi-class logistic regression.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-22001r38"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/SAE/NN/CM/NN_WOAE-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/SAE/NN/CR/NN_WOAE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;38: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without sparse autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-22002r39"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/SAE/NN/CM/NN_AE-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/SAE/NN/CR/NN_AE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;39: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with sparse autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-22003r40"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/SAE/NN/CM/NN_WOAE_FGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/SAE/NN/CR/NN_WOAE_FGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;40: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without sparse autoencoder after
+FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-22004r41"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/SAE/NN/CM/NN_AE_FGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/SAE/NN/CR/NN_AE_FGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;41: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with sparse autoencoder after
+FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-22005r42"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/SAE/NN/CM/NN_WOAE_TFGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/SAE/NN/CR/NN_WOAE_TFGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;42: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without sparse autoencoder after
+T-FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-22006r43"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/SAE/NN/CM/NN_AE_TFGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/SAE/NN/CR/NN_AE_TFGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;43: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with sparse autoencoder after
+T-FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-22007r44"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/SAE/NN/CM/NN_WOAE_BIM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/SAE/NN/CR/NN_WOAE_BIM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;44: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without sparse autoencoder after
+basic iterative method attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-22008r45"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/SAE/NN/CM/NN_AE_BIM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/SAE/NN/CR/NN_AE_BIM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;45: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with sparse autoencoder after basic
+iterative method attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">5.4    </span> <a 
+ id="x1-230005.4"></a>Denoising Autoencoder</h4>
+<p class="noindent" >Denoising autoencoders are used for partially corrupted input and train it to recover the original undistorted input. In this study,
+the corrupted input is not used. The aim is to achieve a good design by changing the reconstruction principle for using
+denoising autoencoders. For achieving this denoising properly, the model requires to extract features that capture useful
+structure in the distribution of the input. Denoising autoencoders apply corrupted data through stochastic mapping. Our input is
+<span 
+class="cmmi-10">x </span>and corrupted data is <img 
+src="model-poission9x.png" alt="^x"  class="widetilde" > and stochastic mapping is <img 
+src="model-poission10x.png" alt="^x"  class="widetilde" > <span 
+class="cmsy-10">~ </span><span 
+class="cmmi-10">q</span><sub><span 
+class="cmmi-7">D</span></sub><span 
+class="cmr-10">(</span><img 
+src="model-poission11x.png" alt="^x"  class="widetilde" > <span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">x</span><span 
+class="cmr-10">)</span><span 
+class="cmmi-10">.</span>
+<p class="noindent" >As its a standard autoencoder, corrupted data <img 
+src="model-poission12x.png" alt="^x"  class="widetilde" > is mapped to a hidden layer.
+<p class="noindent" ><span 
+class="cmmi-10">h </span><span 
+class="cmr-10">= </span><span 
+class="cmmi-10">f</span><sub><span 
+class="cmmi-7">&#x03B8;</span></sub><span 
+class="cmr-10">(</span><img 
+src="model-poission13x.png" alt="^x"  class="widetilde" > <span 
+class="cmr-10">) = </span><span 
+class="cmmi-10">s</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">W</span><img 
+src="model-poission14x.png" alt="^x"  class="widetilde" > <span 
+class="cmr-10">+ </span><span 
+class="cmmi-10">b</span><span 
+class="cmr-10">)</span><span 
+class="cmmi-10">.</span>
+<p class="noindent" >And from this the model reconstructs <span 
+class="cmmi-10">z </span><span 
+class="cmr-10">= </span><span 
+class="cmmi-10">g</span><sub><span 
+class="cmmi-7">&#x03B8;</span></sub><span 
+class="cmsy-10">&#x2032;</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">)</span>.
+<p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">5.4.1    </span> <a 
+ id="x1-240005.4.1"></a>Multi-Class Logistic Regression of Denoising Autoencoder</h5>
+<p class="noindent" >In denoising autoencoder for multi-class logistic regression, the loss does not improve for each epoch. Although it starts better
+at lower epoch values, in the end, vanilla autoencoder seems to be better. Sparse autoencoder&#8217;s loss is slightly
+worse.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-24001r46"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/DAE/MCLR/Loss.png" alt="PIC"  
+width="234" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;46: </span><span  
+class="content">Optimized Relu Loss History for Denoising Autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-24002r47"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/DAE/MCLR/NonTargetedAttack.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;47: </span><span  
+class="content">Comparison of accuracy with and without denoising autoencoder for non-targeted attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >And just like sparse autoencoder, denoising autoencoder also applies a sharp perturbation, which is presented in Figure <a 
+href="#x1-24003r48">48</a> and
+Figure <a 
+href="#x1-24004r49">49</a>.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-24003r48"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/DAE/MCLR/PerturbationSuccess.png" alt="PIC"  
+width="352" height="352" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;48: </span><span  
+class="content">Value change and perturbation of a non-targeted attack on model without denoising autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-24004r49"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/DAE/MCLR/perturbationUnsuccess.png" alt="PIC"  
+width="352" height="352" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;49: </span><span  
+class="content">Value change and perturbation of a non-targeted attack on model with denoising autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >We observe that there is a similarity between accuracy results for denoising autoencoder with multi-class logistic regression and
+sparse autoencoder results. Natural fooling accuracy drops drastically in denoising autoencoder, but non-targeted and one
+targeted attack seem to be somewhat like sparse autoencoder, one targeted attack having less accuracy in denoising
+autoencoder.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-24005r50"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/DAE/MCLR/AllTargeted.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;50: </span><span  
+class="content">Comparison of accuracy with and without denoising autoencoder for targeted attacks. <span 
+class="ptmri8t-">AE stands for the</span>
+<span 
+class="ptmri8t-">models with denoising autoencoder, WO stands for models without autoencoder</span></span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h5 class="subsubsectionHead"><span class="titlemark">5.4.2    </span> <a 
+ id="x1-250005.4.2"></a>Neural Network of Denoising Autoencoder</h5>
+<p class="noindent" >We investigate that neural network accuracy for denoising autoencoder is worse than sparse autoencoder results and vanilla
+autoencoder results. It is still a useful autoencoder for denoising corrupted data and other purposes; however, it is not the right
+choice just for robustness against adversarial examples.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-25001r51"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/DAE/NN/CM/NN_WOAE-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/DAE/NN/CR/NN_WOAE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;51: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without denoising autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-25002r52"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/DAE/NN/CM/NN_AE-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/DAE/NN/CR/NN_AE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;52: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with denoising autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-25003r53"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/DAE/NN/CM/NN_WOAE_FGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/DAE/NN/CR/NN_WOAE_FGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;53: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without denoising autoencoder
+after FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-25004r54"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/DAE/NN/CM/NN_AE_FGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/DAE/NN/CR/NN_AE_FGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;54: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with denoising autoencoder after
+FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-25005r55"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/DAE/NN/CM/NN_WOAE_TFGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/DAE/NN/CR/NN_WOAE_TFGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;55: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without denoising autoencoder
+after T-FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-25006r56"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/DAE/NN/CM/NN_AE_TFGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/DAE/NN/CR/NN_AE_TFGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;56: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with denoising autoencoder after
+T-FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-25007r57"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/DAE/NN/CM/NN_WOAE_BIM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/DAE/NN/CR/NN_WOAE_BIM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;57: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without denoising autoencoder
+after basic iterative method attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-25008r58"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/DAE/NN/CM/NN_AE_BIM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/DAE/NN/CR/NN_AE_BIM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;58: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with denoising autoencoder after
+basic iterative method attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h4 class="subsectionHead"><span class="titlemark">5.5    </span> <a 
+ id="x1-260005.5"></a>Variational Autoencoder</h4>
+<p class="noindent" >In this study, we examine variational autoencoders as the final type of autoencoder type. The variational autoencoders have an
+encoder and a decoder, although their mathematical formulation differs significantly. They are associated with
+Generative Adversarial Networks due to their architectural similarity. In summary, variational autoencoders are also
+generative models. Differently, from sparse autoencoders, denoising autoencoders, and vanilla autoencoders, all
+of which aim discriminative modeling, generative modeling tries to simulate how the data can be generated
+and to understand the underlying causal relations. It also considers these causal relations when generating new
+data.
+<p class="noindent" >Variational autoencoders use an estimator algorithm called Stochastic Gradient Variational Bayes for training. This algorithm
+assumes the data is generated by <span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">&#x03B8;</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">) </span>which is a directed graphical model and <span 
+class="cmmi-10">&#x03B8; </span>being the parameters of decoder, in
+variational autoencoder&#8217;s case, the parameters of the generative model. The encoder is learning an approximation of <span 
+class="cmmi-10">q</span><sub><span 
+class="cmmi-7">&#x03D5;</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">x</span><span 
+class="cmr-10">) </span>to
+a posterior distribution which is showed by <span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">&#x03B8;</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">) </span>and <span 
+class="cmmi-10">&#x03D5; </span>being the parameters of the encoder; in variational
+autoencoder&#8217;s case, the parameters of recognition model. We will use Kullback-Leibler divergence again, showed as
+<span 
+class="cmmi-10">D</span><sub><span 
+class="cmmi-7">KL</span></sub>.
+<p class="noindent" ><span 
+class="cmmi-10">L </span><span 
+class="cmr-10">= (</span><span 
+class="cmmi-10">&#x03D5;,&#x03B8;,x</span><span 
+class="cmr-10">) = </span><span 
+class="cmmi-10">D</span><sub><span 
+class="cmmi-7">KL</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">q</span><sub><span 
+class="cmmi-7">&#x03D5;</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">x</span><span 
+class="cmr-10">)</span><span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">&#x03B8;</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">)) </span><span 
+class="cmsy-10">- </span><span 
+class="msbm-10">E</span><sub><span 
+class="cmmi-7">q</span><sub><span 
+class="cmmi-5">&#x03D5;</span></sub><span 
+class="cmr-7">(</span><span 
+class="cmmi-7">h</span><span 
+class="cmsy-7">|</span><span 
+class="cmmi-7">x</span><span 
+class="cmr-7">)</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">logp</span><sub><span 
+class="cmmi-7">&#x03B8;</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">))</span>.
+<p class="noindent" >Variational and likelihood distributions&#8217; shape is chosen by factorized Gaussians. The encoder outputs are <span 
+class="cmmi-10">p</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><span 
+class="cmr-10">)</span>
+and <span 
+class="cmmi-10">w</span><sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><span 
+class="cmr-10">)</span>. The decoder outputs are <span 
+class="cmmi-10">&#x03BC;</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">) </span>and <span 
+class="cmmi-10">&#x03C3;</span><sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">)</span>. The likelihood term of variational objective is defined
+below.
+<p class="noindent" ><span 
+class="cmmi-10">q</span><sub><span 
+class="cmmi-7">&#x03D5;</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">x</span><span 
+class="cmr-10">) = </span><span 
+class="cmmi-10">N</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">p</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><span 
+class="cmr-10">)</span><span 
+class="cmmi-10">,w</span><sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><span 
+class="cmr-10">)</span><span 
+class="cmmi-10">I</span><span 
+class="cmr-10">)</span>
+<p class="noindent" ><span 
+class="cmmi-10">p</span><sub><span 
+class="cmmi-7">&#x03B8;</span></sub><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">x</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">) = </span><span 
+class="cmmi-10">N</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">&#x03BC;</span><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">)</span><span 
+class="cmmi-10">,&#x03C3;</span><sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmr-10">(</span><span 
+class="cmmi-10">h</span><span 
+class="cmr-10">)</span><span 
+class="cmmi-10">I</span><span 
+class="cmr-10">)</span>
+<p class="noindent" >
+<h5 class="subsubsectionHead"><span class="titlemark">5.5.1    </span> <a 
+ id="x1-270005.5.1"></a>Multi-Class Logistic Regression of Variational Autoencoder</h5>
+<p class="noindent" >The findings from Figure <a 
+href="#x1-27001r59">59</a> show that variational autoencoder indicates the best loss function result. However, Figure <a 
+href="#x1-27002r60">60</a>
+presents that the accuracy is low, especially in low epsilon values where even autoencoded data gives worse accuracy than the
+normal learning process.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-27001r59"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/MCLR/Loss.png" alt="PIC"  
+width="234" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;59: </span><span  
+class="content">Optimized Relu Loss History for Variational Autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-27002r60"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/MCLR/NonTargeted.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;60: </span><span  
+class="content">Comparison of accuracy with and without variational autoencoder for non-targeted attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >Perturbation applied by variational autoencoder is not as sharp in sparse autoencoder and denoising autoencoder. It seems
+similar to vanilla autoencoder&#8217;s perturbation.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-27003r61"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/MCLR/Perturbation.png" alt="PIC"  
+width="352" height="352" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;61: </span><span  
+class="content">Value change and perturbation of a non-targeted attack on model without variational autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-27004r62"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/MCLR/perturbationUnsuccess.png" alt="PIC"  
+width="352" height="352" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;62: </span><span  
+class="content">Value change and perturbation of a non-targeted attack on model with variational autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" >The variational autoencoder has the worst results. Besides, it presents bad results at the low values of epsilon, making
+autoencoded data less accurate and only a slight improvement compared to the normal data in high values of
+epsilon.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-27005r63"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/MCLR/AllTargeted.png" alt="PIC"  
+width="469" height="469" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;63: </span><span  
+class="content">Comparison of accuracy with and without variational autoencoder for targeted attacks. <span 
+class="ptmri8t-">AE stands for the</span>
+<span 
+class="ptmri8t-">models with variational autoencoder, WO stands for models without autoencoder</span></span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-27006r64"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/MCLR/clusters.png" alt="PIC"  
+width="234" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;64: </span><span  
+class="content">Because of Mnist dataset, our latent space is two-dimensional. One is to look at the neighborhoods of
+different classes on the latent 2D plane. Each of these colored clusters are a type of digit. Close clusters are digits that
+are structurally similar, they are digits that share information in the latent space.</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-27007r65"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/MCLR/gan.png" alt="PIC"  
+width="234" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;65: </span><span  
+class="content">Due to VAE is a generative model, we can also generate new Mnist digits using latent plane, sampling
+latent points at regular intervals, and generating the corresponding digit for each of these points.</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h5 class="subsubsectionHead"><span class="titlemark">5.5.2    </span> <a 
+ id="x1-280005.5.2"></a>Neural Network of Variational Autoencoder</h5>
+<p class="noindent" >Variational autoencoder with neural networks also illustrates the worst results compared to other autoencoder types, where the
+accuracy for autoencoded data against an attack has around between 0.96 and 0.99 accuracies, variational autoencoder has
+around between 0.65 and 0.70 accuracies.
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28001r66"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/VAE/NN/CM/NN_WOAE-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/VAE/NN/CR/NN_WOAE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;66: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without variational autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28002r67"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/VAE/NN/CM/NN_AE-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/VAE/NN/CR/NN_AE-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;67: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with variational autoencoder</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28003r68"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/VAE/NN/CM/NN_WOAE_FGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/VAE/NN/CR/NN_WOAE_FGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;68: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without variational autoencoder
+after FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28004r69"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/VAE/NN/CM/NN_AE_FGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/VAE/NN/CR/NN_AE_FGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;69: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with variational autoencoder after
+FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28005r70"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/VAE/NN/CM/NN_WOAE_TFGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/VAE/NN/CR/NN_WOAE_TFGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;70: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without variational autoencoder
+after T-FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28006r71"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/VAE/NN/CM/NN_AE_TFGSM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/VAE/NN/CR/NN_AE_TFGSM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;71: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with variational autoencoder after
+T-FGSM attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28007r72"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/VAE/NN/CM/NN_WOAE_BIM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/VAE/NN/CR/NN_WOAE_BIM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;72: </span><span  
+class="content">Confusion matrix and classification report of the neural network model without variational autoencoder
+after basic iterative method attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28008r73"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" > <img 
+src="./Imgs/VAE/NN/CM/NN_AE_BIM-.png" alt="PIC"  
+width="40" height="40" >  <img 
+src="./Imgs/VAE/NN/CR/NN_AE_BIM-.png" alt="PIC"  
+width="36" height="36" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;73: </span><span  
+class="content">Confusion matrix and classification report of the neural network model with variational autoencoder after
+basic iterative method attack</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28009r74"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/NN/clusters.png" alt="PIC"  
+width="234" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;74: </span><span  
+class="content">Because of MNIST dataset, our latent space is two-dimensional. One is to look at the neighborhoods of
+different classes on the latent 2D plane. Each of these colored clusters are a type of digit. Close clusters are digits that
+are structurally similar, they are digits that share information in the latent space.</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-28010r75"></a>
+                                                                                         
+                                                                                         
+<p class="noindent" ><img 
+src="./Imgs/VAE/NN/gan.png" alt="PIC"  
+width="234" height="234" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;75: </span><span  
+class="content">Due to VAE is a generative model, we can also generate new Mnist digits using latent plane, sampling
+latent points at regular intervals, and generating the corresponding digit for each of these points.</span></div>
+                                                                                         
+                                                                                         
+<p class="noindent" ></div><hr class="endfigure">
+<h3 class="sectionHead"><span class="titlemark">6    </span> <a 
+ id="x1-290006"></a>Conclusion</h3>
+<p class="noindent" >In this paper, we have presented the results for pre-filtering the data with an autoencoder before sending it to the machine
+learning model against adversarial machine learning attacks. We have investigated that the classifier accuracy changes for
+linear and neural network machine learning models. We have also applied non-targeted and targeted attacks to
+multi-class logistic regression. Besides, FGSM, T-FGSM, and BIM attacks have been applied to the neural
+network machine learning model. The effects of these attacks on implementing autoencoder as a filter have been
+analyzed for both machine learning models. We have observed that the robustness provided by autoencoder
+after adversarial attacks can be seen by accuracy drop between 0.1 and 0.2 percent while the models without
+autoencoder suffered tremendous accuracy drops hitting accuracy score between 0.6 and 0.3 in some cases
+even 0.1. We have proposed general, generic, and easy to implement protection against adversarial machine
+learning model attacks. It will be beneficial to remind that all autoencoders in this study were trained with the
+epoch of 35 with 1024 sized batches, so the results can be improved by increasing the number of epochs. In
+conclusion, we have discussed that autoencoders provide robustness against adversarial machine learning attacks
+to machine learning models for both linear models and neural network models. We have examined the other
+types of autoencoders, which are mostly called vanilla autoencoders, give the best results. The second most
+accurate autoencoder type is sparse autoencoders, and the third most accurate is denoising autoencoders, which
+gives similar results with the sparse autoencoders. We have observed that the worst autoencoder type for this
+process is variational autoencoders because variational autoencoders are generative models used in different
+areas.
+<p class="noindent" >In summary, the natural practice of implementing an autoencoder between data and machine learning models can provide
+considerable defense and robustness against attacks. These autoencoders can be easily implemented with libraries such as
+TensorFlow and Keras. Through the results of this review, it is evident that autoencoders can be used in any machine learning
+model easily because of their implementation as a separate layer.
+<p class="noindent" >
+<h4 class="likesubsectionHead"><a 
+ id="x1-300006"></a>Acknowledgement</h4>
+<p class="noindent" >Acknowledgement text.
+<p class="noindent" >
+<h3 class="likesectionHead"><a 
+ id="x1-310006"></a>References</h3>
+<p class="noindent" >
+    <div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper18"></a>[1] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>O.&#x00A0;Vinyals, I.&#x00A0;Babuschkin, W.&#x00A0;M. Czarnecki, M.&#x00A0;Mathieu, A.&#x00A0;Dudzik, J.&#x00A0;Chung, D.&#x00A0;H. Choi, R.&#x00A0;Powell,
+    T.&#x00A0;Ewalds,  P.&#x00A0;Georgiev,  <span 
+class="ptmri8t-">et</span><span 
+class="ptmri8t-">&#x00A0;al.</span>,  &#8220;Grandmaster  level  in  starcraft  ii  using  multi-agent  reinforcement  learning,&#8221;
+    <span 
+class="ptmri8t-">Nature</span>, vol.&#x00A0;575, no.&#x00A0;7782, pp.&#x00A0;350&#8211;354, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper17"></a>[2] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>F.&#x00A0;S. Board, &#8220;Artificial intelligence and machine learning in financial services: Market developments and
+    financial stability implications,&#8221; <span 
+class="ptmri8t-">Financial Stability Board</span>, p.&#x00A0;45, 2017.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper20"></a>[3] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>H.&#x00A0;Z.  S.  S.  T.  K.&#x00A0;J.  Saito,  &#8220;Mode-adaptive  neural  networks  for  quadruped  motion  control,&#8221;  <span 
+class="ptmri8t-">ACM  Trans.</span>
+    <span 
+class="ptmri8t-">Graph.</span>, vol.&#x00A0;37, pp.&#x00A0;145:1&#8211;145:11, July 2018.
+                                                                                         
+                                                                                         
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper19"></a>[4] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>T.-C. Wang, M.-Y. Liu, A.&#x00A0;Tao, G.&#x00A0;Liu, J.&#x00A0;Kautz, and B.&#x00A0;Catanzaro, &#8220;Few-shot video-to-video synthesis,&#8221;
+    <span 
+class="ptmri8t-">arXiv preprint arXiv:1910.12713</span>, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper21"></a>[5] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>M.&#x00A0;Bakator and D.&#x00A0;Radosav, &#8220;Deep learning and medical diagnosis: A review of literature,&#8221; <span 
+class="ptmri8t-">Multimodal</span>
+    <span 
+class="ptmri8t-">Technologies and Interaction</span>, vol.&#x00A0;2, p.&#x00A0;47, 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper31"></a>[6] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>B.&#x00A0;Baker, I.&#x00A0;Kanitscheider, T.&#x00A0;Markov, Y.&#x00A0;Wu, G.&#x00A0;Powell, B.&#x00A0;McGrew, and I.&#x00A0;Mordatch, &#8220;Emergent tool
+    use from multi-agent autocurricula,&#8221; <span 
+class="ptmri8t-">arXiv preprint arXiv:1909.07528</span>, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper22"></a>[7] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>A.&#x00A0;Siddiqi, &#8220;Adversarial security attacks and perturbations on machine learning and deep learning methods,&#8221;
+    <span 
+class="ptmri8t-">CoRR</span>, July 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper23"></a>[8] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>K.&#x00A0;A. R.&#x00A0;T. Kolagari and M.&#x00A0;Zoppelt, &#8220;Attacks on machine learning: Lurking danger for accountability,&#8221;
+    <span 
+class="ptmri8t-">CoRR</span>, Jan. 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ <a 
+ id="Xpaper24"></a>[9] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>M.&#x00A0;Jagielski, A.&#x00A0;Oprea, B.&#x00A0;Biggio, C.&#x00A0;Liu, C.&#x00A0;Nita-Rotaru, and B.&#x00A0;Li, &#8220;Manipulating machine learning:
+    Poisoning  attacks  and  countermeasures  for  regression  learning,&#8221;  in  <span 
+class="ptmri8t-">2018  IEEE  Symposium  on  Security  and</span>
+    <span 
+class="ptmri8t-">Privacy (SP)</span>, pp.&#x00A0;19&#8211;35, 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper41"></a>[10] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>S.&#x00A0;P. H. R. S. L.&#x00A0;S. Lee and J.&#x00A0;Lee, &#8220;Learning predict-and-simulate policies from unorganized human motion
+    data,&#8221; <span 
+class="ptmri8t-">ACM Transactions on Graphics</span>, vol.&#x00A0;38, pp.&#x00A0;1&#8211;11, Nov. 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper42"></a>[11] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>L.&#x00A0;Y.  Z.  S.&#x00A0;Y.  Zheng  and  K.&#x00A0;Zhou,  &#8220;Dynamic  hair  modeling  from  monocular  videos  using  deep  neural
+    networks,&#8221; <span 
+class="ptmri8t-">ACM Trans. Graph.</span>, vol.&#x00A0;38, pp.&#x00A0;235:1&#8211;235:12, Nov. 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper1"></a>[12] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>N.&#x00A0;Carlini   and   D.&#x00A0;A.   Wagner,   &#8220;Towards   evaluating   the   robustness   of   neural   networks,&#8221;   <span 
+class="ptmri8t-">CoRR</span>,
+    vol.&#x00A0;abs/1608.04644, 2016.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper2"></a>[13] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>A.&#x00A0;A.&#x00A0;N. Carlini and D.&#x00A0;A. Wagner, &#8220;Obfuscated gradients give a false sense of security: Circumventing
+    defenses to adversarial examples,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1802.00420, Feb. 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper3"></a>[14] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>A.&#x00A0;M. A. M. L. S.&#x00A0;D. Tsipras and A.&#x00A0;Vladu, &#8220;Towards deep learning models resistant to adversarial attacks,&#8221;
+    <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1706.06083, 2017.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper25"></a>[15] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>A.&#x00A0;E. R. T. S. G. M. P. M. C. S. Z. N.&#x00A0;O. Tippenhauer, &#8220;Real-time evasion attacks with physical constraints
+    on deep learning-based anomaly detectors in industrial control systems,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1907.07487, July 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper26"></a>[16] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>M.&#x00A0;J.  B.  G.  A.&#x00A0;N.  Asokan,  &#8220;Making  targeted  black-box  evasion  attacks  effective  and  efficient,&#8221;  <span 
+class="ptmri8t-">CoRR</span>,
+    vol.&#x00A0;abs/1906.03397, 2019.
+    </p>
+                                                                                         
+                                                                                         
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper27"></a>[17] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>A.&#x00A0;C. A. O.&#x00A0;C. Nita-Rotaru and B.&#x00A0;Kim, &#8220;Are self-driving cars secure? evasion attacks against deep neural
+    networks for steering angle prediction,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1904.07370, Apr. 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper4"></a>[18] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>L.&#x00A0;H. A. D. J. B. N.&#x00A0;B. Rubinstein and J.&#x00A0;D. Tygar, &#8220;Adversarial machine learning,&#8221; in <span 
+class="ptmri8t-">Proceedings of the</span>
+    <span 
+class="ptmri8t-">4th ACM Workshop on Security and Artificial Intelligence</span>, AISec &#8217;11, (New York, NY, USA), pp.&#x00A0;43&#8211;58, ACM,
+    Oct. 2011.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper40"></a>[19] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>X.&#x00A0;Y. P. H. Q. Z. R.&#x00A0;R. Bhat and X.&#x00A0;Li, &#8220;Adversarial examples: Attacks and defenses for deep learning,&#8221;
+    <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1712.07107, July 2017.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xourpaper1"></a>[20] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>S.&#x00A0;Sivasl<img 
+src="ptmr8t-19.png" alt="i" class="x-x-19" />oglu,  F.&#x00A0;O.  Catak,  and  E.&#x00A0;Gul,  &#8220;Incrementing  adversarial  robustness  with  autoencoding  for
+    machine learning model attacks,&#8221; in <span 
+class="ptmri8t-">2019 27th Signal Processing and Communications Applications Conference</span>
+    <span 
+class="ptmri8t-">(SIU)</span>, pp.&#x00A0;1&#8211;4, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xourpaper2"></a>[21] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>M.&#x00A0;Aladag, F.&#x00A0;O. Catak, and E.&#x00A0;Gul, &#8220;Preventing data poisoning attacks by using generative models,&#8221; in
+    <span 
+class="ptmri8t-">2019 1st International Informatics and Software Engineering Conference (UBMYK)</span>, pp.&#x00A0;1&#8211;5, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper28"></a>[22] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>J.&#x00A0;G. Y. Z. X. H.&#x00A0;Y. Jiang and J.&#x00A0;Sun, &#8220;Rnn-test: Adversarial testing framework for recurrent neural network
+    systems,&#8221; <span 
+class="ptmri8t-">CoRR</span>, Nov. 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper29"></a>[23] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>M.&#x00A0;Isakov,  V.&#x00A0;Gadepally,  K.&#x00A0;M.  Gettings,  and  M.&#x00A0;A.  Kinsy,  &#8220;Survey  of  attacks  and  defenses  on
+    edge-deployed  neural  networks,&#8221;  in  <span 
+class="ptmri8t-">2019  IEEE  High  Performance  Extreme  Computing  Conference  (HPEC)</span>,
+    pp.&#x00A0;1&#8211;8, 2019.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper5"></a>[24] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>B.&#x00A0;Li and Y.&#x00A0;Vorobeychik, &#8220;Evasion-robust classification on binary domains,&#8221; <span 
+class="ptmri8t-">ACM Trans. Knowl. Discov.</span>
+    <span 
+class="ptmri8t-">Data</span>, vol.&#x00A0;12, no.&#x00A0;4, pp.&#x00A0;50:1&#8211;50:32, 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper6"></a>[25] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>K.&#x00A0;Y. X. V. T. N.&#x00A0;M. Shafiullah and A.&#x00A0;Madry, &#8220;Training for faster adversarial robustness verification via
+    inducing relu stability,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1809.03008, Sept. 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper7"></a>[26] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>F.&#x00A0;Y. C. L. Y. W.&#x00A0;L. Zhao and X.&#x00A0;Chen, &#8220;Interpreting adversarial robustness: A view from decision surface
+    in input space,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1810.00144, Sept. 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper8"></a>[27] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>L.&#x00A0;P.   J.   D.&#x00A0;R.   Sukthankar   and   A.&#x00A0;Gupta,   &#8220;Robust   adversarial   reinforcement   learning,&#8221;   <span 
+class="ptmri8t-">CoRR</span>,
+    vol.&#x00A0;abs/1703.02702, Mar. 2017.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper9"></a>[28] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>S.&#x00A0;Harding, P.&#x00A0;Rajivan, B.&#x00A0;I. Bertenthal, and C.&#x00A0;Gonzalez, &#8220;Human decisions on targeted and non-targeted
+    adversarial sample.,&#8221; in <span 
+class="ptmri8t-">CogSci</span>, 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper12"></a>[29] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>W.&#x00A0;Bai,  C.&#x00A0;Quan,  and  Z.&#x00A0;Luo,  &#8220;Alleviating  adversarial  attacks  via  convolutional  autoencoder,&#8221;  in  <span 
+class="ptmri8t-">2017</span>
+    <span 
+class="ptmri8t-">18th  IEEE/ACIS  International  Conference  on  Software  Engineering,  Artificial  Intelligence,  Networking  and</span>
+    <span 
+class="ptmri8t-">Parallel/Distributed Computing (SNPD)</span>, pp.&#x00A0;53&#8211;58, IEEE, 2017.
+                                                                                         
+                                                                                         
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper13"></a>[30] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>R.&#x00A0;S.&#x00A0;R. Mahfuz and A.&#x00A0;E. Gamal, &#8220;Combatting adversarial attacks through denoising and dimensionality
+    reduction: A cascaded autoencoder approach,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1812.03087, Dec. 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper15"></a>[31] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>I.&#x00A0;Chen and B.&#x00A0;Sirkeci-Mergen, &#8220;A comparative study of autoencoders against adversarial attacks,&#8221; <span 
+class="ptmri8t-">nt&#8217;l Conf.</span>
+    <span 
+class="ptmri8t-">IP, Comp. Vision, and Pattern Recognition</span>, 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper14"></a>[32] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>
+    G.&#x00A0;G.&#x00A0;P. Tabacof and E.&#x00A0;Valle, &#8220;Adversarial attacks on variational autoencoders,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1806.04646,
+    2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper10"></a>[33] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>S.&#x00A0;Y.   J.&#x00A0;C.   Príncipe,   &#8220;Understanding   autoencoders   with   information   theoretic   concepts,&#8221;   <span 
+class="ptmri8t-">CoRR</span>,
+    vol.&#x00A0;abs/1804.00057, Mar. 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper11"></a>[34] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>A.&#x00A0;K. I. J. G. S. B. Y. D. F. L. M. L. T. P. J. Z. X. H. C. X. J. W. Z. Z. Z. R. A. L. Y. S. H. Y. Z. Y. Z. Z. H. J. L.
+    Y. B. T. A.&#x00A0;S. Tokui and M.&#x00A0;Abe, &#8220;Adversarial attacks and defences competition,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1804.00097,
+    Mar. 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper16"></a>[35] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>I.&#x00A0;J.  Goodfellow,  J.&#x00A0;Shlens,  and  C.&#x00A0;Szegedy,  &#8220;Explaining  and  harnessing  adversarial  examples,&#8221;  <span 
+class="ptmri8t-">arXiv</span>
+    <span 
+class="ptmri8t-">preprint arXiv:1412.6572</span>, 2014.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper32"></a>[36] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>J.&#x00A0;Han and C.&#x00A0;Moraga, &#8220;The influence of the sigmoid function parameters on the speed of backpropagation
+    learning,&#8221; in <span 
+class="ptmri8t-">International Workshop on Artificial Neural Networks</span>, pp.&#x00A0;195&#8211;201, Springer, 1995.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper33"></a>[37] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>A.&#x00A0;F. Agarap, &#8220;Deep learning using rectified linear units (relu),&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1803.08375, 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper30"></a>[38] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>J.&#x00A0;Schmidhuber, &#8220;Deep learning in neural networks: An overview,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1404.7828, Apr. 2014.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper34"></a>[39] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>C.&#x00A0;N.  W.  I.&#x00A0;A.  Gachagan  and  S.&#x00A0;Marshall,  &#8220;Activation  functions:  Comparison  of  trends  in  practice  and
+    research for deep learning,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1811.03378, Nov. 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper35"></a>[40] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>F.&#x00A0;C. N. C.&#x00A0;H. Mao and H.&#x00A0;Hu, &#8220;Assessing four neural networks on handwritten digit recognition dataset
+    (MNIST),&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1811.08278, Nov. 2018.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper38"></a>[41] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>D.-A. Clevert, T.&#x00A0;Unterthiner, and S.&#x00A0;Hochreiter, &#8220;Fast and accurate deep network learning by exponential
+    linear units (elus),&#8221; <span 
+class="ptmri8t-">arXiv preprint arXiv:1511.07289</span>, 2015.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper39"></a>[42] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>H.&#x00A0;Zheng, Z.&#x00A0;Yang, W.&#x00A0;Liu, J.&#x00A0;Liang, and Y.&#x00A0;Li, &#8220;Improving deep neural networks using softplus units,&#8221; in
+    <span 
+class="ptmri8t-">2015 International Joint Conference on Neural Networks (IJCNN)</span>, pp.&#x00A0;1&#8211;4, IEEE, 2015.
+    </p>
+                                                                                         
+                                                                                         
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper37"></a>[43] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>D.&#x00A0;Kingma and J.&#x00A0;Ba, &#8220;Adam: A method for stochastic optimization,&#8221; <span 
+class="ptmri8t-">International Conference on Learning</span>
+    <span 
+class="ptmri8t-">Representations</span>, Dec. 2014.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpaper36"></a>[44] <span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>Z.&#x00A0;Zhang and M.&#x00A0;R. Sabuncu, &#8220;Generalized cross entropy loss for training deep neural networks with noisy
+    labels,&#8221; <span 
+class="ptmri8t-">CoRR</span>, vol.&#x00A0;abs/1805.07836, May 2018.
+</p>
+    </div>
+ 
+</body></html> 
+
+                                                                                         
+
+

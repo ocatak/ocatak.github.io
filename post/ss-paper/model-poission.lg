@@ -1,0 +1,392 @@
+htfcss: ptmri8t font-style: italic;
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
+htfcss: ptmb8t   font-weight: bold;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ptmbi8t  font-weight: bold;   font-style: italic;
+htfcss: ptmbc8t  font-weight: bold;
+htfcss: ecbx  font-weight: bold;
+htfcss: ecsx  font-weight: bold;
+htfcss: ecbi  font-weight: bold;   font-style: italic;
+htfcss: ecit  font-style: italic; font-family: monospace,monospace;
+htfcss: ecss  font-family: sans-serif;
+htfcss: ecff  font-family: fantasy;
+htfcss: ecti  font-style: italic;
+htfcss: ectt  font-family: monospace,monospace;
+htfcss: ptmb8t   font-weight: bold;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+File: model-poission.html
+File: model-poission.css
+File: model-poission.tmp
+Font_Class(4,"4"): <span  class="small-caps"></span>
+Font_Class(1,"1"): <img  src="" alt="" class="%s-%dx-x-%x" />
+Css: p{margin-top:0;margin-bottom:0}
+Css: p.indent{text-indent:0;}
+Css: p + p{margin-top:1em;}
+Css: p + div, p + pre {margin-top:1em;}
+Css: div + p, pre + p {margin-top:1em;}
+Css: @media print {div.crosslinks {visibility:hidden;}}
+Css: a img { border-top: 0; border-left: 0; border-right: 0; }
+Font_Css("4"): .small-caps{font-variant: small-caps; }
+Font_Css("10"): .htf-cmbx {font-weight: bold; font-style:normal;}
+Font_Css("12"): .htf-calligraphy {font-family:cursive}
+Font_Css("14"): .htf-italic {font-style: italic;}
+Font_Css("16"): .htf-bold {font-weight: bold;}
+Font_Css("12"): .htf-calligraphy-bold {font-family:cursive ; font-weight: bold; }
+Css: center { margin-top:1em; margin-bottom:1em; }
+Css: td center { margin-top:0em; margin-bottom:0em; }
+Css: .Canvas { position:relative; }
+Css: img.math{vertical-align:middle;}
+Css: li p.indent { text-indent: 0em }
+Css: li p:first-child{ margin-top:0em; }
+Css: li p:last-child, li div:last-child { margin-bottom:0.5em; }
+Css: li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+Css: .enumerate1 {list-style-type:decimal;}
+Css: .enumerate2 {list-style-type:lower-alpha;}
+Css: .enumerate3 {list-style-type:lower-roman;}
+Css: .enumerate4 {list-style-type:upper-alpha;}
+Css: div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+Css: .obeylines-h,.obeylines-v {white-space: nowrap; }
+Css: div.obeylines-v p { margin-top:0; margin-bottom:0; }
+Css: .overline{ text-decoration:overline; }
+Css: .overline img{ border-top: 1px solid black; }
+Css: td.displaylines {text-align:center; white-space:nowrap;}
+Css: .centerline {text-align:center;}
+Css: .rightline {text-align:right;}
+Css: div.verbatim {font-family: monospace,monospace; white-space: nowrap; text-align:left; clear:both; }
+Css: .fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.fbox {display:table}
+Css: div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: div.minipage{width:100%;}
+Css: div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+Css: div.center div {text-align: left;}
+Css: div.flushright, div.flushright div.flushright {text-align: right;}
+Css: div.flushright div {text-align: left;}
+Css: div.flushleft {text-align: left;}
+Css: .underline{ text-decoration:underline; }
+Css: .underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+Css: .framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+Css: .framebox-c {text-align:center;}
+Css: .framebox-l {text-align:left;}
+Css: .framebox-r {text-align:right;}
+Css: span.thank-mark{ vertical-align: super }
+Css: span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+Css: div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+Css: table.tabular td p{margin-top:0em;}
+Css: table.tabular {margin-left: auto; margin-right: auto;}
+Css: td p:first-child{ margin-top:0em; }
+Css: td p:last-child{ margin-bottom:0em; }
+Css: div.td00{ margin-left:0pt; margin-right:0pt; }
+Css: div.td01{ margin-left:0pt; margin-right:5pt; }
+Css: div.td10{ margin-left:5pt; margin-right:0pt; }
+Css: div.td11{ margin-left:5pt; margin-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: td.td00{ padding-left:0pt; padding-right:0pt; }
+Css: td.td01{ padding-left:0pt; padding-right:5pt; }
+Css: td.td10{ padding-left:5pt; padding-right:0pt; }
+Css: td.td11{ padding-left:5pt; padding-right:5pt; }
+Css: table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+Css: .hline hr, .cline hr{ height : 0px; margin:0px; }
+Css: .hline td, .cline td{ padding: 0; }
+Css: .hline hr, .cline hr{border:none;border-top:1px solid black;}
+Css: .tabbing-right {text-align:right;}
+Css: div.float, div.figure {margin-left: auto; margin-right: auto;}
+Css: div.float img {text-align:center;}
+Css: div.figure img {text-align:center;}
+Css: .marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+Css: .marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+Css: .reversemarginpar{float:left;}
+Css: table.equation {width:100%;}
+Css: .equation td{text-align:center; }
+Css: td.equation { margin-top:1em; margin-bottom:1em; } 
+Css: td.equation-label { width:5%; text-align:center; }
+Css: td.eqnarray4 { width:5%; white-space: normal; }
+Css: td.eqnarray2 { width:5%; }
+Css: table.eqnarray-star, table.eqnarray {width:100%;}
+Css: div.eqnarray{text-align:center;}
+Css: div.array {text-align:center;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.pmatrix img{vertical-align:middle;}
+Css: div.pmatrix {text-align:center;}
+Css: table.pmatrix {width:100%;}
+Css: span.bar-css {text-decoration:overline;}
+Css: img.cdots{vertical-align:middle;}
+Css: .partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+Css: .index-item, .index-subitem, .index-subsubitem {display:block}
+Css: div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:left;}
+Css: div.caption span.id{font-weight: bold; white-space: nowrap; }
+Css: h1.partHead{text-align: center}
+Css: p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+Css: .paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+Css: .subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+Css: .quote {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; margin-right:1em; text-align:justify;}
+Css: .verse{white-space:nowrap; margin-left:2em}
+Css: div.maketitle {text-align:center;}
+Css: h2.titleHead{text-align:center;}
+Css: div.maketitle{ margin-bottom: 2em; }
+Css: div.author, div.date {text-align:center;}
+Css: div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+Css: div.author{white-space: nowrap;}
+Css: .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
+Css: .abstract p {margin-left:5%; margin-right:5%;}
+Css: div.abstract {width:100%;}
+Css: .rotatebox{display: inline-block;}
+Css: .figure img.graphics {margin-left:10%;}
+Css: .subfigcaption {margin-top:1em; margin-left:1em; text-align:center;}
+Css: div.subfigure {text-align:center;display:inline-block;}
+Css: #TBL-4 colgroup{border-left: 1px solid black;border-right:1px solid black;}
+Css: #TBL-4{border-collapse:collapse;}
+Css: #TBL-4 colgroup{border-left: 1px solid black;border-right:1px solid black;}
+Css: #TBL-4{border-collapse:collapse;}
+Css: #TBL-4 colgroup{border-left: 1px solid black;border-right:1px solid black;}
+Css: #TBL-4{border-collapse:collapse;}
+Css: #TBL-4 colgroup{border-left: 1px solid black;border-right:1px solid black;}
+Css: #TBL-4{border-collapse:collapse;}
+l. 177 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/autoencoder1-.png" "./Imgs/AE/MCLR/autoencoder1.pdf" " ---
+File: ./Imgs/AE/MCLR/autoencoder1-.png
+l. 216 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/autoencoder2-.png" "./Imgs/AE/MCLR/autoencoder2.pdf" " ---
+File: ./Imgs/AE/MCLR/autoencoder2-.png
+File: ./Imgs/AE/MCLR/autoencodedMnist.png
+l. 238 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/diyagram2-.png" "./Imgs/AE/MCLR/diyagram2.pdf" " ---
+File: ./Imgs/AE/MCLR/diyagram2-.png
+l. 249 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/allRelu.png" "./Imgs/AE/MCLR/allRelu.eps" " ---
+File: ./Imgs/AE/MCLR/allRelu.png
+l. 251 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/allSigmoid.png" "./Imgs/AE/MCLR/allSigmoid.eps" " ---
+File: ./Imgs/AE/MCLR/allSigmoid.png
+l. 253 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/allSoftSign.png" "./Imgs/AE/MCLR/allSoftSign.eps" " ---
+File: ./Imgs/AE/MCLR/allSoftSign.png
+l. 255 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/allTanh.png" "./Imgs/AE/MCLR/allTanh.eps" " ---
+File: ./Imgs/AE/MCLR/allTanh.png
+l. 267 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/allOptimizedRelu.png" "./Imgs/AE/MCLR/allOptimizedRelu.eps" " ---
+File: ./Imgs/AE/MCLR/allOptimizedRelu.png
+l. 296 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/WithoutAttack_WOAE_MCLR-.png" "./Imgs/AE/MCLR/WithoutAttack_WOAE_MCLR.pdf" " ---
+File: ./Imgs/AE/MCLR/WithoutAttack_WOAE_MCLR-.png
+l. 304 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/WithoutAttack_AE_MCLR-.png" "./Imgs/AE/MCLR/WithoutAttack_AE_MCLR.pdf" " ---
+File: ./Imgs/AE/MCLR/WithoutAttack_AE_MCLR-.png
+l. 312 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/Non_Targeted_WO-.png" "./Imgs/AE/MCLR/Non_Targeted_WO.pdf" " ---
+File: ./Imgs/AE/MCLR/Non_Targeted_WO-.png
+l. 320 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/Non_Targeted_AE-.png" "./Imgs/AE/MCLR/Non_Targeted_AE.pdf" " ---
+File: ./Imgs/AE/MCLR/Non_Targeted_AE-.png
+File: ./Imgs/AE/MCLR/Perturbasyon.png
+File: ./Imgs/AE/MCLR/PerturbasyonUnsuccessful.png
+l. 349 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/nontargetedAttack.png" "./Imgs/AE/MCLR/nontargetedAttack.eps" " ---
+File: ./Imgs/AE/MCLR/nontargetedAttack.png
+l. 355 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/nontargetedAttackOnlyAutoEncoder.png" "./Imgs/AE/MCLR/nontargetedAttackOnlyAutoEncoder.eps" " ---
+File: ./Imgs/AE/MCLR/nontargetedAttackOnlyAutoEncoder.png
+l. 368 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/Heatmap.png" "./Imgs/AE/MCLR/Heatmap.eps" " ---
+File: ./Imgs/AE/MCLR/Heatmap.png
+l. 380 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/targetValues-.png" "./Imgs/AE/MCLR/targetValues.pdf" " ---
+File: ./Imgs/AE/MCLR/targetValues-.png
+l. 388 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/Natural_WO-.png" "./Imgs/AE/MCLR/Natural_WO.pdf" " ---
+File: ./Imgs/AE/MCLR/Natural_WO-.png
+l. 395 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/Natural_AE-.png" "./Imgs/AE/MCLR/Natural_AE.pdf" " ---
+File: ./Imgs/AE/MCLR/Natural_AE-.png
+l. 402 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/NonNatural_WO-.png" "./Imgs/AE/MCLR/NonNatural_WO.pdf" " ---
+File: ./Imgs/AE/MCLR/NonNatural_WO-.png
+l. 409 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/NonNatural_AE-.png" "./Imgs/AE/MCLR/NonNatural_AE.pdf" " ---
+File: ./Imgs/AE/MCLR/NonNatural_AE-.png
+l. 416 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/One_Target_WO-.png" "./Imgs/AE/MCLR/One_Target_WO.pdf" " ---
+File: ./Imgs/AE/MCLR/One_Target_WO-.png
+l. 423 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/MCLR/One_Target_AE-.png" "./Imgs/AE/MCLR/One_Target_AE.pdf" " ---
+File: ./Imgs/AE/MCLR/One_Target_AE-.png
+l. 431 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/AllInOneTargetedAttacks.png" "./Imgs/AE/MCLR/AllInOneTargetedAttacks.eps" " ---
+File: ./Imgs/AE/MCLR/AllInOneTargetedAttacks.png
+l. 437 --- needs --- "rungs -dSAFER -dBATCH -dNOPAUSE -dEPSCrop -r120 -sDEVICE=pngalpha -sOutputFile="./Imgs/AE/MCLR/AEInOneTargetedAttacks.png" "./Imgs/AE/MCLR/AEInOneTargetedAttacks.eps" " ---
+File: ./Imgs/AE/MCLR/AEInOneTargetedAttacks.png
+l. 458 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CM/CM_WOAE-.png" "./Imgs/AE/NN/CM/CM_WOAE.pdf" " ---
+File: ./Imgs/AE/NN/CM/CM_WOAE-.png
+l. 459 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CR/CR_WOAE-.png" "./Imgs/AE/NN/CR/CR_WOAE.pdf" " ---
+File: ./Imgs/AE/NN/CR/CR_WOAE-.png
+l. 467 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CM/CM_AE-.png" "./Imgs/AE/NN/CM/CM_AE.pdf" " ---
+File: ./Imgs/AE/NN/CM/CM_AE-.png
+l. 468 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CR/CR_AE-.png" "./Imgs/AE/NN/CR/CR_AE.pdf" " ---
+File: ./Imgs/AE/NN/CR/CR_AE-.png
+l. 480 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CM/NN_AE_WOAE_FGSM_CM-.png" "./Imgs/AE/NN/CM/NN_AE_WOAE_FGSM_CM.pdf" " ---
+File: ./Imgs/AE/NN/CM/NN_AE_WOAE_FGSM_CM-.png
+l. 481 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CR/NN_AE_WOAE_FGSM_CR-.png" "./Imgs/AE/NN/CR/NN_AE_WOAE_FGSM_CR.pdf" " ---
+File: ./Imgs/AE/NN/CR/NN_AE_WOAE_FGSM_CR-.png
+l. 488 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CM/NN_AE_AE_FGSM_CM-.png" "./Imgs/AE/NN/CM/NN_AE_AE_FGSM_CM.pdf" " ---
+File: ./Imgs/AE/NN/CM/NN_AE_AE_FGSM_CM-.png
+l. 489 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CR/NN_AE_AE_FGSM_CR-.png" "./Imgs/AE/NN/CR/NN_AE_AE_FGSM_CR.pdf" " ---
+File: ./Imgs/AE/NN/CR/NN_AE_AE_FGSM_CR-.png
+l. 502 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CM/NN_AE_WOAE_TFGSM-.png" "./Imgs/AE/NN/CM/NN_AE_WOAE_TFGSM.pdf" " ---
+File: ./Imgs/AE/NN/CM/NN_AE_WOAE_TFGSM-.png
+l. 503 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CR/NN_AE_WOAE_TFGSM-.png" "./Imgs/AE/NN/CR/NN_AE_WOAE_TFGSM.pdf" " ---
+File: ./Imgs/AE/NN/CR/NN_AE_WOAE_TFGSM-.png
+l. 510 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CM/NN_AE_AE_TFGSM-.png" "./Imgs/AE/NN/CM/NN_AE_AE_TFGSM.pdf" " ---
+File: ./Imgs/AE/NN/CM/NN_AE_AE_TFGSM-.png
+l. 511 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CR/NN_AE_AE_TFGSM-.png" "./Imgs/AE/NN/CR/NN_AE_AE_TFGSM.pdf" " ---
+File: ./Imgs/AE/NN/CR/NN_AE_AE_TFGSM-.png
+l. 526 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CM/NN_AE_WOAE_BIM-.png" "./Imgs/AE/NN/CM/NN_AE_WOAE_BIM.pdf" " ---
+File: ./Imgs/AE/NN/CM/NN_AE_WOAE_BIM-.png
+l. 527 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CR/NN_AE_WOAE_BIM-.png" "./Imgs/AE/NN/CR/NN_AE_WOAE_BIM.pdf" " ---
+File: ./Imgs/AE/NN/CR/NN_AE_WOAE_BIM-.png
+l. 534 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CM/NN_AE_AE_BIM-.png" "./Imgs/AE/NN/CM/NN_AE_AE_BIM.pdf" " ---
+File: ./Imgs/AE/NN/CM/NN_AE_AE_BIM-.png
+l. 535 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/AE/NN/CR/NN_AE_AE_BIM-.png" "./Imgs/AE/NN/CR/NN_AE_AE_BIM.pdf" " ---
+File: ./Imgs/AE/NN/CR/NN_AE_AE_BIM-.png
+--- needs --- model-poission.idv[2] ==> model-poission0x.png ---
+--- needs --- model-poission.idv[3] ==> model-poission1x.png ---
+--- needs --- model-poission.idv[4] ==> model-poission2x.png ---
+--- needs --- model-poission.idv[5] ==> model-poission3x.png ---
+--- needs --- model-poission.idv[6] ==> model-poission4x.png ---
+--- needs --- model-poission.idv[7] ==> model-poission5x.png ---
+--- needs --- model-poission.idv[8] ==> model-poission6x.png ---
+--- needs --- model-poission.idv[9] ==> model-poission7x.png ---
+--- needs --- model-poission.idv[10] ==> model-poission8x.png ---
+File: ./Imgs/SAE/MCLR/Loss.png
+File: ./Imgs/SAE/MCLR/NonTargetedAttackComp.png
+File: ./Imgs/SAE/MCLR/PerturbationSuccess.png
+File: ./Imgs/SAE/MCLR/perturbationUnsuccess.png
+File: ./Imgs/SAE/MCLR/AllTargeted.png
+l. 619 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CM/NN_WOAE-.png" "./Imgs/SAE/NN/CM/NN_WOAE.pdf" " ---
+File: ./Imgs/SAE/NN/CM/NN_WOAE-.png
+l. 620 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CR/NN_WOAE-.png" "./Imgs/SAE/NN/CR/NN_WOAE.pdf" " ---
+File: ./Imgs/SAE/NN/CR/NN_WOAE-.png
+l. 627 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CM/NN_AE-.png" "./Imgs/SAE/NN/CM/NN_AE.pdf" " ---
+File: ./Imgs/SAE/NN/CM/NN_AE-.png
+l. 628 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CR/NN_AE-.png" "./Imgs/SAE/NN/CR/NN_AE.pdf" " ---
+File: ./Imgs/SAE/NN/CR/NN_AE-.png
+l. 635 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CM/NN_WOAE_FGSM-.png" "./Imgs/SAE/NN/CM/NN_WOAE_FGSM.pdf" " ---
+File: ./Imgs/SAE/NN/CM/NN_WOAE_FGSM-.png
+l. 636 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CR/NN_WOAE_FGSM-.png" "./Imgs/SAE/NN/CR/NN_WOAE_FGSM.pdf" " ---
+File: ./Imgs/SAE/NN/CR/NN_WOAE_FGSM-.png
+l. 643 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CM/NN_AE_FGSM-.png" "./Imgs/SAE/NN/CM/NN_AE_FGSM.pdf" " ---
+File: ./Imgs/SAE/NN/CM/NN_AE_FGSM-.png
+l. 644 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CR/NN_AE_FGSM-.png" "./Imgs/SAE/NN/CR/NN_AE_FGSM.pdf" " ---
+File: ./Imgs/SAE/NN/CR/NN_AE_FGSM-.png
+l. 651 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CM/NN_WOAE_TFGSM-.png" "./Imgs/SAE/NN/CM/NN_WOAE_TFGSM.pdf" " ---
+File: ./Imgs/SAE/NN/CM/NN_WOAE_TFGSM-.png
+l. 652 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CR/NN_WOAE_TFGSM-.png" "./Imgs/SAE/NN/CR/NN_WOAE_TFGSM.pdf" " ---
+File: ./Imgs/SAE/NN/CR/NN_WOAE_TFGSM-.png
+l. 659 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CM/NN_AE_TFGSM-.png" "./Imgs/SAE/NN/CM/NN_AE_TFGSM.pdf" " ---
+File: ./Imgs/SAE/NN/CM/NN_AE_TFGSM-.png
+l. 660 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CR/NN_AE_TFGSM-.png" "./Imgs/SAE/NN/CR/NN_AE_TFGSM.pdf" " ---
+File: ./Imgs/SAE/NN/CR/NN_AE_TFGSM-.png
+l. 667 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CM/NN_WOAE_BIM-.png" "./Imgs/SAE/NN/CM/NN_WOAE_BIM.pdf" " ---
+File: ./Imgs/SAE/NN/CM/NN_WOAE_BIM-.png
+l. 668 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CR/NN_WOAE_BIM-.png" "./Imgs/SAE/NN/CR/NN_WOAE_BIM.pdf" " ---
+File: ./Imgs/SAE/NN/CR/NN_WOAE_BIM-.png
+l. 675 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CM/NN_AE_BIM-.png" "./Imgs/SAE/NN/CM/NN_AE_BIM.pdf" " ---
+File: ./Imgs/SAE/NN/CM/NN_AE_BIM-.png
+l. 676 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/SAE/NN/CR/NN_AE_BIM-.png" "./Imgs/SAE/NN/CR/NN_AE_BIM.pdf" " ---
+File: ./Imgs/SAE/NN/CR/NN_AE_BIM-.png
+--- needs --- model-poission.idv[12] ==> model-poission9x.png ---
+--- needs --- model-poission.idv[13] ==> model-poission10x.png ---
+--- needs --- model-poission.idv[14] ==> model-poission11x.png ---
+--- needs --- model-poission.idv[15] ==> model-poission12x.png ---
+--- needs --- model-poission.idv[16] ==> model-poission13x.png ---
+--- needs --- model-poission.idv[17] ==> model-poission14x.png ---
+File: ./Imgs/DAE/MCLR/Loss.png
+File: ./Imgs/DAE/MCLR/NonTargetedAttack.png
+File: ./Imgs/DAE/MCLR/PerturbationSuccess.png
+File: ./Imgs/DAE/MCLR/perturbationUnsuccess.png
+File: ./Imgs/DAE/MCLR/AllTargeted.png
+l. 746 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CM/NN_WOAE-.png" "./Imgs/DAE/NN/CM/NN_WOAE.pdf" " ---
+File: ./Imgs/DAE/NN/CM/NN_WOAE-.png
+l. 747 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CR/NN_WOAE-.png" "./Imgs/DAE/NN/CR/NN_WOAE.pdf" " ---
+File: ./Imgs/DAE/NN/CR/NN_WOAE-.png
+l. 754 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CM/NN_AE-.png" "./Imgs/DAE/NN/CM/NN_AE.pdf" " ---
+File: ./Imgs/DAE/NN/CM/NN_AE-.png
+l. 755 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CR/NN_AE-.png" "./Imgs/DAE/NN/CR/NN_AE.pdf" " ---
+File: ./Imgs/DAE/NN/CR/NN_AE-.png
+l. 762 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CM/NN_WOAE_FGSM-.png" "./Imgs/DAE/NN/CM/NN_WOAE_FGSM.pdf" " ---
+File: ./Imgs/DAE/NN/CM/NN_WOAE_FGSM-.png
+l. 763 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CR/NN_WOAE_FGSM-.png" "./Imgs/DAE/NN/CR/NN_WOAE_FGSM.pdf" " ---
+File: ./Imgs/DAE/NN/CR/NN_WOAE_FGSM-.png
+l. 770 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CM/NN_AE_FGSM-.png" "./Imgs/DAE/NN/CM/NN_AE_FGSM.pdf" " ---
+File: ./Imgs/DAE/NN/CM/NN_AE_FGSM-.png
+l. 771 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CR/NN_AE_FGSM-.png" "./Imgs/DAE/NN/CR/NN_AE_FGSM.pdf" " ---
+File: ./Imgs/DAE/NN/CR/NN_AE_FGSM-.png
+l. 778 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CM/NN_WOAE_TFGSM-.png" "./Imgs/DAE/NN/CM/NN_WOAE_TFGSM.pdf" " ---
+File: ./Imgs/DAE/NN/CM/NN_WOAE_TFGSM-.png
+l. 779 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CR/NN_WOAE_TFGSM-.png" "./Imgs/DAE/NN/CR/NN_WOAE_TFGSM.pdf" " ---
+File: ./Imgs/DAE/NN/CR/NN_WOAE_TFGSM-.png
+l. 786 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CM/NN_AE_TFGSM-.png" "./Imgs/DAE/NN/CM/NN_AE_TFGSM.pdf" " ---
+File: ./Imgs/DAE/NN/CM/NN_AE_TFGSM-.png
+l. 787 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CR/NN_AE_TFGSM-.png" "./Imgs/DAE/NN/CR/NN_AE_TFGSM.pdf" " ---
+File: ./Imgs/DAE/NN/CR/NN_AE_TFGSM-.png
+l. 794 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CM/NN_WOAE_BIM-.png" "./Imgs/DAE/NN/CM/NN_WOAE_BIM.pdf" " ---
+File: ./Imgs/DAE/NN/CM/NN_WOAE_BIM-.png
+l. 795 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CR/NN_WOAE_BIM-.png" "./Imgs/DAE/NN/CR/NN_WOAE_BIM.pdf" " ---
+File: ./Imgs/DAE/NN/CR/NN_WOAE_BIM-.png
+l. 802 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CM/NN_AE_BIM-.png" "./Imgs/DAE/NN/CM/NN_AE_BIM.pdf" " ---
+File: ./Imgs/DAE/NN/CM/NN_AE_BIM-.png
+l. 803 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/DAE/NN/CR/NN_AE_BIM-.png" "./Imgs/DAE/NN/CR/NN_AE_BIM.pdf" " ---
+File: ./Imgs/DAE/NN/CR/NN_AE_BIM-.png
+File: ./Imgs/VAE/MCLR/Loss.png
+File: ./Imgs/VAE/MCLR/NonTargeted.png
+File: ./Imgs/VAE/MCLR/Perturbation.png
+File: ./Imgs/VAE/MCLR/perturbationUnsuccess.png
+File: ./Imgs/VAE/MCLR/AllTargeted.png
+File: ./Imgs/VAE/MCLR/clusters.png
+File: ./Imgs/VAE/MCLR/gan.png
+l. 892 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CM/NN_WOAE-.png" "./Imgs/VAE/NN/CM/NN_WOAE.pdf" " ---
+File: ./Imgs/VAE/NN/CM/NN_WOAE-.png
+l. 893 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CR/NN_WOAE-.png" "./Imgs/VAE/NN/CR/NN_WOAE.pdf" " ---
+File: ./Imgs/VAE/NN/CR/NN_WOAE-.png
+l. 900 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CM/NN_AE-.png" "./Imgs/VAE/NN/CM/NN_AE.pdf" " ---
+File: ./Imgs/VAE/NN/CM/NN_AE-.png
+l. 901 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CR/NN_AE-.png" "./Imgs/VAE/NN/CR/NN_AE.pdf" " ---
+File: ./Imgs/VAE/NN/CR/NN_AE-.png
+l. 908 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CM/NN_WOAE_FGSM-.png" "./Imgs/VAE/NN/CM/NN_WOAE_FGSM.pdf" " ---
+File: ./Imgs/VAE/NN/CM/NN_WOAE_FGSM-.png
+l. 909 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CR/NN_WOAE_FGSM-.png" "./Imgs/VAE/NN/CR/NN_WOAE_FGSM.pdf" " ---
+File: ./Imgs/VAE/NN/CR/NN_WOAE_FGSM-.png
+l. 916 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CM/NN_AE_FGSM-.png" "./Imgs/VAE/NN/CM/NN_AE_FGSM.pdf" " ---
+File: ./Imgs/VAE/NN/CM/NN_AE_FGSM-.png
+l. 917 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CR/NN_AE_FGSM-.png" "./Imgs/VAE/NN/CR/NN_AE_FGSM.pdf" " ---
+File: ./Imgs/VAE/NN/CR/NN_AE_FGSM-.png
+l. 924 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CM/NN_WOAE_TFGSM-.png" "./Imgs/VAE/NN/CM/NN_WOAE_TFGSM.pdf" " ---
+File: ./Imgs/VAE/NN/CM/NN_WOAE_TFGSM-.png
+l. 925 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CR/NN_WOAE_TFGSM-.png" "./Imgs/VAE/NN/CR/NN_WOAE_TFGSM.pdf" " ---
+File: ./Imgs/VAE/NN/CR/NN_WOAE_TFGSM-.png
+l. 932 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CM/NN_AE_TFGSM-.png" "./Imgs/VAE/NN/CM/NN_AE_TFGSM.pdf" " ---
+File: ./Imgs/VAE/NN/CM/NN_AE_TFGSM-.png
+l. 933 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CR/NN_AE_TFGSM-.png" "./Imgs/VAE/NN/CR/NN_AE_TFGSM.pdf" " ---
+File: ./Imgs/VAE/NN/CR/NN_AE_TFGSM-.png
+l. 940 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CM/NN_WOAE_BIM-.png" "./Imgs/VAE/NN/CM/NN_WOAE_BIM.pdf" " ---
+File: ./Imgs/VAE/NN/CM/NN_WOAE_BIM-.png
+l. 941 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CR/NN_WOAE_BIM-.png" "./Imgs/VAE/NN/CR/NN_WOAE_BIM.pdf" " ---
+File: ./Imgs/VAE/NN/CR/NN_WOAE_BIM-.png
+l. 948 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CM/NN_AE_BIM-.png" "./Imgs/VAE/NN/CM/NN_AE_BIM.pdf" " ---
+File: ./Imgs/VAE/NN/CM/NN_AE_BIM-.png
+l. 949 --- needs --- "rungs -q -dNOPAUSE -dBATCH -dusecropbox -sDEVICE=pngalpha -r300  -sOutputFile="./Imgs/VAE/NN/CR/NN_AE_BIM-.png" "./Imgs/VAE/NN/CR/NN_AE_BIM.pdf" " ---
+File: ./Imgs/VAE/NN/CR/NN_AE_BIM-.png
+File: ./Imgs/VAE/NN/clusters.png
+File: ./Imgs/VAE/NN/gan.png
+--- characters ---
+Font("cmex","10","10","100")
+Font("cmr","7","7","100")
+Font("cmr","10","10","100")
+Font("cmmi","5","5","100")
+Font("cmmi","7","7","100")
+Font("cmmi","10","10","100")
+Font("cmsy","7","7","100")
+Font("cmsy","10","10","100")
+Font("ptmr8t","","10","100")
+--- needs --- model-poission.idv[19] ==> ptmr8t-19.png ---
+Font("ptmrc8t","","10","172")
+Font("ptmrc8t","","10","100")
+Font("cmex","7","7","100")
+Font("msbm","10","10","100")
+Font("ptmb8t","","10","100")
+Font("ectt","1000","10","100")
+Font("ptmbc8t","","10","120")
+Font("ptmbi8t","","10","100")
+Font("ptmr8t","","10","70")
+Font("ectt","0800","8","87")
+Font("ptmb8t","","10","70")
+Font("cmbx","10","10","100")
+Font("ptmr8t","","10","90")
+Font("ptmri8t","","10","100")

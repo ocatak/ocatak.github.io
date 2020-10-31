@@ -1,0 +1,108 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Introduction}}{2}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Related Work}}{2}\relax 
+\doTocEntry\toclot{1}{\csname a:TocLink\endcsname{1}{x1-2001r1}{}{\ignorespaces Related Work Summary}}{table}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-30003}{QQ2-1-4}{Preliminaries}}{7}\relax 
+\doTocEntry\tocsubsection{3.1}{\csname a:TocLink\endcsname{1}{x1-40003.1}{QQ2-1-5}{Attack Types}}{7}\relax 
+\doTocEntry\tocsubsubsection{3.1.1}{\csname a:TocLink\endcsname{1}{x1-50003.1.1}{QQ2-1-6}{Data Poisoning Attacks}}{7}\relax 
+\doTocEntry\tocsubsubsection{3.1.2}{\csname a:TocLink\endcsname{1}{x1-60003.1.2}{QQ2-1-7}{Model Attacks}}{7}\relax 
+\doTocEntry\tocsubsection{3.2}{\csname a:TocLink\endcsname{1}{x1-70003.2}{QQ2-1-8}{Attack Environments}}{7}\relax 
+\doTocEntry\tocsubsubsection{3.2.1}{\csname a:TocLink\endcsname{1}{x1-80003.2.1}{QQ2-1-9}{White Box Attacks}}{7}\relax 
+\doTocEntry\tocsubsubsection{3.2.2}{\csname a:TocLink\endcsname{1}{x1-90003.2.2}{QQ2-1-10}{Black Box Attacks}}{8}\relax 
+\doTocEntry\tocsubsection{3.3}{\csname a:TocLink\endcsname{1}{x1-100003.3}{QQ2-1-11}{Autoencoder}}{8}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-10001r1}{}{\ignorespaces Autoencoder Layer Structure}}{figure}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-110004}{QQ2-1-13}{System Model}}{11}\relax 
+\doTocEntry\tocsubsection{4.1}{\csname a:TocLink\endcsname{1}{x1-120004.1}{QQ2-1-14}{Creating Autoencoder Model}}{11}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-12001r2}{}{\ignorespaces Autoencoder Activation Functions. Note that layer sizes given according to the dataset which is MNIST dataset}}{figure}\relax 
+\doTocEntry\toclof{3}{\csname a:TocLink\endcsname{1}{x1-12002r3}{}{\ignorespaces Normal and Encoded Data Set of MNIST}}{figure}\relax 
+\doTocEntry\toclof{4}{\csname a:TocLink\endcsname{1}{x1-12003r4}{}{\ignorespaces Process Diagram}}{figure}\relax 
+\doTocEntry\tocsubsection{4.2}{\csname a:TocLink\endcsname{1}{x1-130004.2}{QQ2-1-18}{Activation Function Selection}}{20}\relax 
+\doTocEntry\toclof{5}{\csname a:TocLink\endcsname{1}{x1-13005r5}{}{\ignorespaces Loss histories of different activation functions}}{figure}\relax 
+\doTocEntry\toclof{6}{\csname a:TocLink\endcsname{1}{x1-13006r6}{}{\ignorespaces Optimized Relu Loss History}}{figure}\relax 
+\doTocEntry\tocsubsection{4.3}{\csname a:TocLink\endcsname{1}{x1-140004.3}{QQ2-1-21}{Tuning Parameters}}{26}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-150005}{QQ2-1-22}{Experiments with MNIST Dataset}}{26}\relax 
+\doTocEntry\tocsubsection{5.1}{\csname a:TocLink\endcsname{1}{x1-160005.1}{QQ2-1-23}{Introduction}}{26}\relax 
+\doTocEntry\tocsubsection{5.2}{\csname a:TocLink\endcsname{1}{x1-170005.2}{QQ2-1-24}{Autoencoding}}{26}\relax 
+\doTocEntry\tocsubsubsection{5.2.1}{\csname a:TocLink\endcsname{1}{x1-180005.2.1}{QQ2-1-25}{Multi-Class Logistic Regression}}{26}\relax 
+\doTocEntry\toclof{7}{\csname a:TocLink\endcsname{1}{x1-18001r7}{}{\ignorespaces Confusion matrix of the model without any attack and without autoencoder}}{figure}\relax 
+\doTocEntry\toclof{8}{\csname a:TocLink\endcsname{1}{x1-18002r8}{}{\ignorespaces Confusion matrix of the model without any attack and with autoencoder}}{figure}\relax 
+\doTocEntry\toclof{9}{\csname a:TocLink\endcsname{1}{x1-18003r9}{}{\ignorespaces Confusion matrix of non-targeted attack to model without autoencoder}}{figure}\relax 
+\doTocEntry\toclof{10}{\csname a:TocLink\endcsname{1}{x1-18004r10}{}{\ignorespaces Confusion matrix of non-targeted attack to model with autoencoder}}{figure}\relax 
+\doTocEntry\toclof{11}{\csname a:TocLink\endcsname{1}{x1-18005r11}{}{\ignorespaces Value change and perturbation of a non-targeted attack on model without autoencoder}}{figure}\relax 
+\doTocEntry\toclof{12}{\csname a:TocLink\endcsname{1}{x1-18006r12}{}{\ignorespaces Value change and perturbation of a non-targeted attack on model with autoencoder}}{figure}\relax 
+\doTocEntry\toclof{13}{\csname a:TocLink\endcsname{1}{x1-18007r13}{}{\ignorespaces Comparison of accuracy with and without autoencoder for non-targeted attack}}{figure}\relax 
+\doTocEntry\toclof{14}{\csname a:TocLink\endcsname{1}{x1-18008r14}{}{\ignorespaces Details of accuracy with autoencoder for non-targeted attack}}{figure}\relax 
+\doTocEntry\toclof{15}{\csname a:TocLink\endcsname{1}{x1-18009r15}{}{\ignorespaces Heatmap of actual numbers and mispredictions}}{figure}\relax 
+\doTocEntry\toclof{16}{\csname a:TocLink\endcsname{1}{x1-18010r16}{}{\ignorespaces Actual numbers and their target values for each targeted attack method}}{figure}\relax 
+\doTocEntry\toclof{17}{\csname a:TocLink\endcsname{1}{x1-18011r17}{}{\ignorespaces Confusion matrix of \textbf  {natural targeted attack} to model without autoencoder}}{figure}\relax 
+\doTocEntry\toclof{18}{\csname a:TocLink\endcsname{1}{x1-18012r18}{}{\ignorespaces Confusion matrix of \textbf  {natural targeted attack} to model with autoencoder}}{figure}\relax 
+\doTocEntry\toclof{19}{\csname a:TocLink\endcsname{1}{x1-18013r19}{}{\ignorespaces Confusion matrix of \textbf  {non-natural targeted attack} to model without autoencoder}}{figure}\relax 
+\doTocEntry\toclof{20}{\csname a:TocLink\endcsname{1}{x1-18014r20}{}{\ignorespaces Confusion matrix of \textbf  {non-natural targeted attack} to model with autoencoder}}{figure}\relax 
+\doTocEntry\toclof{21}{\csname a:TocLink\endcsname{1}{x1-18015r21}{}{\ignorespaces Confusion matrix of \textbf  {one number targeted attack} to model without autoencoder}}{figure}\relax 
+\doTocEntry\toclof{22}{\csname a:TocLink\endcsname{1}{x1-18016r22}{}{\ignorespaces Confusion matrix of \textbf  {one number targeted attack} to model with autoencoder}}{figure}\relax 
+\doTocEntry\toclof{23}{\csname a:TocLink\endcsname{1}{x1-18017r23}{}{\ignorespaces Comparison of accuracy with and without autoencoder for targeted attacks. \textit  {AE stands for the models with autoencoder, WO stands for models without autoencoder}}}{figure}\relax 
+\doTocEntry\toclof{24}{\csname a:TocLink\endcsname{1}{x1-18018r24}{}{\ignorespaces Details of accuracy with autoencoder for targeted attacks}}{figure}\relax 
+\doTocEntry\tocsubsubsection{5.2.2}{\csname a:TocLink\endcsname{1}{x1-190005.2.2}{QQ2-1-44}{Neural Networks}}{81}\relax 
+\doTocEntry\toclof{25}{\csname a:TocLink\endcsname{1}{x1-19001r25}{}{\ignorespaces Confusion matrix and classification report of the neural network model without autoencoder}}{figure}\relax 
+\doTocEntry\toclof{26}{\csname a:TocLink\endcsname{1}{x1-19002r26}{}{\ignorespaces Confusion matrix and classification report of the neural network model with autoencoder}}{figure}\relax 
+\doTocEntry\toclof{27}{\csname a:TocLink\endcsname{1}{x1-19003r27}{}{\ignorespaces Confusion matrix and classification report of the neural network model without autoencoder after FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{28}{\csname a:TocLink\endcsname{1}{x1-19004r28}{}{\ignorespaces Confusion matrix and classification report of the neural network model with autoencoder after FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{29}{\csname a:TocLink\endcsname{1}{x1-19005r29}{}{\ignorespaces Confusion matrix and classification report of the neural network model without autoencoder after T-FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{30}{\csname a:TocLink\endcsname{1}{x1-19006r30}{}{\ignorespaces Confusion matrix and classification report of the neural network model with autoencoder after T-FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{31}{\csname a:TocLink\endcsname{1}{x1-19007r31}{}{\ignorespaces Confusion matrix and classification report of the neural network model without autoencoder after basic iterative method attack}}{figure}\relax 
+\doTocEntry\toclof{32}{\csname a:TocLink\endcsname{1}{x1-19008r32}{}{\ignorespaces Confusion matrix and classification report of the neural network model with autoencoder after basic iterative method attack}}{figure}\relax 
+\doTocEntry\tocsubsection{5.3}{\csname a:TocLink\endcsname{1}{x1-200005.3}{QQ2-1-53}{Sparse Autoencoder}}{105}\relax 
+\doTocEntry\tocsubsubsection{5.3.1}{\csname a:TocLink\endcsname{1}{x1-210005.3.1}{QQ2-1-54}{Multi-Class Logistic Regression of Sparse Autoencoder}}{105}\relax 
+\doTocEntry\toclof{33}{\csname a:TocLink\endcsname{1}{x1-21001r33}{}{\ignorespaces Optimized Relu Loss History for Sparse Autoencoder}}{figure}\relax 
+\doTocEntry\toclof{34}{\csname a:TocLink\endcsname{1}{x1-21002r34}{}{\ignorespaces Comparison of accuracy with and without sparse autoencoder for non-targeted attack}}{figure}\relax 
+\doTocEntry\toclof{35}{\csname a:TocLink\endcsname{1}{x1-21003r35}{}{\ignorespaces Value change and perturbation of a non-targeted attack on model without sparse autoencoder}}{figure}\relax 
+\doTocEntry\toclof{36}{\csname a:TocLink\endcsname{1}{x1-21004r36}{}{\ignorespaces Value change and perturbation of a non-targeted attack on model with sparse autoencoder}}{figure}\relax 
+\doTocEntry\toclof{37}{\csname a:TocLink\endcsname{1}{x1-21005r37}{}{\ignorespaces Comparison of accuracy with and without sparse autoencoder for targeted attacks. \textit  {AE stands for the models with sparse autoencoder, WO stands for models without autoencoder}}}{figure}\relax 
+\doTocEntry\tocsubsubsection{5.3.2}{\csname a:TocLink\endcsname{1}{x1-220005.3.2}{QQ2-1-60}{Neural Network of Sparse Autoencoder}}{120}\relax 
+\doTocEntry\toclof{38}{\csname a:TocLink\endcsname{1}{x1-22001r38}{}{\ignorespaces Confusion matrix and classification report of the neural network model without sparse autoencoder}}{figure}\relax 
+\doTocEntry\toclof{39}{\csname a:TocLink\endcsname{1}{x1-22002r39}{}{\ignorespaces Confusion matrix and classification report of the neural network model with sparse autoencoder}}{figure}\relax 
+\doTocEntry\toclof{40}{\csname a:TocLink\endcsname{1}{x1-22003r40}{}{\ignorespaces Confusion matrix and classification report of the neural network model without sparse autoencoder after FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{41}{\csname a:TocLink\endcsname{1}{x1-22004r41}{}{\ignorespaces Confusion matrix and classification report of the neural network model with sparse autoencoder after FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{42}{\csname a:TocLink\endcsname{1}{x1-22005r42}{}{\ignorespaces Confusion matrix and classification report of the neural network model without sparse autoencoder after T-FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{43}{\csname a:TocLink\endcsname{1}{x1-22006r43}{}{\ignorespaces Confusion matrix and classification report of the neural network model with sparse autoencoder after T-FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{44}{\csname a:TocLink\endcsname{1}{x1-22007r44}{}{\ignorespaces Confusion matrix and classification report of the neural network model without sparse autoencoder after basic iterative method attack}}{figure}\relax 
+\doTocEntry\toclof{45}{\csname a:TocLink\endcsname{1}{x1-22008r45}{}{\ignorespaces Confusion matrix and classification report of the neural network model with sparse autoencoder after basic iterative method attack}}{figure}\relax 
+\doTocEntry\tocsubsection{5.4}{\csname a:TocLink\endcsname{1}{x1-230005.4}{QQ2-1-69}{Denoising Autoencoder}}{144}\relax 
+\doTocEntry\tocsubsubsection{5.4.1}{\csname a:TocLink\endcsname{1}{x1-240005.4.1}{QQ2-1-70}{Multi-Class Logistic Regression of Denoising Autoencoder}}{144}\relax 
+\doTocEntry\toclof{46}{\csname a:TocLink\endcsname{1}{x1-24001r46}{}{\ignorespaces Optimized Relu Loss History for Denoising Autoencoder}}{figure}\relax 
+\doTocEntry\toclof{47}{\csname a:TocLink\endcsname{1}{x1-24002r47}{}{\ignorespaces Comparison of accuracy with and without denoising autoencoder for non-targeted attack}}{figure}\relax 
+\doTocEntry\toclof{48}{\csname a:TocLink\endcsname{1}{x1-24003r48}{}{\ignorespaces Value change and perturbation of a non-targeted attack on model without denoising autoencoder}}{figure}\relax 
+\doTocEntry\toclof{49}{\csname a:TocLink\endcsname{1}{x1-24004r49}{}{\ignorespaces Value change and perturbation of a non-targeted attack on model with denoising autoencoder}}{figure}\relax 
+\doTocEntry\toclof{50}{\csname a:TocLink\endcsname{1}{x1-24005r50}{}{\ignorespaces Comparison of accuracy with and without denoising autoencoder for targeted attacks. \textit  {AE stands for the models with denoising autoencoder, WO stands for models without autoencoder}}}{figure}\relax 
+\doTocEntry\tocsubsubsection{5.4.2}{\csname a:TocLink\endcsname{1}{x1-250005.4.2}{QQ2-1-76}{Neural Network of Denoising Autoencoder}}{159}\relax 
+\doTocEntry\toclof{51}{\csname a:TocLink\endcsname{1}{x1-25001r51}{}{\ignorespaces Confusion matrix and classification report of the neural network model without denoising autoencoder}}{figure}\relax 
+\doTocEntry\toclof{52}{\csname a:TocLink\endcsname{1}{x1-25002r52}{}{\ignorespaces Confusion matrix and classification report of the neural network model with denoising autoencoder}}{figure}\relax 
+\doTocEntry\toclof{53}{\csname a:TocLink\endcsname{1}{x1-25003r53}{}{\ignorespaces Confusion matrix and classification report of the neural network model without denoising autoencoder after FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{54}{\csname a:TocLink\endcsname{1}{x1-25004r54}{}{\ignorespaces Confusion matrix and classification report of the neural network model with denoising autoencoder after FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{55}{\csname a:TocLink\endcsname{1}{x1-25005r55}{}{\ignorespaces Confusion matrix and classification report of the neural network model without denoising autoencoder after T-FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{56}{\csname a:TocLink\endcsname{1}{x1-25006r56}{}{\ignorespaces Confusion matrix and classification report of the neural network model with denoising autoencoder after T-FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{57}{\csname a:TocLink\endcsname{1}{x1-25007r57}{}{\ignorespaces Confusion matrix and classification report of the neural network model without denoising autoencoder after basic iterative method attack}}{figure}\relax 
+\doTocEntry\toclof{58}{\csname a:TocLink\endcsname{1}{x1-25008r58}{}{\ignorespaces Confusion matrix and classification report of the neural network model with denoising autoencoder after basic iterative method attack}}{figure}\relax 
+\doTocEntry\tocsubsection{5.5}{\csname a:TocLink\endcsname{1}{x1-260005.5}{QQ2-1-85}{Variational Autoencoder}}{183}\relax 
+\doTocEntry\tocsubsubsection{5.5.1}{\csname a:TocLink\endcsname{1}{x1-270005.5.1}{QQ2-1-86}{Multi-Class Logistic Regression of Variational Autoencoder}}{183}\relax 
+\doTocEntry\toclof{59}{\csname a:TocLink\endcsname{1}{x1-27001r59}{}{\ignorespaces Optimized Relu Loss History for Variational Autoencoder}}{figure}\relax 
+\doTocEntry\toclof{60}{\csname a:TocLink\endcsname{1}{x1-27002r60}{}{\ignorespaces Comparison of accuracy with and without variational autoencoder for non-targeted attack}}{figure}\relax 
+\doTocEntry\toclof{61}{\csname a:TocLink\endcsname{1}{x1-27003r61}{}{\ignorespaces Value change and perturbation of a non-targeted attack on model without variational autoencoder}}{figure}\relax 
+\doTocEntry\toclof{62}{\csname a:TocLink\endcsname{1}{x1-27004r62}{}{\ignorespaces Value change and perturbation of a non-targeted attack on model with variational autoencoder}}{figure}\relax 
+\doTocEntry\toclof{63}{\csname a:TocLink\endcsname{1}{x1-27005r63}{}{\ignorespaces Comparison of accuracy with and without variational autoencoder for targeted attacks. \textit  {AE stands for the models with variational autoencoder, WO stands for models without autoencoder}}}{figure}\relax 
+\doTocEntry\toclof{64}{\csname a:TocLink\endcsname{1}{x1-27006r64}{}{\ignorespaces Because of Mnist dataset, our latent space is two-dimensional. One is to look at the neighborhoods of different classes on the latent 2D plane. Each of these colored clusters are a type of digit. Close clusters are digits that are structurally similar, they are digits that share information in the latent space.}}{figure}\relax 
+\doTocEntry\toclof{65}{\csname a:TocLink\endcsname{1}{x1-27007r65}{}{\ignorespaces Due to VAE is a generative model, we can also generate new Mnist digits using latent plane, sampling latent points at regular intervals, and generating the corresponding digit for each of these points.}}{figure}\relax 
+\doTocEntry\tocsubsubsection{5.5.2}{\csname a:TocLink\endcsname{1}{x1-280005.5.2}{QQ2-1-94}{Neural Network of Variational Autoencoder}}{204}\relax 
+\doTocEntry\toclof{66}{\csname a:TocLink\endcsname{1}{x1-28001r66}{}{\ignorespaces Confusion matrix and classification report of the neural network model without variational autoencoder}}{figure}\relax 
+\doTocEntry\toclof{67}{\csname a:TocLink\endcsname{1}{x1-28002r67}{}{\ignorespaces Confusion matrix and classification report of the neural network model with variational autoencoder}}{figure}\relax 
+\doTocEntry\toclof{68}{\csname a:TocLink\endcsname{1}{x1-28003r68}{}{\ignorespaces Confusion matrix and classification report of the neural network model without variational autoencoder after FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{69}{\csname a:TocLink\endcsname{1}{x1-28004r69}{}{\ignorespaces Confusion matrix and classification report of the neural network model with variational autoencoder after FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{70}{\csname a:TocLink\endcsname{1}{x1-28005r70}{}{\ignorespaces Confusion matrix and classification report of the neural network model without variational autoencoder after T-FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{71}{\csname a:TocLink\endcsname{1}{x1-28006r71}{}{\ignorespaces Confusion matrix and classification report of the neural network model with variational autoencoder after T-FGSM attack}}{figure}\relax 
+\doTocEntry\toclof{72}{\csname a:TocLink\endcsname{1}{x1-28007r72}{}{\ignorespaces Confusion matrix and classification report of the neural network model without variational autoencoder after basic iterative method attack}}{figure}\relax 
+\doTocEntry\toclof{73}{\csname a:TocLink\endcsname{1}{x1-28008r73}{}{\ignorespaces Confusion matrix and classification report of the neural network model with variational autoencoder after basic iterative method attack}}{figure}\relax 
+\doTocEntry\toclof{74}{\csname a:TocLink\endcsname{1}{x1-28009r74}{}{\ignorespaces Because of MNIST dataset, our latent space is two-dimensional. One is to look at the neighborhoods of different classes on the latent 2D plane. Each of these colored clusters are a type of digit. Close clusters are digits that are structurally similar, they are digits that share information in the latent space.}}{figure}\relax 
+\doTocEntry\toclof{75}{\csname a:TocLink\endcsname{1}{x1-28010r75}{}{\ignorespaces Due to VAE is a generative model, we can also generate new Mnist digits using latent plane, sampling latent points at regular intervals, and generating the corresponding digit for each of these points.}}{figure}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-290006}{QQ2-1-105}{Conclusion}}{234}\relax 
+\doTocEntry\toclikesubsection{}{\csname a:TocLink\endcsname{1}{x1-300006}{QQ2-1-106}{Acknowledgement}}{234}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-310006}{QQ2-1-107}{References}}{234}\relax 

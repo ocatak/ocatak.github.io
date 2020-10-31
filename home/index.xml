@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020 Ferhat Ozgur Catak</copyright>
-    <lastBuildDate>Sun, 24 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2020 00:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://www.ozgurcatak.org/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,7 +18,7 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://www.ozgurcatak.org/home/about/</guid>
-      <description>Biography Ferhat Ozgur Catak is an Artificial Intelligence and Cyber Security Researcher of Simula Research Laboratory. His research interests include machine learning, cyber security, malware analysis and deep learning.</description>
+      <description>Biography Ferhat Ozgur Catak is an Artificial Intelligence and Cyber Security Researcher. His research interests include machine learning, cyber security, malware analysis and deep learning.</description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@
     <item>
       <title>Tags</title>
       <link>https://www.ozgurcatak.org/home/tags/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 +0200</pubDate>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0200</pubDate>
       
       <guid>https://www.ozgurcatak.org/home/tags/</guid>
       <description></description>
