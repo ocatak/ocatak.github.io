@@ -49,8 +49,9 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/</loc>
-      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
+      <loc>https://www.ozgurcatak.org/publication_types/6/</loc>
+      <lastmod>2020-11-14T00:00:00+00:00</lastmod>
+      <priority>1.00</priority>
     </url>
     
   
@@ -59,8 +60,36 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/</loc>
-      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
+      <lastmod>2020-11-14T00:00:00+00:00</lastmod>
       <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/publication/2020-malicious-url-detection-using-machine-learning/</loc>
+      <lastmod>2020-11-14T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/publication_types/</loc>
+      <lastmod>2020-11-14T00:00:00+00:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/</loc>
+      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
     </url>
     
   
@@ -119,26 +148,6 @@
     
       <loc>https://www.ozgurcatak.org/post/smile-webinar-2020/</loc>
       <lastmod>2020-06-19T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/publication_types/6/</loc>
-      <lastmod>2020-06-08T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/publication_types/</loc>
-      <lastmod>2020-06-08T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
     </url>
     
   
