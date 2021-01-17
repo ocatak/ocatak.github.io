@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020 Ferhat Ozgur Catak</copyright>
-    <lastBuildDate>Mon, 06 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://www.ozgurcatak.org/publication_types/4/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Closeness and Uncertainty Aware Adversarial Examples Detection in Adversarial Machine Learning</title>
+      <link>https://www.ozgurcatak.org/publication/2021-closeness-and-uncertainty-aware-adversarial-examples-detection-in-adversarial-machine-learning/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/publication/2021-closeness-and-uncertainty-aware-adversarial-examples-detection-in-adversarial-machine-learning/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Benchmark API Call Dataset for Windows PE Malware Classification</title>

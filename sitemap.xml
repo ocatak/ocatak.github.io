@@ -49,8 +49,18 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/about/</loc>
-      <lastmod>2020-11-27T00:00:00+01:00</lastmod>
+      <loc>https://www.ozgurcatak.org/publication_types/4/</loc>
+      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/publication/2021-closeness-and-uncertainty-aware-adversarial-examples-detection-in-adversarial-machine-learning/</loc>
+      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -59,8 +69,27 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/</loc>
-      <lastmod>2020-11-21T00:00:00+00:00</lastmod>
+      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
       <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/publication_types/</loc>
+      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/about/</loc>
+      <lastmod>2020-11-27T00:00:00+01:00</lastmod>
     </url>
     
   
@@ -80,16 +109,6 @@
     
       <loc>https://www.ozgurcatak.org/publication/2020-malicious-url-detection-using-machine-learning/</loc>
       <lastmod>2020-11-14T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/publication_types/</loc>
-      <lastmod>2020-11-14T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
     </url>
     
   
@@ -258,16 +277,6 @@
     
       <loc>https://www.ozgurcatak.org/publication/2019-sensor-based-detection/</loc>
       <lastmod>2019-06-06T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/publication_types/4/</loc>
-      <lastmod>2019-05-06T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
     </url>
     
   
