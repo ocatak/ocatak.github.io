@@ -49,8 +49,8 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/post/data-privacy-techniques/</loc>
-      <lastmod>2021-01-29T20:18:07+01:00</lastmod>
+      <loc>https://www.ozgurcatak.org/post/ccis-2019/</loc>
+      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
     </url>
     
   
@@ -59,8 +59,47 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/</loc>
-      <lastmod>2021-01-29T20:18:07+01:00</lastmod>
+      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
       <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/</loc>
+      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/machine-learning/</loc>
+      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/malware/</loc>
+      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/post/data-privacy-techniques/</loc>
+      <lastmod>2021-01-29T20:18:07+01:00</lastmod>
     </url>
     
   
@@ -171,16 +210,6 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/tags/</loc>
-      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
-      <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://www.ozgurcatak.org/tags/adversatial-machine-learning/</loc>
       <lastmod>2020-10-17T19:26:10+02:00</lastmod>
       <priority>1.00</priority>
@@ -192,16 +221,6 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/tags/cyber-security/</loc>
-      <lastmod>2020-10-17T19:26:10+02:00</lastmod>
-      <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/tags/machine-learning/</loc>
       <lastmod>2020-10-17T19:26:10+02:00</lastmod>
       <priority>1.00</priority>
     </url>

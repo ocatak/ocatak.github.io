@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020 Ferhat Ozgur Catak</copyright>
-    <lastBuildDate>Sat, 17 Oct 2020 19:26:10 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jan 2021 20:30:33 +0100</lastBuildDate>
     
 	<atom:link href="https://www.ozgurcatak.org/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CCIS 2019 Presentation</title>
+      <link>https://www.ozgurcatak.org/post/ccis-2019/</link>
+      <pubDate>Fri, 29 Jan 2021 20:30:33 +0100</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/post/ccis-2019/</guid>
+      <description>My Deep Learning based Malware Detection and Classification presentation.
+Presentation Link</description>
+    </item>
     
     <item>
       <title>Autoencoder Based Adversarial Machine Learning Attack Mitigation</title>
