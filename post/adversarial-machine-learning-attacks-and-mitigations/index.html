@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="author" content="Dr. Ferhat Ozgur Catak">
+  <meta name="description" content="Ferhat Ozgur Catak is an Artificial Intelligence and Cyber Security Researcher. He is interested in Data Privacy and Cyber Security for machine learning and deep learning, covering the theoretical, applicative, and computational aspects. His primary research interests lie broadly in deep learning.">
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="https://www.ozgurcatak.org/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-108796420-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+	  ga('require', 'ipMeta', {
+          serviceProvider: 'dimension1',
+          networkDomain: 'dimension2',
+          networkType: 'dimension3',
+      });
+      ga('ipMeta:loadNetworkFields');
+      ga('send', 'pageview');
+    </script>
+	
+	
+<script async src="https://ipmeta.io/plugin.js"></script>
+	
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="icon" type="image/png" href="https://www.ozgurcatak.org/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="https://www.ozgurcatak.org/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://www.ozgurcatak.org/post/adversarial-machine-learning-attacks-and-mitigations/">
+
+  
+  
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "Person",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://www.ozgurcatak.org"
+    },
+    "name" : "Ferhat Ozgur Catak",
+	"jobTitle": "Artificial Intelligence Scientist",
+    "description" : "Research about Cyber Security, Artificial Intelligence, Machine Learning, Deep Learning, Uncertainty",
+    "url" : "https://www.ozgurcatak.org/",
+    "image": "https://www.ozgurcatak.org/img/foc.jpg",
+    "birthPlace": "Turkey",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Oslo",
+     "addressCountry": "Norway"
+    },
+    "alumniOf": "Istanbul University",
+	"worksFor": {
+      "@type": "Organization",
+      "name": "Simula Research Laboratory"
+    },
+    "sameAs": [
+    "http://www.linkedin.com/in/ozgurcatak/",
+    "https://scholar.google.com.tr/citations?user=qPzUoDYAAAAJ&hl=en",
+    "https://github.com/ocatak",
+    "https://www.researchgate.net/profile/Ferhat_Ozgur_Catak",
+    "https://orcid.org/0000-0002-2434-9966"
+  ]
+}
+</script>
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ozgurcatak" />
+<meta name="twitter:creator" content="@ozgurcatak" />
+<meta property="og:url" content="https://www.ozgurcatak.org/" />
+
+<meta property="og:image" content="http://www.ozgurcatak.org/img/foc.jpg" />
+
+
+
+
+  <title>Adversarial Machine Learning Mitigation: Adversarial Learning | Ferhat Ozgur Catak</title>
+
+  <meta content="cyber security, machine learning, artificial intelligence, dataset" name="keywords">
+
+<meta content='http://www.ozgurcatak.org/' property='og:url'/>
+<meta content="Adversarial Machine Learning Mitigation: Adversarial Learning - Ferhat Ozgur Catak" property="og:title">
+
+<meta property="og:description" content="Ferhat Ozgur Catak is an Artificial Intelligence and Cyber Security Researcher. I am interested in Data Privacy and Cyber Security for machine learning and deep learning, covering the theoretical, applicative, and computational aspects. My primary research interests lie broadly in deep learning." />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Adversarial Machine Learning Mitigation: Adversarial Learning - Blog post",
+  "datePublished": "25.05.2020",
+  "dateModified": "25.05.2020",
+  "image":"https://www.ozgurcatak.org/img/foc.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Ferhat Ozgur Catak"
+  },
+  "mainEntityOfPage": { "@type": "WebPage" },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Ferhat Ozgur Catak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ozgurcatak.org/img/foc.jpg"
+    }
+  },
+  "description": "AI&Security Researcher",
+  "keywords": ["keras","machine learning","deep learning"]
+}
+</script>
+
+
+
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="https://www.ozgurcatak.org/">Ferhat Ozgur Catak</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/courses/">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/publication/">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/post/">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Adversarial Machine Learning Mitigation: Adversarial Learning</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2021-01-26 20:30:33 &#43;0100 CET" itemprop="datePublished">
+      2021-01-26
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    14 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Adversarial%20Machine%20Learning%20Mitigation%3a%20Adversarial%20Learning&amp;url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fadversarial-machine-learning-attacks-and-mitigations%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fadversarial-machine-learning-attacks-and-mitigations%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fadversarial-machine-learning-attacks-and-mitigations%2f&amp;title=Adversarial%20Machine%20Learning%20Mitigation%3a%20Adversarial%20Learning"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fadversarial-machine-learning-attacks-and-mitigations%2f&amp;title=Adversarial%20Machine%20Learning%20Mitigation%3a%20Adversarial%20Learning"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Adversarial%20Machine%20Learning%20Mitigation%3a%20Adversarial%20Learning&amp;body=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fadversarial-machine-learning-attacks-and-mitigations%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>There are several attacks against deep learning models in the literature, including <strong>fast-gradient sign method</strong> (FGSM), <strong>basic iterative method</strong> (BIM) or <strong>momentum iterative method</strong> (MIM) attacks. These attack are the purest form of the gradient-based evading technique that is used by attackers to evade the classification model.</p>
+
+<h2 id="cite-the-code">Cite The Code</h2>
+
+<p>If you find those results useful please cite this paper :</p>
+
+<pre><code>    @PROCEEDINGS{catak-adv-ml-2020,
+    title = {Deep Neural Network based Malicious Network Activity Detection Under Adversarial Machine Learning Attacks},
+    booktitle = {Proc.\ 3rd International Conference on Intelligent Technologies and Applications (INTAP 2020)},
+    volume = 5805,
+    series = {LNCS},author  = {Ferhat Ozgur Catak},
+    publisher = {Springer},
+    year = {2020}
+    }
+</code></pre>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>In this work, I will present a new approach to protect a malicious activity detection model from the several adversarial machine learning attacks. Hence, we explore the power of applying adversarial training to build a robust model against FGSM attacks. Accordingly, (1) dataset enhanced with the adversarial examples; (2) deep neural network-based detection model is trained using the KDDCUP99 dataset to learn the FGSM based attack patterns. We applied this training model to the benchmark cyber security dataset.</p>
+
+<p>The adversarial machine learning has been used to describe the attacks to machine learning models, which tries to mislead models by malicious input instances. Figure shows the typical adversarial machine learning attack.</p>
+
+<p><img src="https://www.ozgurcatak.org/post/adversarial-ml/adversarial_attack.png" alt="Adversarial machine learning attack" /></p>
+
+<p>A typical machine learning model basically consists of two stages as training time and decision time. Thus, the adversarial machine learning attacks occur in either training time or decision time. The techniques used by hackers for adversarial machine learning can be divided into two, according to the time of the attack:</p>
+
+<ul>
+<li><strong>Data Poisoning</strong>: The attacker changes some labels of training input instances to mislead the output model.</li>
+<li><strong>Model Poisoning</strong>: The hacker drives model to produce false labeling using some perturbated instance after the model is created.</li>
+</ul>
+
+<p>Our model is able to respond to the model attacks by hackers who use the adversarial machine learning methods. Figure illustrates the system architecture used to protect the model and to classify correctly.
+<img src="https://www.ozgurcatak.org/post/adversarial-ml/adversarial-machine-learning-mitigation.png" alt="Adversarial machine learning attack mitigation" /></p>
+
+<h2 id="let-s-coding">Let&rsquo;s coding</h2>
+
+<p>We import the usual standard libraries plus one cleverhans library to make adversarial attack to the deep learning model.</p>
+
+<pre><code class="language-python">from sklearn.datasets import fetch_kddcup99
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+from sklearn import preprocessing
+import tensorflow as tf
+import pandas as pd
+import numpy as np
+from keras.utils import np_utils
+from cleverhans.future.tf2.attacks import fast_gradient_method, \
+    basic_iterative_method, momentum_iterative_method
+
+np.random.seed(10)
+</code></pre>
+
+<p>In this work, we will use standart KDDCUP&rsquo;99 intrusion detection dataset to show the results. We need to extract the numerical features from the dataset. I created a new method to load and extract the KDDCUP&rsquo;99 dataset.</p>
+
+<pre><code class="language-python">COL_NAME = ['duration', 'protocol_type', 'service', 'flag', 'src_bytes',
+            'dst_bytes', 'land', 'wrong_fragment', 'urgent', 'hot',
+            'num_failed_logins', 'logged_in', 'num_compromised', 'root_shell',
+            'su_attempted', 'num_root', 'num_file_creations', 'num_shells',
+            'num_access_files', 'num_outbound_cmds', 'is_host_login',
+            'is_guest_login', 'count', 'srv_count', 'serror_rate',
+            'srv_serror_rate', 'rerror_rate', 'srv_rerror_rate',
+            'same_srv_rate', 'diff_srv_rate', 'srv_diff_host_rate',
+            'dst_host_count', 'dst_host_srv_count', 'dst_host_same_srv_rate',
+            'dst_host_diff_srv_rate', 'dst_host_same_src_port_rate',
+            'dst_host_srv_diff_host_rate', 'dst_host_serror_rate',
+            'dst_host_srv_serror_rate', 'dst_host_rerror_rate', 'dst_host_srv_rerror_rate']
+
+NUMERIC_COLS = ['duration', 'src_bytes', 'dst_bytes', 'wrong_fragment',
+                'urgent', 'hot', 'num_failed_logins', 'num_compromised',
+                'root_shell', 'su_attempted', 'num_root', 'num_file_creations',
+                'num_shells', 'num_access_files', 'num_outbound_cmds', 'count',
+                'srv_count', 'serror_rate', 'srv_serror_rate', 'rerror_rate',
+                'srv_rerror_rate', 'same_srv_rate', 'diff_srv_rate',
+                'srv_diff_host_rate', 'dst_host_count', 'dst_host_srv_count',
+                'dst_host_same_srv_rate', 'dst_host_diff_srv_rate',
+                'dst_host_same_src_port_rate', 'dst_host_srv_diff_host_rate',
+                'dst_host_serror_rate', 'dst_host_srv_serror_rate',
+                'dst_host_rerror_rate', 'dst_host_srv_rerror_rate']
+
+def get_ds():
+    &quot;&quot;&quot; get_ds: Get the numeric values of the KDDCUP'99 dataset. &quot;&quot;&quot;
+    x_kddcup, y_kddcup = fetch_kddcup99(return_X_y=True, shuffle=False)
+    df_kddcup = pd.DataFrame(x_kddcup, columns=COL_NAME)
+    df_kddcup['label'] = y_kddcup
+    df_kddcup.drop_duplicates(keep='first', inplace=True)
+    df_kddcup['label'] = df_kddcup['label'].apply(lambda d: \
+                                    str(d).replace('.', '').replace(&quot;b'&quot;, &quot;&quot;).\
+                                        replace(&quot;'&quot;, &quot;&quot;))
+
+    conversion_dict = {'back':'dos', 'buffer_overflow':'u2r', 'ftp_write':'r2l',
+                       'guess_passwd':'r2l', 'imap':'r2l', 'ipsweep':'probe',
+                       'land':'dos', 'loadmodule':'u2r', 'multihop':'r2l',
+                       'neptune':'dos', 'nmap':'probe', 'perl':'u2r', 'phf':'r2l',
+                       'pod':'dos', 'portsweep':'probe', 'rootkit':'u2r',
+                       'satan':'probe', 'smurf':'dos', 'spy':'r2l', 'teardrop':'dos',
+                       'warezclient':'r2l', 'warezmaster':'r2l'}
+    df_kddcup['label'] = df_kddcup['label'].replace(conversion_dict)
+    df_kddcup = df_kddcup.query(&quot;label != 'u2r'&quot;)
+    df_y = pd.DataFrame(df_kddcup.label, columns=[&quot;label&quot;], dtype=&quot;category&quot;)
+    df_kddcup.drop([&quot;label&quot;], inplace=True, axis=1)
+    x_kddcup = df_kddcup[NUMERIC_COLS].values
+    x_kddcup = preprocessing.scale(x_kddcup)
+    y_kddcup = df_y.label.cat.codes.to_numpy()
+    return x_kddcup, y_kddcup
+
+</code></pre>
+
+<p>The tensorflow based classification model is then given for example as exercise here:</p>
+
+<pre><code class="language-python">def create_tf_model(input_size, num_of_class):
+    &quot;&quot;&quot; This method creates the tensorflow classification model &quot;&quot;&quot;
+    model_kddcup = tf.keras.Sequential([
+        tf.keras.layers.Dense(200, input_dim=input_size, activation=tf.nn.relu),
+        tf.keras.layers.Dense(500, activation=tf.nn.relu),
+        tf.keras.layers.Dense(200, activation=tf.nn.relu),
+        tf.keras.layers.Dense(num_of_class),
+        # We seperate the activation layer to be able to access
+        # the logits of the previous layer later
+        tf.keras.layers.Activation(tf.nn.softmax)
+        ])
+    model_kddcup.compile(loss='categorical_crossentropy',
+                         optimizer='adam',
+                         metrics=['accuracy'])
+    return model_kddcup
+</code></pre>
+
+<p>The next step is to create adversarial machine learning attacks using CleverHans library. I used <strong>fast-gradient sign method</strong> (FGSM), <strong>basic iterative method</strong> (BIM) or <strong>momentum iterative method</strong> (MIM) attacks for the Tensorflow library. I created 3 methods for each attack.</p>
+
+<pre><code class="language-python">def gen_tf2_fgsm_attack(org_model, x_test):
+    &quot;&quot;&quot; This method creates adversarial examples with fgsm &quot;&quot;&quot;
+    logits_model = tf.keras.Model(org_model.input, model.layers[-1].output)
+
+    epsilon = 0.1
+    adv_fgsm_x = fast_gradient_method(logits_model,
+                                      x_test,
+                                      epsilon,
+                                      np.inf,
+                                      targeted=False)
+    return adv_fgsm_x
+
+def gen_tf2_bim(org_model, x_test):
+    &quot;&quot;&quot; This method creates adversarial examples with bim &quot;&quot;&quot;
+    logits_model = tf.keras.Model(org_model.input, model.layers[-1].output)
+
+    epsilon = 0.1
+    adv_bim_x = basic_iterative_method(logits_model,
+                                       x_test,
+                                       epsilon,
+                                       0.1,
+                                       nb_iter=10,
+                                       norm=np.inf,
+                                       targeted=True)
+    return adv_bim_x
+
+def gen_tf2_mim(org_model, x_test):
+    &quot;&quot;&quot; This method creates adversarial examples with mim &quot;&quot;&quot;
+    logits_model = tf.keras.Model(org_model.input, model.layers[-1].output)
+
+    epsilon = 0.1
+    adv_mim_x = momentum_iterative_method(logits_model,
+                                          x_test,
+                                          epsilon,
+                                          0.1,
+                                          nb_iter=100,
+                                          norm=np.inf,
+                                          targeted=True)
+    return adv_mim_x
+</code></pre>
+
+<p>Let&rsquo;s continue with the training of the attack detection model with the normal (non-manipulated) KDDCUP&rsquo;99 dataset</p>
+
+<pre><code class="language-python">EPOCH = 50
+TEST_RATE = 0.2
+VALIDATION_RATE = 0.2
+
+X, y = get_ds()
+
+num_class = len(np.unique(y))
+
+attack_functions = [gen_tf2_bim,
+                    gen_tf2_fgsm_attack,
+                    gen_tf2_mim]
+
+model = create_tf_model(X.shape[1], num_class)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, \
+                                                    test_size=TEST_RATE)
+y_train_cat = np_utils.to_categorical(y_train)
+y_test_cat = np_utils.to_categorical(y_test)
+
+history = model.fit(X_train, y_train_cat, epochs=EPOCH,
+                    batch_size=50000, verbose=0,
+                    validation_split=VALIDATION_RATE)
+
+y_pred = model.predict_classes(X_test)
+cm_org = confusion_matrix(y_test, y_pred)
+print(&quot;*&quot;*50)
+print(&quot;Original confusion matrix&quot;)
+print(cm_org)
+</code></pre>
+
+<pre><code>C:\Users\ferhatoc\AppData\Roaming\Python\Python37\site-packages\pandas\core\frame.py:3997: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  errors=errors,
+
+
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_train_function.&lt;locals&gt;.train_function at 0x0000025288139948&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_train_function.&lt;locals&gt;.train_function at 0x0000025288139948&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_test_function.&lt;locals&gt;.test_function at 0x0000025287FF4318&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_test_function.&lt;locals&gt;.test_function at 0x0000025287FF4318&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:From &lt;ipython-input-7-6c756bab0648&gt;:24: Sequential.predict_classes (from tensorflow.python.keras.engine.sequential) is deprecated and will be removed after 2021-01-01.
+Instructions for updating:
+Please use instead:* `np.argmax(model.predict(x), axis=-1)`,   if your model does multi-class classification   (e.g. if it uses a `softmax` last-layer activation).* `(model.predict(x) &gt; 0.5).astype(&quot;int32&quot;)`,   if your model does binary classification   (e.g. if it uses a `sigmoid` last-layer activation).
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000025283D0E798&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000025283D0E798&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+**************************************************
+Original confusion matrix
+[[10873    16     0     0]
+ [   16 17528     6    18]
+ [    7    20   403    11]
+ [    3    23     4   179]]
+</code></pre>
+
+<h2 id="original-model-s-confusion-matrix">Original Model&rsquo;s Confusion Matrix</h2>
+
+<p>The original model&rsquo;s confusion matrix is shown here. According to the confusion matrix, the model&rsquo;s classification performance quite good.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center"></th>
+<th align="right"></th>
+<th align="right"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">10873</td>
+<td align="center">16</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td align="left">16</td>
+<td align="center">17528</td>
+<td align="right">6</td>
+<td align="right">18</td>
+</tr>
+
+<tr>
+<td align="left">7</td>
+<td align="center">20</td>
+<td align="right">403</td>
+<td align="right">11</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="center">23</td>
+<td align="right">4</td>
+<td align="right">179</td>
+</tr>
+</tbody>
+</table>
+
+<p>Let&rsquo;s continue with the attacks, attacked model&rsquo;s confusion matrices and adversarial trained model&rsquo;s confusion matrices</p>
+
+<pre><code class="language-python">for attack_function in attack_functions:
+        print(&quot;*&quot;*20)
+        print(&quot;Attack function is &quot;, attack_function)
+        
+        model = create_tf_model(X.shape[1], num_class)
+        history = model.fit(X_train, y_train_cat, epochs=EPOCH,
+                            batch_size=50000, verbose=0,
+                            validation_split=VALIDATION_RATE)
+        
+        X_adv_list = []
+        y_adv_list = []
+
+        adv_x = attack_function(model, X_test)
+        y_pred = model.predict_classes(adv_x)
+        cm_adv = confusion_matrix(y_test, y_pred)
+        print(&quot;*&quot;*20)
+        print(&quot;Attacked confusion matrix&quot;)
+        print(cm_adv)
+
+        print(&quot;Adversarial training&quot;)
+        # define the checkpoint
+
+        adv_x = attack_function(model, X_train)
+        adv_x_test = attack_function(model, X_test)
+
+        concat_adv_x = np.concatenate([X_train, adv_x])
+        concat_y_train = np.concatenate([y_train_cat, y_train_cat])
+
+        history = model.fit(concat_adv_x, concat_y_train, epochs=EPOCH,
+                            batch_size=50000, verbose=0,
+                            validation_data=(adv_x_test, y_test_cat))
+
+        y_pred = model.predict_classes(adv_x_test)
+        cm_adv = confusion_matrix(y_test, y_pred)
+        print(&quot;*&quot;*20)
+        print(&quot;Attacked confusion matrix - adv training&quot;)
+        print(cm_adv)
+</code></pre>
+
+<pre><code>********************
+Attack function is  &lt;function gen_tf2_bim at 0x00000252FCF84A68&gt;
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_train_function.&lt;locals&gt;.train_function at 0x00000252FD05FDC8&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_train_function.&lt;locals&gt;.train_function at 0x00000252FD05FDC8&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_test_function.&lt;locals&gt;.test_function at 0x00000252877B80D8&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_test_function.&lt;locals&gt;.test_function at 0x00000252877B80D8&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000025281E8B168&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000025281E8B168&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+********************
+Attacked confusion matrix
+[[10874    15     0     0]
+ [   14 17532     7    15]
+ [    6    19   404    12]
+ [    3    23     5   178]]
+Adversarial training
+********************
+Attacked confusion matrix - adv training
+[[10877    12     0     0]
+ [   12 17535     6    15]
+ [    1    13   425     2]
+ [    0    22     3   184]]
+********************
+Attack function is  &lt;function gen_tf2_fgsm_attack at 0x00000252FCF84B88&gt;
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_train_function.&lt;locals&gt;.train_function at 0x0000025281E8B438&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_train_function.&lt;locals&gt;.train_function at 0x0000025281E8B438&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_test_function.&lt;locals&gt;.test_function at 0x0000025288BB38B8&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_test_function.&lt;locals&gt;.test_function at 0x0000025288BB38B8&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000025287EF2558&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000025287EF2558&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+********************
+Attacked confusion matrix
+[[10702   180     6     1]
+ [   79 17353    31   105]
+ [    9    47   376     9]
+ [    3    88     8   110]]
+Adversarial training
+********************
+Attacked confusion matrix - adv training
+[[10877    11     0     1]
+ [    9 17543     4    12]
+ [    1    15   422     3]
+ [    2    25     2   180]]
+********************
+Attack function is  &lt;function gen_tf2_mim at 0x00000252FCF84D38&gt;
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_train_function.&lt;locals&gt;.train_function at 0x00000252875459D8&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_train_function.&lt;locals&gt;.train_function at 0x00000252875459D8&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_test_function.&lt;locals&gt;.test_function at 0x00000252F9990048&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_test_function.&lt;locals&gt;.test_function at 0x00000252F9990048&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:5 out of the last 14 calls to &lt;function compute_gradient at 0x00000252FCF6A318&gt; triggered tf.function retracing. Tracing is expensive and the excessive number of tracings is likely due to passing python objects instead of tensors. Also, tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. Please refer to https://www.tensorflow.org/tutorials/customization/performance#python_or_tensor_args and https://www.tensorflow.org/api_docs/python/tf/function for more details.
+WARNING:tensorflow:AutoGraph could not transform &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000025280355A68&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING: AutoGraph could not transform &lt;function Model.make_predict_function.&lt;locals&gt;.predict_function at 0x0000025280355A68&gt; and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: Bad argument number for Name: 4, expecting 3
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+********************
+Attacked confusion matrix
+[[10874    15     0     0]
+ [   16 17530     5    17]
+ [    6    24   400    11]
+ [    3    23     5   178]]
+Adversarial training
+********************
+Attacked confusion matrix - adv training
+[[10878    11     0     0]
+ [   12 17537     4    15]
+ [    1    16   420     4]
+ [    0    21     2   186]]
+</code></pre>
+
+<h2 id="adversarial-trainings-results">Adversarial Trainings Results</h2>
+
+<h3 id="basic-iterative-method-bim">Basic Iterative Method (BIM)</h3>
+
+<p>Attacked model&rsquo;s confusion matrix</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center"></th>
+<th align="right"></th>
+<th align="right"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">10874</td>
+<td align="center">15</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td align="left">14</td>
+<td align="center">17532</td>
+<td align="right">7</td>
+<td align="right">15</td>
+</tr>
+
+<tr>
+<td align="left">6</td>
+<td align="center">19</td>
+<td align="right">404</td>
+<td align="right">12</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="center">23</td>
+<td align="right">5</td>
+<td align="right">178</td>
+</tr>
+</tbody>
+</table>
+
+<p>Adversarial trained model&rsquo;s confusion matrix</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center"></th>
+<th align="right"></th>
+<th align="right"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">10877</td>
+<td align="center">12</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td align="left">12</td>
+<td align="center">17535</td>
+<td align="right">6</td>
+<td align="right">15</td>
+</tr>
+
+<tr>
+<td align="left">1</td>
+<td align="center">13</td>
+<td align="right">425</td>
+<td align="right">2</td>
+</tr>
+
+<tr>
+<td align="left">0</td>
+<td align="center">22</td>
+<td align="right">3</td>
+<td align="right">184</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="fast-gradient-sign-method-fgsm">Fast Gradient Sign Method (FGSM)</h3>
+
+<p>Attacked model&rsquo;s confusion matrix</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center"></th>
+<th align="right"></th>
+<th align="right"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">10702</td>
+<td align="center">180</td>
+<td align="right">6</td>
+<td align="right">1</td>
+</tr>
+
+<tr>
+<td align="left">79</td>
+<td align="center">17353</td>
+<td align="right">31</td>
+<td align="right">105</td>
+</tr>
+
+<tr>
+<td align="left">9</td>
+<td align="center">47</td>
+<td align="right">376</td>
+<td align="right">9</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="center">88</td>
+<td align="right">8</td>
+<td align="right">110</td>
+</tr>
+</tbody>
+</table>
+
+<p>Adversarial trained model&rsquo;s confusion matrix</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center"></th>
+<th align="right"></th>
+<th align="right"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">10877</td>
+<td align="center">11</td>
+<td align="right">0</td>
+<td align="right">1</td>
+</tr>
+
+<tr>
+<td align="left">9</td>
+<td align="center">17543</td>
+<td align="right">4</td>
+<td align="right">12</td>
+</tr>
+
+<tr>
+<td align="left">1</td>
+<td align="center">15</td>
+<td align="right">422</td>
+<td align="right">3</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="center">25</td>
+<td align="right">2</td>
+<td align="right">180</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="momentum-iterative-method-mim">Momentum Iterative Method (MIM)</h3>
+
+<p>Attacked model&rsquo;s confusion matrix</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center"></th>
+<th align="right"></th>
+<th align="right"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">10874</td>
+<td align="center">15</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td align="left">16</td>
+<td align="center">17530</td>
+<td align="right">5</td>
+<td align="right">17</td>
+</tr>
+
+<tr>
+<td align="left">6</td>
+<td align="center">24</td>
+<td align="right">400</td>
+<td align="right">11</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="center">23</td>
+<td align="right">5</td>
+<td align="right">178</td>
+</tr>
+</tbody>
+</table>
+
+<p>Adversarial trained model&rsquo;s confusion matrix</p>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="center"></th>
+<th align="right"></th>
+<th align="right"></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">10878</td>
+<td align="center">11</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td align="left">12</td>
+<td align="center">17537</td>
+<td align="right">4</td>
+<td align="right">15</td>
+</tr>
+
+<tr>
+<td align="left">1</td>
+<td align="center">16</td>
+<td align="right">420</td>
+<td align="right">4</td>
+</tr>
+
+<tr>
+<td align="left">0</td>
+<td align="center">21</td>
+<td align="right">2</td>
+<td align="right">186</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-python">
+</code></pre>
+
+    </div>
+
+    
+    
+    
+    <div class="article-tags">
+      
+      <a class="btn btn-primary btn-outline" href="https://www.ozgurcatak.org/tags/machine-learning">machine learning</a>
+      
+      <a class="btn btn-primary btn-outline" href="https://www.ozgurcatak.org/tags/adversarial-machine-learning">adversarial machine learning</a>
+      
+    </div>
+    
+    
+
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/">Autoencoder Based Adversarial Machine Learning Attack Mitigation</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="container article-widget">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/"><span
+      aria-hidden="true">&larr;</span> Autoencoder Based Adversarial Machine Learning Attack Mitigation</a></li>
+    
+
+    
+    <li class="next"><a href="https://www.ozgurcatak.org/post/data-privacy-techniques/">Data Privacy and Privacy Preserving Techniques <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2020 Ferhat Ozgur Catak &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="https://www.ozgurcatak.org/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

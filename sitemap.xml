@@ -107,6 +107,25 @@
     
     <url>
     
+      <loc>https://www.ozgurcatak.org/post/adversarial-machine-learning-attacks-and-mitigations/</loc>
+      <lastmod>2021-01-26T20:30:33+01:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/adversarial-machine-learning/</loc>
+      <lastmod>2021-01-26T20:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://www.ozgurcatak.org/publication_types/2/</loc>
       <lastmod>2021-01-22T00:00:00+00:00</lastmod>
       <priority>1.00</priority>
@@ -223,15 +242,6 @@
       <loc>https://www.ozgurcatak.org/tags/cyber-security/</loc>
       <lastmod>2020-10-17T19:26:10+02:00</lastmod>
       <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/post/adversarial-ai-mitigation/</loc>
-      <lastmod>2020-07-17T00:00:00+00:00</lastmod>
     </url>
     
   

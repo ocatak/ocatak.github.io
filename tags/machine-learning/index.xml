@@ -23,6 +23,17 @@ Presentation Link</description>
     </item>
     
     <item>
+      <title>Adversarial Machine Learning Mitigation: Adversarial Learning</title>
+      <link>https://www.ozgurcatak.org/post/adversarial-machine-learning-attacks-and-mitigations/</link>
+      <pubDate>Tue, 26 Jan 2021 20:30:33 +0100</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/post/adversarial-machine-learning-attacks-and-mitigations/</guid>
+      <description>There are several attacks against deep learning models in the literature, including fast-gradient sign method (FGSM), basic iterative method (BIM) or momentum iterative method (MIM) attacks. These attack are the purest form of the gradient-based evading technique that is used by attackers to evade the classification model.
+Cite The Code If you find those results useful please cite this paper :
+ @PROCEEDINGS{catak-adv-ml-2020, title = {Deep Neural Network based Malicious Network Activity Detection Under Adversarial Machine Learning Attacks}, booktitle = {Proc.</description>
+    </item>
+    
+    <item>
       <title>Autoencoder Based Adversarial Machine Learning Attack Mitigation</title>
       <link>https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/</link>
       <pubDate>Sat, 17 Oct 2020 19:26:10 +0200</pubDate>
