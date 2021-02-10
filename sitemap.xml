@@ -49,8 +49,18 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/post/ccis-2019/</loc>
-      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
+      <loc>https://www.ozgurcatak.org/publication_types/4/</loc>
+      <lastmod>2021-02-10T00:00:00+00:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/publication/2021-exploiting-epistemic-uncertainty-of-the-deep-learning-models-to-generate-adversarial-samples/</loc>
+      <lastmod>2021-02-10T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -59,8 +69,27 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/</loc>
-      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
+      <lastmod>2021-02-10T00:00:00+00:00</lastmod>
       <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/publication_types/</loc>
+      <lastmod>2021-02-10T00:00:00+00:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/post/ccis-2019/</loc>
+      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
     </url>
     
   
@@ -145,16 +174,6 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/publication_types/</loc>
-      <lastmod>2021-01-22T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://www.ozgurcatak.org/publication_types/6/</loc>
       <lastmod>2021-01-11T00:00:00+00:00</lastmod>
       <priority>1.00</priority>
@@ -176,16 +195,6 @@
     
       <loc>https://www.ozgurcatak.org/publication/</loc>
       <lastmod>2021-01-11T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/publication_types/4/</loc>
-      <lastmod>2020-12-11T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
     </url>
     
   
