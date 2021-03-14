@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020 Ferhat Ozgur Catak</copyright>
-    <lastBuildDate>Tue, 26 Jan 2021 20:30:33 +0100</lastBuildDate>
+    <lastBuildDate>Sat, 13 Mar 2021 15:30:33 +0100</lastBuildDate>
     
 	<atom:link href="https://www.ozgurcatak.org/tags/adversarial-machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>6G and Security: 6G solutions with Adversarial Machine Learning Attacks: Millimeter Wave Beam Prediction Use-Case</title>
+      <link>https://www.ozgurcatak.org/post/6g_security_adversarial_machine_learning/</link>
+      <pubDate>Sat, 13 Mar 2021 15:30:33 +0100</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/post/6g_security_adversarial_machine_learning/</guid>
+      <description>6G and Artificial Intelligence With Security Problems 6G solutions with Adversarial Machine Learning Attacks: Millimeter Wave Beam Prediction Use-Case
+6G is the next generation for the communication systems. In recent years, machine learning algorithms have been applied widely in various fields such as health, transportation, and the autonomous car. The predictive algorithms will be used in 6G problems. With the rapid developments of deep learning techniques, it is critical to take the security concern into account to apply the algorithms.</description>
+    </item>
     
     <item>
       <title>Adversarial Machine Learning Mitigation: Adversarial Learning</title>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="author" content="Dr. Ferhat Ozgur Catak">
+  <meta name="description" content="Ferhat Ozgur Catak is an Artificial Intelligence and Cyber Security Researcher. He is interested in Data Privacy and Cyber Security for machine learning and deep learning, covering the theoretical, applicative, and computational aspects. His primary research interests lie broadly in deep learning.">
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="https://www.ozgurcatak.org/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-108796420-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+	  ga('require', 'ipMeta', {
+          serviceProvider: 'dimension1',
+          networkDomain: 'dimension2',
+          networkType: 'dimension3',
+      });
+      ga('ipMeta:loadNetworkFields');
+      ga('send', 'pageview');
+    </script>
+	
+	
+<script async src="https://ipmeta.io/plugin.js"></script>
+	
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="icon" type="image/png" href="https://www.ozgurcatak.org/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="https://www.ozgurcatak.org/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://www.ozgurcatak.org/post/6g_security_adversarial_machine_learning/">
+
+  
+  
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "Person",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://www.ozgurcatak.org"
+    },
+    "name" : "Ferhat Ozgur Catak",
+	"jobTitle": "Artificial Intelligence Scientist",
+    "description" : "Research about Cyber Security, Artificial Intelligence, Machine Learning, Deep Learning, Uncertainty",
+    "url" : "https://www.ozgurcatak.org/",
+    "image": "https://www.ozgurcatak.org/img/foc.jpg",
+    "birthPlace": "Turkey",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Oslo",
+     "addressCountry": "Norway"
+    },
+    "alumniOf": "Istanbul University",
+	"worksFor": {
+      "@type": "Organization",
+      "name": "Simula Research Laboratory"
+    },
+    "sameAs": [
+    "http://www.linkedin.com/in/ozgurcatak/",
+    "https://scholar.google.com.tr/citations?user=qPzUoDYAAAAJ&hl=en",
+    "https://github.com/ocatak",
+    "https://www.researchgate.net/profile/Ferhat_Ozgur_Catak",
+    "https://orcid.org/0000-0002-2434-9966"
+  ]
+}
+</script>
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ozgurcatak" />
+<meta name="twitter:creator" content="@ozgurcatak" />
+<meta property="og:url" content="https://www.ozgurcatak.org/" />
+
+<meta property="og:image" content="http://www.ozgurcatak.org/img/foc.jpg" />
+
+
+
+
+  
+<title>6G and Security: 6G solutions with Adversarial Machine Learning Attacks: Millimeter Wave Beam Prediction Use-Case</title>
+  <meta content="cyber security, machine learning, artificial intelligence, dataset" name="keywords">
+
+<meta content='http://www.ozgurcatak.org/' property='og:url'/>
+<meta content="6G and Security: 6G solutions with Adversarial Machine Learning Attacks: Millimeter Wave Beam Prediction Use-Case - Ferhat Ozgur Catak" property="og:title">
+
+<meta property="og:description" content="Ferhat Ozgur Catak is an Artificial Intelligence and Cyber Security Researcher. Dr. Catak interested in Data Privacy and Cyber Security for machine learning and deep learning, covering the theoretical, applicative, and computational aspects. My primary research interests lie broadly in deep learning." />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "6G and Security: 6G solutions with Adversarial Machine Learning Attacks: Millimeter Wave Beam Prediction Use-Case - Blog post",
+  "datePublished": "25.05.2020",
+  "dateModified": "25.05.2020",
+  "image":"https://www.ozgurcatak.org/img/foc.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Ferhat Ozgur Catak"
+  },
+  "mainEntityOfPage": { "@type": "WebPage" },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Ferhat Ozgur Catak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ozgurcatak.org/img/foc.jpg"
+    }
+  },
+  "description": "AI&Security Researcher",
+  "keywords": ["keras","machine learning","deep learning"]
+}
+</script>
+
+
+
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="https://www.ozgurcatak.org/">Ferhat Ozgur Catak</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/courses/">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/publication/">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/post/">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">6G and Security: 6G solutions with Adversarial Machine Learning Attacks: Millimeter Wave Beam Prediction Use-Case</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2021-03-13 15:30:33 &#43;0100 CET" itemprop="datePublished">
+      2021-03-13
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=6G%20and%20Security%3a%206G%20solutions%20with%20Adversarial%20Machine%20Learning%20Attacks%3a%20Millimeter%20Wave%20Beam%20Prediction%20Use-Case&amp;url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2f6g_security_adversarial_machine_learning%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2f6g_security_adversarial_machine_learning%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2f6g_security_adversarial_machine_learning%2f&amp;title=6G%20and%20Security%3a%206G%20solutions%20with%20Adversarial%20Machine%20Learning%20Attacks%3a%20Millimeter%20Wave%20Beam%20Prediction%20Use-Case"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2f6g_security_adversarial_machine_learning%2f&amp;title=6G%20and%20Security%3a%206G%20solutions%20with%20Adversarial%20Machine%20Learning%20Attacks%3a%20Millimeter%20Wave%20Beam%20Prediction%20Use-Case"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=6G%20and%20Security%3a%206G%20solutions%20with%20Adversarial%20Machine%20Learning%20Attacks%3a%20Millimeter%20Wave%20Beam%20Prediction%20Use-Case&amp;body=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2f6g_security_adversarial_machine_learning%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="6g-and-artificial-intelligence-with-security-problems">6G and Artificial Intelligence With Security Problems</h1>
+
+<p>6G solutions with Adversarial Machine Learning Attacks: Millimeter Wave Beam Prediction Use-Case</p>
+
+<p>6G is the next generation for the communication systems. In recent years, machine learning algorithms have been applied widely in various fields such as health, transportation, and the autonomous car. The predictive algorithms will be used in 6G problems. With the rapid developments of deep learning techniques, it is critical to take the security concern into account to apply the algorithms. While machine learning offers significant advantages for 6G, AI models’ security is ignored. Since it has many applications in the real world, security is a vital part of the algorithms. This post has proposed a mitigation method for adversarial attacks against 6G machine learning models with adversarial learning. The main idea behind adversarial attacks against machine learning models is to produce faulty results by manipulating trained deep learning models for 6G applications.</p>
+
+<p><strong>Cite The Work</strong>
+If you find this implementation useful please cite it:</p>
+
+<pre><code>@misc{ 6g-sec-problems,
+   author = &quot;Catak, FO. &quot;,
+   title = &quot;6G with Adversarial Machine Learning Security Problems: Millimeter Wave Beam Prediction Use-Case&quot;,
+   year = &quot;2021&quot;,
+   url = &quot;https://arxiv.org/abs/1905.01999&quot;,
+   note = &quot;[arXiv:1905.01999 ]&quot;
+ }
+</code></pre>
+
+<h3 id="1-introduction-to-6g">1. Introduction to 6G</h3>
+
+<p>Up to 4G, time-frequency domain technology has been explored to increase overall system capacity. The recent developments in 5G and beyond technologies support emerging applications such as smart homes, vehicular networks, augmented reality (AR), virtual reality (VR) with unprecedented rates enabled by recent advances in massive multiple-input multiple-output (MIMO), mmWave communications, network slicing, small cells, and Internet of things (IoT). These complex structures of 5G and beyond technologies can be captured by using <strong>data-driven approach</strong> machine learning (ML) algorithm. The strong learning, reasoning, intelligent recognition abilities of ML allow the network structure to train and adapt itself to support diverse demands of the systems without human intervention.</p>
+
+<p>On the other hand, 6G is vulnerable for the adversarial machine learning attacks. Figure shows an attack scenario. The attacker gets an legitimate input, <strong>x</strong>, creates a noise vector with an *e *budget sums the input instance and the craftily designed noise to create adversarial input <strong>x_adv.</strong></p>
+
+<p><img src="https://cdn-images-1.medium.com/max/NaN/1*Pj-Y8DBrwTvpbpNNg3IMuw.png" alt="" /></p>
+
+<h3 id="2-adversarial-machine-learning">2. Adversarial Machine Learning</h3>
+
+<p>Adversarial machine learning is an attack technique that attempts to fool neural network models by supplying craftily manipulated input with a small difference. The obvious intention is to produce a failure in a neural network.</p>
+
+<p>There are many attacking methods for deep learning models, and FGSM is the most straightforward and powerful attack type. FGSM works by utilizing the gradients of the neural network to create an adversarial example to evade the model. For an input instance <strong>x</strong>.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*Zj4yTE_gWpohFd0AMDB2eg.png" alt="" /></p>
+
+<p>The overall steps are following;</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/NaN/1*SRH_2i4-kD4e8hShVJxQnQ.png" alt="" /></p>
+
+<h3 id="3-solution-adversarial-training">3. Solution: Adversarial Training</h3>
+
+<p>Adversarial training is a widely recommended defense that implies generating adversarial instances using the gradient of the victim classifier, and then re-training the model with the adversarial instances and their respective labels. This technique has demonstrated to be efficient in defending models from adversarial attacks.</p>
+
+<p>Let us first think a common classification problem with a training instances **X **of dimension <em>d</em>, a label space **Y. **We assume the classifier <em>h</em> has been trained to minimize a loss function <em>l</em> as follows:</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*1xJ4kLqE8uBLZ1UGPWmYNw.png" alt="Image by Author" /><em>Image by Author</em></p>
+
+<p>We modified the optimization function for a 6G security problem. The following figure shows the diagram of <strong>RF beamforming codeword adversarial training</strong>.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/NaN/1*mKw5tgP8GcSZzZTv2IaYrA.png" alt="Image by Author" /><em>Image by Author</em></p>
+
+<h3 id="5-let-s-get-coding">5. Let’s get coding</h3>
+
+<p>I will show the our proposed approach with <strong>Python</strong> language. I import the usual standard libraries to build a deep learning model to predict RF beamforming codeword.</p>
+
+<pre><code>import tensorflow as tf
+from scipy.io import loadmat, savemat
+import numpy as np
+from keras.models import Sequential
+from keras.layers import Dense
+from tqdm import tqdm
+from keras.callbacks import ModelCheckpoint
+import pickle 
+from sklearn.metrics import mean_squared_error
+import matplotlib.pyplot as plt
+import pandas as pd
+</code></pre>
+
+<p>In this work, I will use publicly avaliable <a href="https://www.deepmimo.net" target="_blank">DeepMIMO dataset</a> to attack RF beam forming prediction model. I will use FGSM attack, and <strong>Mean Squared Error</strong> loss function for the input manipulation. My FGSM attack implementation is here.</p>
+
+<pre><code>loss_object = tf.keras.losses.MeanSquaredError()
+
+def fgsm(model, input_instance, label, n_BS,n_beams, epsilon =0.01):
+    tensor_input_instance = tf.convert_to_tensor(input_instance, dtype=tf.float32)
+    adv_x = input_instance
+    for idx in range(0, n_BS*n_beams-2, n_beams):
+        with tf.GradientTape() as tape:
+            tmp_label = label[:, idx:idx + n_beams]
+            tape.watch(tensor_input_instance)
+            prediction = model(tensor_input_instance)
+            loss = loss_object(tmp_label, prediction)
+            gradient = tape.gradient(loss, tensor_input_instance)
+            signed_grad = tf.sign(gradient)
+            adv_x = adv_x + eps * signed_grad
+    return adv_x
+</code></pre>
+
+<h3 id="the-parameters-in-our-scenario">The parameters in our scenario</h3>
+
+<p>The table shows the all parameters for RF beamforming, deep neural network, and adversarial setup.</p>
+
+<p><img src="https://cdn-images-1.medium.com/max/NaN/1*nienMmOQ8qbpOZg47n4afA.png" alt="" /></p>
+
+<pre><code># Reading input and output sets generated from MATLAB
+# with DeepMIMO generator http://www.deepmimo.net
+In_set_file=loadmat('DLCB_dataset/DLCB_input.mat')
+Out_set_file=loadmat('DLCB_dataset/DLCB_output.mat')
+
+In_set=In_set_file['DL_input']
+Out_set=Out_set_file['DL_output']
+
+# Parameter initialization
+num_user_tot=In_set.shape[0]
+
+DL_size_ratio = .8
+count=0
+num_tot_TX=4
+num_beams=512
+</code></pre>
+
+<h2 id="the-original-undefended-train-procedure">The original (undefended) train procedure</h2>
+
+<pre><code>def train(In_train, Out_train, In_test, Out_test,
+          nb_epoch, batch_size,dr,
+          num_hidden_layers, nodes_per_layer,
+          loss_fn,n_BS,n_beams):
+
+    in_shp = list(In_train.shape[1:])
+
+    AP_models = []
+    for idx in range(0, n_BS*n_beams-2, n_beams):
+        idx_str = str(idx / n_beams + 1)
+        act_func = 'relu'
+        model = Sequential()
+        model.add(Dense(100, input_dim=in_shp[0], activation=act_func))
+        model.add(Dense(100, activation=act_func))
+        model.add(Dense(100, activation=act_func))
+        model.add(Dense(100, activation=act_func))
+        model.add(Dense(n_beams, activation=act_func))
+        model.compile(loss=loss_fn, optimizer='rmsprop', metrics=['mean_squared_error'])
+
+        history = model.fit(In_train,
+                            Out_train[:, idx:idx + n_beams],
+                            batch_size=batch_size,
+                            epochs=nb_epoch,
+                            verbose=0,
+                            validation_data=(In_test, Out_test[:,idx:idx + n_beams]))
+
+        filehandler = open('history.pkl', 'wb') 
+        pickle.dump(history.history, filehandler)
+        filehandler.close()
+
+        AP_models.append(model)
+    return AP_models
+</code></pre>
+
+<h2 id="training-process-normal-behaviour">Training process (Normal Behaviour)</h2>
+
+<p>Here we will train the RF beamforming codeword prediction model with out any attacker.</p>
+
+<pre><code>count=count+1
+DL_size=int(num_user_tot*DL_size_ratio)
+
+np.random.seed(2016)
+n_examples = DL_size
+num_train  = int(DL_size * 0.8)
+num_test   = int(num_user_tot*.2)
+
+train_index = np.random.choice(range(0,num_user_tot), size=num_train, replace=False)
+rem_index = set(range(0,num_user_tot))-set(train_index)
+test_index= list(set(np.random.choice(list(rem_index), size=num_test, replace=False)))
+
+In_train = In_set[train_index]
+In_test =  In_set[test_index] 
+
+Out_train = Out_set[train_index]
+Out_test = Out_set[test_index]
+
+#In_train, In_test, Out_train, Out_test =  train_test_split(In_set, Out_set, test_size=0.33)
+
+# Learning model parameters
+nb_epoch = 10    
+batch_size = 100  
+dr = 0.05                  # dropout rate  
+num_hidden_layers=4
+nodes_per_layer=In_train.shape[1]
+loss_fn='mean_squared_error'
+
+eps = 2.0 * 16.0 / 255.0
+
+
+# Model training
+AP_models = train(In_train, Out_train, In_test, Out_test,
+                                      nb_epoch, batch_size,dr,
+                                      num_hidden_layers, nodes_per_layer,
+                                      loss_fn,num_tot_TX,num_beams)
+# Model running/testing
+DL_Result={}
+mse_list = []
+for id in range(0,num_tot_TX,1): 
+    beams_predicted=AP_models[id].predict( In_test, batch_size=10, verbose=0)
+
+    DL_Result['TX'+str(id+1)+'Pred_Beams']=beams_predicted
+    DL_Result['TX'+str(id+1)+'Opt_Beams']=Out_test[:,id*num_beams:(id+1)*num_beams]
+
+    mse = mean_squared_error(Out_test[:,id*num_beams:(id+1)*num_beams],beams_predicted)
+    mse_list.append(mse)
+print('mse:',np.mean(mse_list))
+
+DL_Result['user_index']=test_index
+
+mse: 0.00030647155448710575
+</code></pre>
+
+<h2 id="attack-the-rf-beamforming-codeword-prediction-model">Attack the RF Beamforming Codeword Prediction Model</h2>
+
+<p>The RF beamforming prediction model’s performance is quite good which is 0.00039. Now, we will attack the model with FGSM.</p>
+
+<pre><code>import warnings
+warnings.filterwarnings('ignore')
+# Model running/testing
+DL_Result={}
+mse_list = []
+for id in range(0,num_tot_TX,1): 
+    # !!!!! Attack generation !!!!
+    In_test_adv = fgsm(AP_models[id], In_test,Out_test,num_tot_TX,num_beams,eps)
+    beams_predicted=AP_models[id].predict( In_test_adv, batch_size=10, verbose=0)
+
+    DL_Result['TX'+str(id+1)+'Pred_Beams']=beams_predicted
+    DL_Result['TX'+str(id+1)+'Opt_Beams']=Out_test[:,id*num_beams:(id+1)*num_beams]
+
+    mse = mean_squared_error(Out_test[:,id*num_beams:(id+1)*num_beams],beams_predicted)
+    mse_list.append(mse)
+print('mse:',np.mean(mse_list))
+
+mse: 0.0151878763143215
+</code></pre>
+
+<h3 id="adversarial-training">Adversarial Training</h3>
+
+<p>The attacked model’s performance (i.e. mse=0.01532) is worst than the normal performance (i.e. mse=0.00039). Let’s train the normal model with adversarial training.</p>
+
+<pre><code># Model training function
+def adv_train(In_train, Out_train, In_test, Out_test,
+          nb_epoch, batch_size,dr,
+          num_hidden_layers, nodes_per_layer,
+          loss_fn,n_BS,n_beams, eps):
+
+    in_shp = list(In_train.shape[1:])
+
+    AP_models = []
+    mcp_save = ModelCheckpoint('model.hdf5', save_best_only=True, verbose=0, 
+                                   monitor='val_mean_squared_error', mode='min')
+
+    for idx in range(0, n_BS*n_beams-2, n_beams):
+        idx_str = str(idx / n_beams + 1)
+        act_func = 'relu'
+        model = Sequential()
+        model.add(Dense(100, input_dim=in_shp[0], activation=act_func))
+        model.add(Dense(100, activation=act_func))
+        model.add(Dense(100, activation=act_func))
+        model.add(Dense(100, activation=act_func))
+        model.add(Dense(n_beams, activation=act_func))
+        model.compile(loss=loss_fn, optimizer='rmsprop', metrics=['mean_squared_error'])
+
+        history = model.fit(In_train,
+                            Out_train[:, idx:idx + n_beams],
+                            batch_size=batch_size,
+                            epochs=nb_epoch,
+                            verbose=0,
+                            validation_data=(In_test, Out_test[:,idx:idx + n_beams]))
+
+        callbacks = [mcp_save]
+        for _ in range(10):
+            In_train_adv = fgsm(model, In_train,Out_train, n_BS, n_beams)
+            In_train_adv = np.concatenate((In_train, In_train_adv), axis=0)
+
+            Out_train_adv = np.concatenate((Out_train, Out_train), axis=0)
+
+            history = model.fit(In_train_adv,
+                                Out_train_adv[:, idx:idx + n_beams],
+                                batch_size=batch_size,
+                                epochs=nb_epoch*3,
+                                verbose=0,
+                                callbacks=callbacks,
+                                validation_data=(In_test, Out_test[:,idx:idx + n_beams]))
+            model.load_weights('model.hdf5')
+
+        AP_models.append(model)
+    return AP_models
+
+AP_models = adv_train(In_train, Out_train, In_test, Out_test,
+                      nb_epoch, batch_size,dr,
+                      num_hidden_layers, nodes_per_layer,
+                      loss_fn,num_tot_TX,num_beams,eps)
+
+# Model running/testing
+DL_Result={}
+mse_list = []
+for id in range(0,num_tot_TX,1): 
+    # !!!!! Attack generation !!!!
+    In_test_adv = fgsm(AP_models[id], In_test,Out_test,num_tot_TX,num_beams,eps)
+    beams_predicted=AP_models[id].predict( In_test_adv, batch_size=10, verbose=0)
+
+    DL_Result['TX'+str(id+1)+'Pred_Beams']=beams_predicted
+    DL_Result['TX'+str(id+1)+'Opt_Beams']=Out_test[:,id*num_beams:(id+1)*num_beams]
+
+    mse = mean_squared_error(Out_test[:,id*num_beams:(id+1)*num_beams],beams_predicted)
+    mse_list.append(mse)
+print('mse:',np.mean(mse_list))
+
+mse: 0.0006801871943259285
+</code></pre>
+
+<h3 id="all-results">All results</h3>
+
+<p>Now the RF beamforming codeword prediction model’s performance under attack is better than the undefended model performance.</p>
+
+<pre><code>vals = [0.00039551136731949614,0.01532598592375935,0.0007175213740754419]
+df = pd.DataFrame({'Scenario':['SC1: Normal','SC2: Attacked','SC3: Defended'],'vals':vals})
+df.plot.bar(x='Scenario',y='vals', rot=0,color=['green', 'red','blue'], 
+            edgecolor='black',legend='',linewidth=2)
+plt.xlabel('')
+ax = plt.gca()
+for i, v in enumerate(vals):
+    ax.text(-0.17+i*0.97, 0.0002 + v, str(np.round(vals[i],5)), color='blue')
+plt.ylabel('MSE')
+plt.grid(True, which=&quot;both&quot;, ls=&quot;--&quot;)
+plt.show()
+</code></pre>
+
+<p><img src="https://cdn-images-1.medium.com/max/NaN/1*nG5EYpCNLrexfBsZdR1MOw.png" alt="Image by Author" /><em>Image by Author</em></p>
+
+<h3 id="6-conclusion">6. Conclusion</h3>
+
+<p>This research discussed one of the security issues related to RF beamforming codeword prediction models’ vulnerabilities and solutions: (1) Is the deep learning-based RF beamforming codeword predictor vulnerable for adversarial machine learning attacks? (2) Is the iterative adversarial training approach a mitigation method for the adversarial attacks in beamforming prediction? We conducted experiments with the DeepMIMO ray tracing scenario to answer these questions. Our results confirm that the original model is vulnerable to a modified FGSM attack. One of the mitigation methods is the iterative adversarial training approach. Our empirical results also show that iterative adversarial training successfully increases the RF beamforming prediction performance and creates a more accurate predictor, suggesting that the strategy can improve the predictor’s performance.</p>
+
+    </div>
+
+    
+    
+    
+    <div class="article-tags">
+      
+      <a class="btn btn-primary btn-outline" href="https://www.ozgurcatak.org/tags/machine-learning">machine learning</a>
+      
+      <a class="btn btn-primary btn-outline" href="https://www.ozgurcatak.org/tags/adversarial-machine-learning">adversarial machine learning</a>
+      
+    </div>
+    
+    
+
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="https://www.ozgurcatak.org/post/adversarial-machine-learning-attacks-and-mitigations/">Adversarial Machine Learning Mitigation: Adversarial Learning</a></li>
+    
+    <li><a href="https://www.ozgurcatak.org/post/ccis-2019/">CCIS 2019 Presentation</a></li>
+    
+    <li><a href="https://www.ozgurcatak.org/post/ss-paper/autoencoder-based-adversarial-ml/">Autoencoder Based Adversarial Machine Learning Attack Mitigation</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="container article-widget">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://www.ozgurcatak.org/post/ccis-2019/"><span
+      aria-hidden="true">&larr;</span> CCIS 2019 Presentation</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2020 Ferhat Ozgur Catak &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="https://www.ozgurcatak.org/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+

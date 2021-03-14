@@ -49,6 +49,55 @@
     
     <url>
     
+      <loc>https://www.ozgurcatak.org/post/6g_security_adversarial_machine_learning/</loc>
+      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/</loc>
+      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/</loc>
+      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/adversarial-machine-learning/</loc>
+      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/machine-learning/</loc>
+      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://www.ozgurcatak.org/publication_types/4/</loc>
       <lastmod>2021-02-10T00:00:00+00:00</lastmod>
       <priority>1.00</priority>
@@ -68,16 +117,6 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/</loc>
-      <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-      <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>https://www.ozgurcatak.org/publication_types/</loc>
       <lastmod>2021-02-10T00:00:00+00:00</lastmod>
       <priority>1.00</priority>
@@ -90,26 +129,6 @@
     
       <loc>https://www.ozgurcatak.org/post/ccis-2019/</loc>
       <lastmod>2021-01-29T20:30:33+01:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/tags/</loc>
-      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
-      <priority>1.00</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/tags/machine-learning/</loc>
-      <lastmod>2021-01-29T20:30:33+01:00</lastmod>
-      <priority>1.00</priority>
     </url>
     
   
@@ -138,16 +157,6 @@
     
       <loc>https://www.ozgurcatak.org/post/adversarial-machine-learning-attacks-and-mitigations/</loc>
       <lastmod>2021-01-26T20:30:33+01:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>https://www.ozgurcatak.org/tags/adversarial-machine-learning/</loc>
-      <lastmod>2021-01-26T20:30:33+01:00</lastmod>
-      <priority>1.00</priority>
     </url>
     
   
