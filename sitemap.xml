@@ -49,8 +49,8 @@
     
     <url>
     
-      <loc>https://www.ozgurcatak.org/post/6g_security_adversarial_machine_learning/</loc>
-      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <loc>https://www.ozgurcatak.org/post/adversarial_machine_learning_cybersecurity/</loc>
+      <lastmod>2021-04-04T12:30:33+01:00</lastmod>
     </url>
     
   
@@ -59,7 +59,7 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/</loc>
-      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <lastmod>2021-04-04T12:30:33+01:00</lastmod>
       <priority>1.00</priority>
     </url>
     
@@ -69,7 +69,7 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/tags/</loc>
-      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <lastmod>2021-04-04T12:30:33+01:00</lastmod>
       <priority>1.00</priority>
     </url>
     
@@ -79,7 +79,17 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/tags/adversarial-machine-learning/</loc>
-      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <lastmod>2021-04-04T12:30:33+01:00</lastmod>
+      <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/tags/cybersecurity/</loc>
+      <lastmod>2021-04-04T12:30:33+01:00</lastmod>
       <priority>1.00</priority>
     </url>
     
@@ -89,8 +99,17 @@
     <url>
     
       <loc>https://www.ozgurcatak.org/tags/machine-learning/</loc>
-      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
+      <lastmod>2021-04-04T12:30:33+01:00</lastmod>
       <priority>1.00</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://www.ozgurcatak.org/post/6g_security_adversarial_machine_learning/</loc>
+      <lastmod>2021-03-13T15:30:33+01:00</lastmod>
     </url>
     
   

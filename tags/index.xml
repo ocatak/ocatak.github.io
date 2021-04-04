@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020 Ferhat Ozgur Catak</copyright>
-    <lastBuildDate>Sat, 13 Mar 2021 15:30:33 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 04 Apr 2021 12:30:33 +0100</lastBuildDate>
     
 	<atom:link href="https://www.ozgurcatak.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,16 +15,25 @@
     <item>
       <title>adversarial machine learning</title>
       <link>https://www.ozgurcatak.org/tags/adversarial-machine-learning/</link>
-      <pubDate>Sat, 13 Mar 2021 15:30:33 +0100</pubDate>
+      <pubDate>Sun, 04 Apr 2021 12:30:33 +0100</pubDate>
       
       <guid>https://www.ozgurcatak.org/tags/adversarial-machine-learning/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>cybersecurity</title>
+      <link>https://www.ozgurcatak.org/tags/cybersecurity/</link>
+      <pubDate>Sun, 04 Apr 2021 12:30:33 +0100</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>machine learning</title>
       <link>https://www.ozgurcatak.org/tags/machine-learning/</link>
-      <pubDate>Sat, 13 Mar 2021 15:30:33 +0100</pubDate>
+      <pubDate>Sun, 04 Apr 2021 12:30:33 +0100</pubDate>
       
       <guid>https://www.ozgurcatak.org/tags/machine-learning/</guid>
       <description></description>
