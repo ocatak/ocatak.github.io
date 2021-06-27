@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020 Ferhat Ozgur Catak</copyright>
-    <lastBuildDate>Sun, 04 Apr 2021 12:30:33 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 27 Jun 2021 10:30:33 +0100</lastBuildDate>
     
 	<atom:link href="https://www.ozgurcatak.org/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevSecOps - Background, Status and Future Challenges</title>
+      <link>https://www.ozgurcatak.org/post/devsecops/</link>
+      <pubDate>Sun, 27 Jun 2021 10:30:33 +0100</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/post/devsecops/</guid>
+      <description> Introduction  DevSecOps Powerpoint Presentation GitHub repository https://github.com/ocatak/devsecops-tutorial  </description>
+    </item>
     
     <item>
       <title>AI-Sec 2021 : Cyber Security and Adversarial Machine Learning: Emerging Attacks and Mitigation Strategies</title>

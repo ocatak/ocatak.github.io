@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2020 Ferhat Ozgur Catak</copyright>
-    <lastBuildDate>Sun, 04 Apr 2021 12:30:33 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 27 Jun 2021 10:30:33 +0100</lastBuildDate>
     
 	<atom:link href="https://www.ozgurcatak.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cybersecurity</title>
+      <link>https://www.ozgurcatak.org/tags/cybersecurity/</link>
+      <pubDate>Sun, 27 Jun 2021 10:30:33 +0100</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://www.ozgurcatak.org/tags/devops/</link>
+      <pubDate>Sun, 27 Jun 2021 10:30:33 +0100</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devsecops</title>
+      <link>https://www.ozgurcatak.org/tags/devsecops/</link>
+      <pubDate>Sun, 27 Jun 2021 10:30:33 +0100</pubDate>
+      
+      <guid>https://www.ozgurcatak.org/tags/devsecops/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>adversarial machine learning</title>
@@ -18,15 +45,6 @@
       <pubDate>Sun, 04 Apr 2021 12:30:33 +0100</pubDate>
       
       <guid>https://www.ozgurcatak.org/tags/adversarial-machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cybersecurity</title>
-      <link>https://www.ozgurcatak.org/tags/cybersecurity/</link>
-      <pubDate>Sun, 04 Apr 2021 12:30:33 +0100</pubDate>
-      
-      <guid>https://www.ozgurcatak.org/tags/cybersecurity/</guid>
       <description></description>
     </item>
     

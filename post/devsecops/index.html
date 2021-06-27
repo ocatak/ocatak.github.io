@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.55.6" />
+  <meta name="author" content="Dr. Ferhat Ozgur Catak">
+  <meta name="description" content="Ferhat Ozgur Catak is an Artificial Intelligence and Cyber Security Researcher. He is interested in Data Privacy and Cyber Security for machine learning and deep learning, covering the theoretical, applicative, and computational aspects. His primary research interests lie broadly in deep learning.">
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="https://www.ozgurcatak.org/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-108796420-1', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+	  ga('require', 'ipMeta', {
+          serviceProvider: 'dimension1',
+          networkDomain: 'dimension2',
+          networkType: 'dimension3',
+      });
+      ga('ipMeta:loadNetworkFields');
+      ga('send', 'pageview');
+    </script>
+	
+	
+<script async src="https://ipmeta.io/plugin.js"></script>
+	
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="icon" type="image/png" href="https://www.ozgurcatak.org/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="https://www.ozgurcatak.org/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://www.ozgurcatak.org/post/devsecops/">
+
+  
+  
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "Person",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "http://www.ozgurcatak.org"
+    },
+    "name" : "Ferhat Ozgur Catak",
+	"jobTitle": "Artificial Intelligence Scientist",
+    "description" : "Research about Cyber Security, Artificial Intelligence, Machine Learning, Deep Learning, Uncertainty",
+    "url" : "https://www.ozgurcatak.org/",
+    "image": "https://www.ozgurcatak.org/img/foc.jpg",
+    "birthPlace": "Turkey",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Oslo",
+     "addressCountry": "Norway"
+    },
+    "alumniOf": "Istanbul University",
+	"worksFor": {
+      "@type": "Organization",
+      "name": "Simula Research Laboratory"
+    },
+    "sameAs": [
+    "http://www.linkedin.com/in/ozgurcatak/",
+    "https://scholar.google.com.tr/citations?user=qPzUoDYAAAAJ&hl=en",
+    "https://github.com/ocatak",
+    "https://www.researchgate.net/profile/Ferhat_Ozgur_Catak",
+    "https://orcid.org/0000-0002-2434-9966"
+  ]
+}
+</script>
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@ozgurcatak" />
+<meta name="twitter:creator" content="@ozgurcatak" />
+<meta property="og:url" content="https://www.ozgurcatak.org/" />
+
+<meta property="og:image" content="http://www.ozgurcatak.org/img/foc.jpg" />
+
+
+
+
+  
+<title>DevSecOps - Background, Status and Future Challenges</title>
+  <meta content="cyber security, machine learning, artificial intelligence, dataset" name="keywords">
+
+<meta content='http://www.ozgurcatak.org/' property='og:url'/>
+<meta content="DevSecOps - Background, Status and Future Challenges - Ferhat Ozgur Catak" property="og:title">
+
+<meta property="og:description" content="Ferhat Ozgur Catak is an Artificial Intelligence and Cyber Security Researcher. Dr. Catak interested in Data Privacy and Cyber Security for machine learning and deep learning, covering the theoretical, applicative, and computational aspects. My primary research interests lie broadly in deep learning." />
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "DevSecOps - Background, Status and Future Challenges - Blog post",
+  "datePublished": "25.05.2020",
+  "dateModified": "25.05.2020",
+  "image":"https://www.ozgurcatak.org/img/foc.jpg",
+  "author": {
+    "@type": "Person",
+    "name": "Ferhat Ozgur Catak"
+  },
+  "mainEntityOfPage": { "@type": "WebPage" },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Ferhat Ozgur Catak",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.ozgurcatak.org/img/foc.jpg"
+    }
+  },
+  "description": "AI&Security Researcher",
+  "keywords": ["keras","machine learning","deep learning"]
+}
+</script>
+
+
+
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="https://www.ozgurcatak.org/">Ferhat Ozgur Catak</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/courses/">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/publication/">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/post/">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="https://www.ozgurcatak.org/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">DevSecOps - Background, Status and Future Challenges</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2021-06-27 10:30:33 &#43;0100 &#43;0100" itemprop="datePublished">
+      2021-06-27
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    1 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=DevSecOps%20-%20Background%2c%20Status%20and%20Future%20Challenges&amp;url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fdevsecops%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fdevsecops%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fdevsecops%2f&amp;title=DevSecOps%20-%20Background%2c%20Status%20and%20Future%20Challenges"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fdevsecops%2f&amp;title=DevSecOps%20-%20Background%2c%20Status%20and%20Future%20Challenges"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=DevSecOps%20-%20Background%2c%20Status%20and%20Future%20Challenges&amp;body=https%3a%2f%2fwww.ozgurcatak.org%2fpost%2fdevsecops%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="introduction">Introduction</h2>
+
+<ul>
+<li>DevSecOps <a href="https://github.com/ocatak/devsecops-tutorial/raw/master/DevSecOps.pdf" target="_blank">Powerpoint Presentation</a></li>
+<li>GitHub repository <a href="https://github.com/ocatak/devsecops-tutorial" target="_blank">https://github.com/ocatak/devsecops-tutorial</a></li>
+</ul>
+
+<p><img src="https://raw.githubusercontent.com/ocatak/devsecops-tutorial/master/devsecops.png" alt="DevSecOps" /></p>
+
+    </div>
+
+    
+    
+    
+    <div class="article-tags">
+      
+      <a class="btn btn-primary btn-outline" href="https://www.ozgurcatak.org/tags/devops">devops</a>
+      
+      <a class="btn btn-primary btn-outline" href="https://www.ozgurcatak.org/tags/devsecops">devsecops</a>
+      
+      <a class="btn btn-primary btn-outline" href="https://www.ozgurcatak.org/tags/cybersecurity">cybersecurity</a>
+      
+    </div>
+    
+    
+
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="https://www.ozgurcatak.org/post/adversarial_machine_learning_cybersecurity/">AI-Sec 2021 : Cyber Security and Adversarial Machine Learning: Emerging Attacks and Mitigation Strategies</a></li>
+    
+  </ul>
+</div>
+
+
+
+<div class="container article-widget">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://www.ozgurcatak.org/post/adversarial_machine_learning_cybersecurity/"><span
+      aria-hidden="true">&larr;</span> AI-Sec 2021 : Cyber Security and Adversarial Machine Learning: Emerging Attacks and Mitigation Strategies</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2020 Ferhat Ozgur Catak &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="https://www.ozgurcatak.org/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
