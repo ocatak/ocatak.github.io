@@ -50,20 +50,11 @@
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108796420-1"></script>
-<!-- Note: plugin scripts must be included after the tracking snippet. -->
-<script src="https://ipmeta.io/plugin.js"></script>
-
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  
-  provideGtagPlugin({
-      serviceProvider: 'dimension1',
-      networkDomain: 'dimension2',
-      networkType: 'dimension3',
-   });
-    
+
   gtag('config', 'UA-108796420-1');
 </script>
 
