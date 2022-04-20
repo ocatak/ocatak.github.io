@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.ozgurcatak.org/sitemap.xml
+Sitemap: https://ocatak.github.io/sitemap.xml
