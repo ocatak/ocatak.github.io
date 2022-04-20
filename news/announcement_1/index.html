@@ -44,24 +44,32 @@
     
 
 
-<script async src="//www.google-analytics.com/analytics.js"></script>
-        <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'ua-108796420-1', 'auto');
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-	  ga('require', 'ipMeta', {
-          serviceProvider: 'dimension1',
-          networkDomain: 'dimension2',
-          networkType: 'dimension3',
-      });
-      ga('ipMeta:loadNetworkFields');
-      ga('send', 'pageview');
-    </script>
-	
-	<!-- IpMeta must be included after Google Analytics -->
-<script async src="https://ipmeta.io/plugin.js"></script>
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108796420-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108796420-1');
+</script>
+
+<!-- Note: plugin scripts must be included after the tracking snippet. -->
+<script src="https://ipmeta.io/plugin.js"></script>
+
+<script>
+   provideGtagPlugin({
+      serviceProvider: 'dimension1',
+      networkDomain: 'dimension2',
+      networkType: 'dimension3',
+   });
+</script>
+
 
   </head>
 
