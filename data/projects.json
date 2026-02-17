@@ -9,7 +9,7 @@
       "primary": true,
       "image": "assets/img/QuantumUQ-logo.png",
       "links": [
-        { "label": "GitHub", "url": "https://github.com/placeholder-quantumuq" },
+        { "label": "GitHub", "url": "https://github.com/ocatak/QuantumUQ" },
         { "label": "Docs", "url": "#" },
         { "label": "PyPI", "url": "https://pypi.org/project/quantumuq/" }
       ]
