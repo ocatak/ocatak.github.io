@@ -1,0 +1,28 @@
+{
+  "faq": [
+    {
+      "question": "What is Trustworthy AI for critical infrastructure?",
+      "answer": "Trustworthy AI for critical infrastructure means building AI systems that are secure, robust, explainable, and reliable when deployed in sectors like energy, transport, healthcare, and communications. It combines adversarial robustness, uncertainty quantification, privacy-preserving collaboration, and continuous monitoring so that failures or attacks do not compromise safety or availability."
+    },
+    {
+      "question": "Why does uncertainty quantification matter for secure AI?",
+      "answer": "Uncertainty quantification (UQ) tells us when the model is confident vs. uncertain. In security-sensitive settings, knowing uncertainty helps detect out-of-distribution inputs, adversarial examples, and edge cases. UQ supports safe decision-making and aligns with regulatory and assurance requirements for critical systems."
+    },
+    {
+      "question": "What is QuantumUQ and who is it for?",
+      "answer": "QuantumUQ is an open-source toolkit for uncertainty quantification in quantum machine learning, built on Qiskit and PennyLane. It is for researchers and practitioners who want to combine classical UQ methods with quantum and hybrid quantum-classical models, and to report reliable predictions with confidence bounds."
+    },
+    {
+      "question": "How can I collaborate with Ferhat Ozgur Catak?",
+      "answer": "I welcome collaboration on trustworthy AI, secure ML, UQ, federated learning, and quantum-enhanced security. Please reach out via f.ozgur.catak@uis.no with a short description of your interests. For PhD or postdoc opportunities, mention your background and preferred topic. Industry partnerships on secure AI for critical infrastructure are also encouraged."
+    },
+    {
+      "question": "What courses does Ozgur teach at UiS?",
+      "answer": "At the University of Stavanger I teach DAT505 Ethical Hacking (MSc), DAT945 Secure and Robust AI Model Development (PhD), DAT250 Information and Software Security, and DAT620 Project in Computer Science. See the Teaching page for learning outcomes and details."
+    },
+    {
+      "question": "Where can I find your publications and code?",
+      "answer": "Publications are listed on the Publications page with PDF/DOI links where available. Code for selected projects (e.g. QuantumUQ) is linked from the Projects page and GitHub. BibTeX is provided for easy citation."
+    }
+  ]
+}

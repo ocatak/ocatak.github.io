@@ -1,0 +1,44 @@
+{
+  "courses": [
+    {
+      "code": "DAT505",
+      "name": "Ethical Hacking (MSc)",
+      "url": "https://www.uis.no/en/course/DAT505",
+      "outcomes": [
+        "Understand attack surfaces and penetration testing methodology.",
+        "Apply legal and ethical frameworks in security assessment.",
+        "Perform hands-on lab exercises in controlled environments."
+      ]
+    },
+    {
+      "code": "DAT945",
+      "name": "Secure and Robust AI Model Development (PhD)",
+      "url": "https://www.uis.no/en/course/DAT945_1",
+      "outcomes": [
+        "Design and evaluate adversarially robust models.",
+        "Implement uncertainty quantification and privacy-preserving methods.",
+        "Connect theory to practice for critical infrastructure applications."
+      ]
+    },
+    {
+      "code": "DAT250",
+      "name": "Information and Software Security",
+      "url": "https://www.uis.no/en/course/DAT250",
+      "outcomes": [
+        "Identify common vulnerabilities and secure coding practices.",
+        "Apply cryptographic and access control concepts.",
+        "Analyze real-world security incidents and mitigations."
+      ]
+    },
+    {
+      "code": "DAT620",
+      "name": "Project in Computer Science",
+      "url": "https://www.uis.no/en/course/DAT620",
+      "outcomes": [
+        "Execute a substantial project with research or industry relevance.",
+        "Apply project management and reporting skills.",
+        "Present and defend technical work."
+      ]
+    }
+  ]
+}

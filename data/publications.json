@@ -1,0 +1,112 @@
+{
+  "publications": [
+    {
+      "title": "Trustworthy Quantum Machine Learning: A Roadmap for Reliability, Robustness, and Security in the NISQ Era",
+      "venue": "arXiv preprint arXiv:2511.02602",
+      "year": "2025",
+      "contribution": "Roadmap for reliability, robustness, and security of quantum ML in the NISQ era.",
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2511.02602"}],
+      "featured": true,
+      "bibtex": "@article{catak2025trustworthy,\n  title={Trustworthy Quantum Machine Learning: A Roadmap for Reliability, Robustness, and Security in the NISQ Era},\n  author={Catak, Ferhat Ozgur and Seo, Jungwon and Cali, Umit},\n  journal={arXiv preprint arXiv:2511.02602},\n  year={2025}\n}"
+    },
+    {
+      "title": "Uncertainty quantification in large language models through convex hull analysis",
+      "venue": "Discover Artificial Intelligence",
+      "year": "2024",
+      "contribution": "Convex hull-based uncertainty quantification for LLM reliability.",
+      "links": [{"label": "PDF", "url": "#"}, {"label": "DOI", "url": "#"}],
+      "featured": true,
+      "bibtex": "@article{catak2024uncertainty,\n  title={Uncertainty quantification in large language models through convex hull analysis},\n  author={Catak, Ferhat Ozgur and Kuzlu, Murat},\n  journal={Discover Artificial Intelligence},\n  volume={4},\n  number={1},\n  pages={90},\n  year={2024},\n  publisher={Springer International Publishing Cham}\n}"
+    },
+    {
+      "title": "Secure federated learning via neural cryptography with homomorphic operations",
+      "venue": "Discover Artificial Intelligence",
+      "year": "2025",
+      "contribution": "Neural cryptography and homomorphic operations for secure federated learning.",
+      "links": [{"label": "PDF", "url": "#"}, {"label": "DOI", "url": "#"}],
+      "featured": true,
+      "bibtex": "@article{sele2025secure,\n  title={Secure federated learning via neural cryptography with homomorphic operations},\n  author={Sele, Espen and Catak, Ferhat Ozgur and Seo, Jungwon and Kuzlu, Murat},\n  journal={Discover Artificial Intelligence},\n  volume={5},\n  number={1},\n  pages={392},\n  year={2025},\n  publisher={Springer}\n}"
+    },
+    {
+      "title": "Neural Networks Meet Elliptic Curve Cryptography: A Novel Approach to Secure Communication",
+      "venue": "2024 IEEE Virtual Conference on Communications (VCC)",
+      "year": "2024",
+      "contribution": "Combining neural networks with elliptic curve cryptography for secure communication.",
+      "links": [{"label": "PDF", "url": "#"}, {"label": "DOI", "url": "#"}],
+      "featured": true,
+      "bibtex": "@inproceedings{woien2024neural,\n  title={Neural Networks Meet Elliptic Curve Cryptography: A Novel Approach to Secure Communication},\n  author={W{\\o}ien, Mina Cecilie and Catak, Ferhat Ozgur and Kuzlu, Murat and Cali, Umit},\n  booktitle={2024 IEEE Virtual Conference on Communications (VCC)},\n  pages={1--6},\n  year={2024},\n  organization={IEEE}\n}"
+    },
+    {
+      "title": "Improving Medical Diagnostics with Vision-Language Models: Convex Hull-Based Uncertainty Analysis",
+      "venue": "arXiv preprint arXiv:2412.00056",
+      "year": "2024",
+      "contribution": "Convex hull-based uncertainty analysis for trustworthy medical VLMs.",
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2412.00056"}],
+      "featured": true,
+      "bibtex": "@article{catak2024improving,\n  title={Improving Medical Diagnostics with Vision-Language Models: Convex Hull-Based Uncertainty Analysis},\n  author={Catak, Ferhat Ozgur and Kuzlu, Murat and Patrick, Taylor},\n  journal={arXiv preprint arXiv:2412.00056},\n  year={2024}\n}"
+    },
+    {
+      "title": "Federated learning: Overview, strategies, applications, tools and future directions",
+      "venue": "Heliyon",
+      "year": "2024",
+      "contribution": "Comprehensive overview of federated learning for privacy-preserving and trustworthy collaboration.",
+      "links": [{"label": "PDF", "url": "#"}, {"label": "DOI", "url": "#"}],
+      "featured": true,
+      "bibtex": "@article{yurdem2024federated,\n  title={Federated learning: Overview, strategies, applications, tools and future directions},\n  author={Yurdem, Betul and Kuzlu, Murat and Gullu, Mehmet Kemal and Catak, Ferhat Ozgur and Tabassum, Maliha},\n  journal={Heliyon},\n  volume={10},\n  number={19},\n  year={2024},\n  publisher={Elsevier}\n}"
+    },
+    {
+      "title": "Radar Emitter Localization Based on Multipath Exploitation Using Machine Learning",
+      "venue": "IEEE Access",
+      "year": "2024",
+      "contribution": "ML-based radar emitter localization exploiting multipath propagation.",
+      "links": [{"label": "PDF", "url": "#"}, {"label": "DOI", "url": "#"}],
+      "featured": false,
+      "bibtex": "@article{catak2024radar,\n  title={Radar Emitter Localization Based on Multipath Exploitation Using Machine Learning},\n  author={Catak, Ferhat Ozgur and Al Imran, Md Abdullah and Dalveren, Yaser and Yildiz, Beytullah and Kara, Ali},\n  journal={IEEE Access},\n  volume={12},\n  pages={163367--163381},\n  year={2024},\n  publisher={IEEE}\n}"
+    },
+    {
+      "title": "BERT4MIMO: A foundation model using BERT architecture for massive MIMO channel state information prediction",
+      "venue": "arXiv preprint arXiv:2501.01802",
+      "year": "2025",
+      "contribution": "BERT-based foundation model for massive MIMO CSI prediction.",
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2501.01802"}],
+      "featured": false,
+      "bibtex": "@article{catak2025bert4mimo,\n  title={BERT4MIMO: A foundation model using BERT architecture for massive MIMO channel state information prediction},\n  author={Catak, Ferhat Ozgur and Kuzlu, Murat and Cali, Umit},\n  journal={arXiv preprint arXiv:2501.01802},\n  year={2025}\n}"
+    },
+    {
+      "title": "Serverless federated learning: Decentralized spectrum sensing in heterogeneous networks",
+      "venue": "Physical Communication",
+      "year": "2025",
+      "contribution": "Serverless FL for decentralized spectrum sensing.",
+      "links": [{"label": "PDF", "url": "#"}, {"label": "DOI", "url": "#"}],
+      "featured": false,
+      "bibtex": "@article{catak2025serverless,\n  title={Serverless federated learning: Decentralized spectrum sensing in heterogeneous networks},\n  author={Catak, Ferhat Ozgur and Kuzlu, Murat and Dalveren, Yaser and Ozdemir, Gokcen},\n  journal={Physical Communication},\n  volume={70},\n  pages={102634},\n  year={2025},\n  publisher={Elsevier}\n}"
+    },
+    {
+      "title": "GC-Fed: Gradient Centralized Federated Learning with Partial Client Participation",
+      "venue": "Information Fusion",
+      "year": "2026",
+      "contribution": "Gradient centralized FL with partial client participation.",
+      "links": [{"label": "PDF", "url": "#"}, {"label": "DOI", "url": "#"}],
+      "featured": false,
+      "bibtex": "@article{seo2026gc,\n  title={GC-Fed: Gradient Centralized Federated Learning with Partial Client Participation},\n  author={Seo, Jungwon and Catak, Ferhat Ozgur and Rong, Chunming and Hong, Kibeom and Kim, Minhoe},\n  journal={Information Fusion},\n  pages={104148},\n  year={2026},\n  publisher={Elsevier}\n}"
+    },
+    {
+      "title": "Comparative Analysis of Attention Mechanisms for Automatic Modulation Classification in Radio Frequency Signals",
+      "venue": "arXiv preprint arXiv:2508.09996",
+      "year": "2025",
+      "contribution": "Attention mechanisms for automatic modulation classification in RF.",
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2508.09996"}],
+      "featured": false,
+      "bibtex": "@article{catak2025comparative,\n  title={Comparative Analysis of Attention Mechanisms for Automatic Modulation Classification in Radio Frequency Signals},\n  author={Catak, Ferhat Ozgur and Kuzlu, Murat and Cali, Umit},\n  journal={arXiv preprint arXiv:2508.09996},\n  year={2025}\n}"
+    },
+    {
+      "title": "EvalQReason: A Framework for Step-Level Reasoning Evaluation in Large Language Models",
+      "venue": "arXiv preprint arXiv:2602.02295",
+      "year": "2026",
+      "contribution": "Framework for step-level reasoning evaluation in LLMs.",
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2602.02295"}],
+      "featured": false,
+      "bibtex": "@article{freja2026evalqreason,\n  title={EvalQReason: A Framework for Step-Level Reasoning Evaluation in Large Language Models},\n  author={Freja, Shaima Ahmad and Catak, Ferhat Ozgur and Yurdem, Betul and Rong, Chunming},\n  journal={arXiv preprint arXiv:2602.02295},\n  year={2026}\n}"
+    }
+  ]
+}

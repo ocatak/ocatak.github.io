@@ -1,0 +1,74 @@
+{
+  "talks": [
+    {
+      "title": "Digital Consent from Design to Implementation / NewbornTimeline Dashboard Interface",
+      "venue": "NewbornTime Project Final Workshop, Stavanger",
+      "date": "June 2025",
+      "links": []
+    },
+    {
+      "title": "Principles of Trustworthy AI and the Integration of GDPR-Compliant Models",
+      "venue": "NORA Workshop on AI Security, Oslo (Simula Research Lab.)",
+      "date": "April 2024",
+      "links": [
+        { "label": "Workshop", "url": "https://www.nora.ai/events/2024/workshop---identifying-key-challenges-in-ai-securi.html" }
+      ]
+    },
+    {
+      "title": "Building Trust in Healthcare with Privacy Techniques – Blockchain, Federated Learning, and Homomorphic Encryption in the Cloud",
+      "venue": "NewbornTime Project Workshop, Stavanger",
+      "date": "June 2023",
+      "links": []
+    },
+    {
+      "title": "Ethics and (Cyber)Security in AI",
+      "venue": "NORA Annual Conference, Stavanger",
+      "date": "Nov 2022",
+      "links": [
+        { "label": "Program", "url": "https://www.nora.ai/nora-conferences/annual-conference-2022/program/" }
+      ]
+    },
+    {
+      "title": "Securing AI Supply-Chains – From Model Zoo to Production",
+      "venue": "SmartCon Data Science Days 2021, Istanbul (virtual)",
+      "date": "Oct 2021",
+      "links": [
+        { "label": "Conference", "url": "https://www.smartcon.com/team-category/data-science-days-main-conference/" }
+      ]
+    },
+    {
+      "title": "Data Privacy and Privacy-Preserving Techniques",
+      "venue": "IEEE Young Professionals Connecting Experts Web-series (Region 8)",
+      "date": "July 2020",
+      "links": []
+    },
+    {
+      "title": "Adversarial Machine Learning, OWASP Top-10 and Blockchain Threat Models",
+      "venue": "Marmara University Cyber-Security Seminar Series, Istanbul",
+      "date": "Apr 2019 & Apr 2018",
+      "links": [
+        { "label": "Seminar", "url": "https://cse-eng.marmara.edu.tr/seminerler/bolum-seminerleri" }
+      ]
+    },
+    {
+      "title": "Next-Generation IT-Security Models for Critical Infrastructure",
+      "venue": "IDC IT Security Roadshow 2018, Ankara",
+      "date": "Sept 2018",
+      "links": []
+    },
+    {
+      "title": "Cyber-Security Policies in the Age of AI",
+      "venue": "Sabanci University Politics & Security Summit, Istanbul",
+      "date": "Feb 2017",
+      "links": [
+        { "label": "Summit", "url": "https://gazetesu.sabanciuniv.edu/tr/politika-ve-guvenlik-zirvesinde-siber-guvenlik-politikalari-konusuldu" }
+      ]
+    },
+    {
+      "title": "Cyber Security and Information Warfare",
+      "venue": "Turkish National Defence University, Istanbul",
+      "date": "May 2017",
+      "links": []
+    }
+  ]
+}

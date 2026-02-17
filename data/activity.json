@@ -1,0 +1,18 @@
+{
+  "activity": [
+    { "date": "Jun 2025", "title": "NewbornTime Final Workshop", "description": "Digital consent and NewbornTimeline dashboard; Ethereum-based consent ledger for neonatal video data." },
+    { "date": "Feb 2025", "title": "QuantumUQ v0.2 release", "description": "Open-source UQ for quantum ML: new uncertainty bounds and PennyLane integration." },
+    { "date": "Jan 2025", "title": "Invited talk: IEEE Norway ComSoc", "description": "Trustworthy AI for critical infrastructure." },
+    { "date": "2025", "title": "BERT4MIMO-AI4Wireless repo", "description": "Transformer-based foundation model for massive MIMO CSI prediction (arXiv:2501.01802)." },
+    { "date": "2025", "title": "Trustworthy AI book", "description": "From Theory to Practice on Amazon; companion code on GitHub (trustworthyai)." },
+    { "date": "2025", "title": "Secure federated learning (Discover AI)", "description": "Neural cryptography with homomorphic operations for secure FL." },
+    { "date": "Dec 2024", "title": "Preprint: Federated UQ for Healthcare", "description": "Submitted to IEEE TNNLS." },
+    { "date": "Nov 2024", "title": "Program committee: IEEE S&P 2025", "description": "Reviewing secure ML track." },
+    { "date": "2024", "title": "Attention-based AMC repo", "description": "Comparative attention mechanisms for automatic modulation classification (RadioML); IEEE." },
+    { "date": "Apr 2024", "title": "NORA Workshop on AI Security", "description": "Principles of Trustworthy AI and GDPR-compliant models (Simula, Oslo)." },
+    { "date": "Oct 2024", "title": "DAT945 course update", "description": "New module on prompt injection and jailbreaks." },
+    { "date": "2024", "title": "UQ and federated learning papers", "description": "Discover AI (LLM UQ), arXiv (medical VLMs), Heliyon (federated overview), IEEE VCC (neural ECC)." },
+    { "date": "2022", "title": "6G channel estimation dataset", "description": "Defensive distillation for adversarial robustness in DL-based channel estimation (IEEE Access); repo on GitHub." },
+    { "date": "Ongoing", "title": "Malware and crypto repos", "description": "malware_api_class (Mal-API-2019), Homomorphic-Neural-Cryptography; open on GitHub." }
+  ]
+}

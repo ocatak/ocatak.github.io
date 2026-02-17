@@ -1,0 +1,110 @@
+{
+  "projects": [
+    {
+      "id": "quantumuq",
+      "title": "QuantumUQ",
+      "meta": "Open-source toolkit",
+      "description": "Open-source toolkit for uncertainty quantification in quantum machine learning (Qiskit + PennyLane).",
+      "tags": ["Open-source", "Research"],
+      "primary": true,
+      "image": "assets/img/QuantumUQ-logo.png",
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/placeholder-quantumuq" },
+        { "label": "Docs", "url": "#" },
+        { "label": "PyPI", "url": "https://pypi.org/project/quantumuq/" }
+      ]
+    },
+    {
+      "id": "trustworthy-ai-book",
+      "title": "Trustworthy AI",
+      "meta": "Book",
+      "description": "Practical guide to building reliable and secure AI systems.",
+      "tags": ["Book"],
+      "primary": false,
+      "image": "assets/img/trystworthy-ai-book.jpg",
+      "links": [
+        { "label": "Get the book (Amazon)", "url": "https://a.co/d/088MMyaR" }
+      ]
+    },
+    {
+      "id": "secure-ai-6g",
+      "title": "Secure AI for 6G / Next-Gen Communications",
+      "meta": "Research",
+      "description": "Robust signal intelligence, adversarial resilience, and uncertainty-aware inference for future networks.",
+      "tags": ["Research"],
+      "primary": false,
+      "links": [
+        { "label": "Research page", "url": "research.html" }
+      ]
+    },
+    {
+      "id": "bert4mimo",
+      "title": "BERT4MIMO-AI4Wireless",
+      "meta": "Transformer-based CSI",
+      "description": "MIMO4BERT/CSIBERT model for Channel State Information reconstruction and prediction in dynamic wireless environments. Transformer-based; includes data preprocessing, training, and evaluation. Publication: BERT4MIMO (arXiv:2501.01802).",
+      "tags": ["Open-source", "Research"],
+      "primary": false,
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/ocatak/BERT4MIMO-AI4Wireless" },
+        { "label": "arXiv", "url": "https://arxiv.org/abs/2501.01802" }
+      ]
+    },
+    {
+      "id": "malware-api-class",
+      "title": "malware_api_class",
+      "meta": "Mal-API-2019 dataset",
+      "description": "Public malware dataset from Cuckoo Sandbox (Windows API calls). Benchmark for PE malware classification and metamorphic malware behavior; eight families (Trojan, Backdoor, Downloader, Worms, Spyware, Adware, Dropper, Virus). CSV format for ML.",
+      "tags": ["Open-source"],
+      "primary": false,
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/ocatak/malware_api_class" }
+      ]
+    },
+    {
+      "id": "6g-channel-estimation",
+      "title": "6g-channel-estimation-dataset",
+      "meta": "6G / NextG adversarial security",
+      "description": "Dataset and code for defensive distillation-based mitigation of adversarial attacks on DL channel estimation (5G/6G). MATLAB 5G Toolbox; vulnerability analysis and defensive distillation. IEEE Access 2022.",
+      "tags": ["Open-source", "Research"],
+      "primary": false,
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/ocatak/6g-channel-estimation-dataset" },
+        { "label": "DOI", "url": "https://doi.org/10.1109/ACCESS.2022.3206385" }
+      ]
+    },
+    {
+      "id": "attention-amr",
+      "title": "attention_based_automatic_modulation_recognition",
+      "meta": "AMC / RadioML / PyTorch",
+      "description": "Comparative study of attention mechanisms for Automatic Modulation Classification on RF signals. CNN-Transformer hybrid: baseline, causal, and sparse attention. RML2016.10a; training, experiments, visualizations. IEEE.",
+      "tags": ["Open-source", "Research"],
+      "primary": false,
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/ocatak/attention_based_automatic_modulation_recognition" }
+      ]
+    },
+    {
+      "id": "trustworthyai-repo",
+      "title": "Trustworthy AI (book code)",
+      "meta": "From Theory to Practice",
+      "description": "Companion code for the book: Python examples for uncertainty quantification, adversarial ML, explainability, federated learning, homomorphic encryption. By chapter (Chap-2–6). DAT945 / NORA.AI.",
+      "tags": ["Open-source", "Book"],
+      "primary": false,
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/ocatak/trustworthyai" },
+        { "label": "Get the book", "url": "https://a.co/d/088MMyaR" }
+      ]
+    },
+    {
+      "id": "homomorphic-neural-crypto",
+      "title": "Homomorphic-Neural-Cryptography",
+      "meta": "Master thesis",
+      "description": "Asymmetric neural cryptography with homomorphic and probabilistic properties. Five networks (Alice, Bob, Eve, HO Addition, HO Multiplication); elliptic-curve keys; homomorphic add/multiply on ciphertexts. Python.",
+      "tags": ["Open-source"],
+      "primary": false,
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/ocatak/Homomorphic-Neural-Cryptography" }
+      ]
+    }
+  ]
+}

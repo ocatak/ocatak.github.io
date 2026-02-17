@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Projects — Ferhat Ozgur Catak | QuantumUQ, Trustworthy AI, Secure 6G</title>
+  <meta name="description" content="Projects by Ferhat Ozgur Catak: QuantumUQ (UQ in quantum ML), Trustworthy AI book, Secure AI for 6G and next-gen communications.">
+  <link rel="canonical" href="https://YOUR-BASE-URL-HERE/projects.html">
+  <meta property="og:title" content="Projects — Ferhat Ozgur Catak">
+  <meta property="og:url" content="https://YOUR-BASE-URL-HERE/projects.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FW8MWV7WQC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FW8MWV7WQC');
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://YOUR-BASE-URL-HERE/"},{"@type":"ListItem","position":2,"name":"Projects","item":"https://YOUR-BASE-URL-HERE/projects.html"}]}
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar__brand">Ferhat Ozgur Catak</a>
+      <button id="nav-toggle" class="navbar__toggle" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar__icon--open" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
+        <span class="navbar__icon--close" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+      </button>
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <nav id="nav-menu" class="navbar__nav" aria-label="Main">
+          <a class="navbar__link" href="index.html">Home</a>
+          <a class="navbar__link" href="research.html">Research</a>
+          <a class="navbar__link" href="projects.html" aria-current="page">Projects</a>
+          <a class="navbar__link" href="publications.html">Publications</a>
+          <a class="navbar__link" href="talks.html">Talks</a>
+          <a class="navbar__link" href="teaching.html">Teaching</a>
+          <a class="navbar__link" href="about.html">About</a>
+          <a class="navbar__link" href="contact.html">Contact</a>
+          <a href="contact.html" class="navbar__cta">Collaborate</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Switch to light mode"><span class="icon-sun" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span><span class="icon-moon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span> / </span><span>Projects</span>
+        </nav>
+        <h1>Projects</h1>
+        <p class="page-header__sub">Open-source, books, and research initiatives</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filters">
+          <div class="filters__search">
+            <label for="project-search" class="sr-only">Search projects</label>
+            <input type="search" id="project-search" placeholder="Search projects..." aria-label="Search projects">
+          </div>
+          <div class="filter-tags" role="group" aria-label="Filter by tag">
+            <button type="button" class="filter-tag is-active" data-tag="">All</button>
+            <button type="button" class="filter-tag" data-tag="Open-source">Open-source</button>
+            <button type="button" class="filter-tag" data-tag="Book">Book</button>
+            <button type="button" class="filter-tag" data-tag="Research">Research</button>
+            <button type="button" class="filter-tag" data-tag="Teaching">Teaching</button>
+          </div>
+        </div>
+        <div id="projects-grid" class="grid-3"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <div class="footer__brand">Ferhat Ozgur Catak</div>
+        <p class="footer__email"><a href="mailto:f.ozgur.catak@uis.no">f.ozgur.catak@uis.no</a></p>
+        <div class="footer__social">
+          <a href="https://github.com/ocatak" target="_blank" rel="noopener" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+          <a href="https://www.linkedin.com/in/ozgurcatak" target="_blank" rel="noopener" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://scholar.google.com/citations?user=placeholder" target="_blank" rel="noopener" aria-label="Google Scholar"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></a>
+          <a href="https://www.uis.no/nb/profile/ferhat-ozgur-catak-0" target="_blank" rel="noopener" aria-label="UiS profile">UiS</a>
+        </div>
+      </div>
+      <p class="footer__copy">© <span id="footer-year">2025</span> Ferhat Ozgur Catak</p>
+    </div>
+  </footer>
+
+  <script type="application/json" id="inline-projects">
+  {"projects":[{"id":"quantumuq","title":"QuantumUQ","meta":"Open-source toolkit","description":"Open-source toolkit for uncertainty quantification in quantum machine learning (Qiskit + PennyLane).","tags":["Open-source","Research"],"primary":true,"links":[{"label":"GitHub","url":"https://github.com/placeholder-quantumuq"},{"label":"Docs","url":"#"},{"label":"PyPI","url":"https://pypi.org/project/quantumuq/"}]},{"id":"trustworthy-ai-book","title":"Trustworthy AI","meta":"Book","description":"Practical guide to building reliable and secure AI systems.","tags":["Book"],"primary":false,"links":[{"label":"Get the book (Amazon)","url":"https://a.co/d/088MMyaR"}]},{"id":"secure-ai-6g","title":"Secure AI for 6G / Next-Gen Communications","meta":"Research","description":"Robust signal intelligence, adversarial resilience, and uncertainty-aware inference for future networks.","tags":["Research"],"primary":false,"links":[{"label":"Research page","url":"research.html"}]},{"id":"bert4mimo","title":"BERT4MIMO-AI4Wireless","meta":"Transformer-based CSI","description":"MIMO4BERT/CSIBERT model for Channel State Information reconstruction and prediction in dynamic wireless environments. Transformer-based; includes data preprocessing, training, and evaluation. Publication: BERT4MIMO (arXiv:2501.01802).","tags":["Open-source","Research"],"primary":false,"links":[{"label":"GitHub","url":"https://github.com/ocatak/BERT4MIMO-AI4Wireless"},{"label":"arXiv","url":"https://arxiv.org/abs/2501.01802"}]},{"id":"malware-api-class","title":"malware_api_class","meta":"Mal-API-2019 dataset","description":"Public malware dataset from Cuckoo Sandbox (Windows API calls). Benchmark for PE malware classification and metamorphic malware behavior; eight families. CSV format for ML.","tags":["Open-source"],"primary":false,"links":[{"label":"GitHub","url":"https://github.com/ocatak/malware_api_class"}]},{"id":"6g-channel-estimation","title":"6g-channel-estimation-dataset","meta":"6G / NextG adversarial security","description":"Dataset and code for defensive distillation mitigation of adversarial attacks on DL channel estimation (5G/6G). IEEE Access 2022.","tags":["Open-source","Research"],"primary":false,"links":[{"label":"GitHub","url":"https://github.com/ocatak/6g-channel-estimation-dataset"},{"label":"DOI","url":"https://doi.org/10.1109/ACCESS.2022.3206385"}]},{"id":"attention-amr","title":"attention_based_automatic_modulation_recognition","meta":"AMC • RadioML • PyTorch","description":"Attention mechanisms for Automatic Modulation Classification on RF signals. CNN-Transformer hybrid: baseline, causal, sparse attention. RML2016.10a. IEEE.","tags":["Open-source","Research"],"primary":false,"links":[{"label":"GitHub","url":"https://github.com/ocatak/attention_based_automatic_modulation_recognition"}]},{"id":"trustworthyai-repo","title":"Trustworthy AI (book code)","meta":"From Theory to Practice","description":"Companion code for the book: Python examples for UQ, adversarial ML, explainability, federated learning, homomorphic encryption. By chapter.","tags":["Open-source","Book"],"primary":false,"links":[{"label":"GitHub","url":"https://github.com/ocatak/trustworthyai"},{"label":"Get the book","url":"https://a.co/d/088MMyaR"}]},{"id":"homomorphic-neural-crypto","title":"Homomorphic-Neural-Cryptography","meta":"Master thesis","description":"Asymmetric neural cryptography with homomorphic and probabilistic properties. Five networks; elliptic-curve keys; homomorphic add/multiply. Python.","tags":["Open-source"],"primary":false,"links":[{"label":"GitHub","url":"https://github.com/ocatak/Homomorphic-Neural-Cryptography"}]}]}
+  </script>
+  <script defer src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    (function() {
+      var grid = document.getElementById('projects-grid');
+      var searchEl = document.getElementById('project-search');
+      var tagButtons = document.querySelectorAll('.filter-tag');
+      var currentTag = '';
+      var currentQuery = '';
+      var projects = [];
+
+      function escapeHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+      function render(list) {
+        if (!grid) return;
+        grid.innerHTML = list.map(function(p) {
+          var links = (p.links || []).map(function(l) { return '<a href="' + escapeHtml(l.url || '#') + '" class="btn btn--outline" target="_blank" rel="noopener">' + escapeHtml(l.label || l.name) + '</a>'; }).join('');
+          return '<div class="card' + (p.primary ? ' card--primary' : '') + '" data-tags="' + (p.tags || []).join(' ') + '" data-title="' + escapeHtml((p.title || p.name || '').toLowerCase()) + '">' +
+            (p.image ? '<img src="' + escapeHtml(p.image) + '" alt="" class="card__image" loading="lazy">' : '') +
+            '<h3 class="card__title">' + escapeHtml(p.title || p.name) + '</h3>' +
+            (p.meta ? '<p class="card__meta">' + escapeHtml(p.meta) + '</p>' : '') +
+            (p.description ? '<p class="card__text">' + escapeHtml(p.description) + '</p>' : '') +
+            (links ? '<div class="card__actions">' + links + '</div>' : '') + '</div>';
+        }).join('');
+      }
+      function filter() {
+        var q = (currentQuery || '').trim().toLowerCase();
+        var tag = (currentTag || '').toLowerCase();
+        var list = projects.filter(function(p) {
+          var matchTag = !tag || (p.tags || []).some(function(t) { return t.toLowerCase() === tag; });
+          var matchQ = !q || (p.title || '').toLowerCase().indexOf(q) >= 0 || (p.description || '').toLowerCase().indexOf(q) >= 0;
+          return matchTag && matchQ;
+        });
+        render(list);
+      }
+      function loadProjects() {
+        var inlineEl = document.getElementById('inline-projects');
+        if (inlineEl && inlineEl.textContent) {
+          try {
+            var data = JSON.parse(inlineEl.textContent.trim());
+            projects = data.projects || data.items || (Array.isArray(data) ? data : []);
+            filter();
+            return;
+          } catch (e) {}
+        }
+        if (window.loadData) {
+          window.loadData('projects', 'data/projects.json', function(data) {
+            projects = Array.isArray(data) ? data : (data.projects || data.items || []);
+            filter();
+          });
+        } else {
+          fetch('data/projects.json').then(function(r) { return r.json(); }).then(function(data) {
+            projects = data.projects || data.items || [];
+            filter();
+          }).catch(function() {
+            projects = [];
+            filter();
+          });
+        }
+      }
+      loadProjects();
+      if (searchEl) searchEl.addEventListener('input', function() { currentQuery = this.value; filter(); });
+      tagButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          tagButtons.forEach(function(b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          currentTag = btn.getAttribute('data-tag') || '';
+          filter();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
