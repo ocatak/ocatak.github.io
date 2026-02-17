@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-BASE-URL-HERE/sitemap.xml
+Sitemap: https://www.ozgurcatak.net/sitemap.xml

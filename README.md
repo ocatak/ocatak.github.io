@@ -54,12 +54,12 @@ Before deploying, replace **`https://YOUR-BASE-URL-HERE/`** with your real base 
 2. **`sitemap.xml`** — every `<loc>`.
 3. **`robots.txt`** — the `Sitemap:` line.
 
-Example: if your site is `https://ocatak.github.io/`, set base to `https://ocatak.github.io/` (with trailing slash for consistency).
+Example: if your site is `https://www.ozgurcatak.net/`, set base to `https://www.ozgurcatak.net/` (with trailing slash for consistency).
 
 ## Deploying on GitHub Pages
 
 1. Create a repository (e.g. `username.github.io` for a user site).
-2. Replace `YOUR-BASE-URL-HERE` with `https://username.github.io` (or your repo URL) in all files above.
+2. Replace `YOUR-BASE-URL-HERE` with your real domain (e.g. `https://www.ozgurcatak.net`) in all files above.
 3. Push the project to the repo.
 4. In **Settings → Pages**, choose source **Deploy from a branch**, branch **main** (or **master**), folder **/ (root)**.
 5. After deployment, the site will be at `https://username.github.io/`.
