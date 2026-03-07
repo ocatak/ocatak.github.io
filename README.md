@@ -1,6 +1,6 @@
 # Personal Academic Website — Ferhat Ozgur Catak
 
-Static HTML personal academic website for **Ferhat Ozgur Catak** (Ozgur), Associate Professor of Cyber Security at the University of Stavanger (UiS). Optimized for SEO, fast load, and mobile-first UX.
+Static HTML personal academic website for **Ferhat Ozgur Catak** (Ozgur), Professor of Cyber Security at the University of Stavanger (UiS). Optimized for SEO, fast load, and mobile-first UX.
 
 ## Structure
 
@@ -32,6 +32,26 @@ Static HTML personal academic website for **Ferhat Ozgur Catak** (Ozgur), Associ
   favicon.ico         # Add your favicon
   README.md
 ```
+
+## Running locally
+
+No build step is required. You can preview the site in two ways:
+
+**Option 1 — Open in browser**  
+Double-click `index.html` or open it from your browser (File → Open). The site works via `file://` because each page has inline JSON fallbacks when `fetch()` is not available.
+
+**Option 2 — Local HTTP server (recommended)**  
+Serving over HTTP lets the site load data from the `data/*.json` files and avoids `file://` limitations. From the project root:
+
+- **Python 3:**  
+  `python3 -m http.server 8000`  
+  Then open [http://localhost:8000](http://localhost:8000).
+
+- **Node.js (npx):**  
+  `npx serve`  
+  Then open the URL shown in the terminal (e.g. [http://localhost:3000](http://localhost:3000)).
+
+Use **Ctrl+C** (or **Cmd+C** on macOS) in the terminal to stop the server.
 
 ## Editing content
 
