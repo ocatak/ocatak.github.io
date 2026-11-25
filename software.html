@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Software and Datasets – Ferhat Ozgur Catak</title>
+  <meta name="description" content="Open-source code and datasets by Ferhat Ozgur Catak: the Mal-API-2019 malware dataset, the QuantumUQ quantum ML library, and trustworthy AI code.">
+  <link rel="canonical" href="https://www.ozgurcatak.net/software.html">
+  <meta name="author" content="Ferhat Ozgur Catak">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ferhat Ozgur Catak">
+  <meta property="og:title" content="Research Software and Datasets – Ferhat Ozgur Catak">
+  <meta property="og:description" content="Open-source code and datasets by Ferhat Ozgur Catak: the Mal-API-2019 malware dataset, the QuantumUQ quantum ML library, and trustworthy AI code.">
+  <meta property="og:url" content="https://www.ozgurcatak.net/software.html">
+  <meta property="og:image" content="https://www.ozgurcatak.net/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ferhat Ozgur Catak, Professor of Cyber Security at the University of Stavanger">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ozgurcatak">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="alternate" type="text/plain" href="llms.txt" title="Plain-text profile for AI assistants">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "dateModified": "2026-11-25",
+        "@id": "https://www.ozgurcatak.net/software.html",
+        "url": "https://www.ozgurcatak.net/software.html",
+        "name": "Research software and datasets",
+        "author": {
+          "@type": "Person",
+          "@id": "https://www.ozgurcatak.net/#person",
+          "name": "Ferhat Ozgur Catak",
+          "url": "https://www.ozgurcatak.net/"
+        }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "name": "QuantumUQ",
+        "description": "Uncertainty quantification, calibration and reliability benchmarking for quantum machine learning with Qiskit and PennyLane.",
+        "codeRepository": "https://github.com/ocatak/QuantumUQ",
+        "programmingLanguage": "Python",
+        "license": "https://opensource.org/licenses/MIT",
+        "url": "https://quantumuq.readthedocs.io/",
+        "sameAs": [
+          "https://pypi.org/project/quantumuq/"
+        ],
+        "author": {
+          "@type": "Person",
+          "@id": "https://www.ozgurcatak.net/#person",
+          "name": "Ferhat Ozgur Catak",
+          "url": "https://www.ozgurcatak.net/"
+        },
+        "citation": "https://doi.org/10.5617/nmi.13217",
+        "keywords": [
+          "quantum machine learning",
+          "uncertainty quantification",
+          "Qiskit",
+          "PennyLane"
+        ]
+      },
+      {
+        "@type": "Dataset",
+        "name": "Mal-API-2019: Windows PE malware API call dataset",
+        "description": "Windows API-call sequences of 7,107 Windows PE malware samples recorded with Cuckoo Sandbox and labelled into eight families (Trojan, Backdoor, Downloader, Worm, Spyware, Adware, Dropper, Virus) using VirusTotal reports, in CSV format for machine-learning research.",
+        "url": "https://github.com/ocatak/malware_api_class",
+        "keywords": [
+          "malware",
+          "malware classification",
+          "Windows API calls",
+          "Cuckoo Sandbox",
+          "cyber security"
+        ],
+        "creator": [
+          {
+            "@type": "Person",
+            "@id": "https://www.ozgurcatak.net/#person",
+            "name": "Ferhat Ozgur Catak",
+            "url": "https://www.ozgurcatak.net/"
+          },
+          {
+            "@type": "Person",
+            "name": "Ahmet Faruk Yazı"
+          }
+        ],
+        "isAccessibleForFree": true,
+        "citation": "https://doi.org/10.7717/peerj-cs.285",
+        "alternateName": "Mal-API-2019",
+        "license": "https://opensource.org/licenses/MIT",
+        "sameAs": [
+          "https://data.mendeley.com/datasets/w393cchcb7/2",
+          "https://doi.org/10.48550/arxiv.1905.01999"
+        ],
+        "distribution": {
+          "@type": "DataDownload",
+          "encodingFormat": "text/csv",
+          "contentUrl": "https://raw.githubusercontent.com/ocatak/malware_api_class/master/mal-api-2019.zip"
+        },
+        "identifier": "https://doi.org/10.17632/w393cchcb7.2"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Apache HTTP access logs dataset for attack-targeted scan detection",
+        "description": "Apache HTTP Server access logs for detecting vulnerability scans, cross-site scripting (XSS) and SQL injection attempts.",
+        "url": "https://github.com/ocatak/apache-http-logs",
+        "keywords": [
+          "web security",
+          "log analysis",
+          "XSS",
+          "SQL injection",
+          "intrusion detection"
+        ],
+        "creator": {
+          "@type": "Person",
+          "@id": "https://www.ozgurcatak.net/#person",
+          "name": "Ferhat Ozgur Catak",
+          "url": "https://www.ozgurcatak.net/"
+        },
+        "isAccessibleForFree": true,
+        "citation": "https://doi.org/10.1016/j.aci.2017.04.002"
+      },
+      {
+        "@type": "Dataset",
+        "name": "6G channel estimation dataset for adversarial machine learning",
+        "description": "A dataset for deep-learning-based channel estimation in 6G wireless communication and the study of adversarial attacks against it.",
+        "url": "https://github.com/ocatak/6g-channel-estimation-dataset",
+        "keywords": [
+          "6G",
+          "channel estimation",
+          "adversarial machine learning",
+          "wireless security"
+        ],
+        "creator": {
+          "@type": "Person",
+          "@id": "https://www.ozgurcatak.net/#person",
+          "name": "Ferhat Ozgur Catak",
+          "url": "https://www.ozgurcatak.net/"
+        },
+        "isAccessibleForFree": true,
+        "citation": "https://doi.org/10.1109/access.2022.3206385"
+      },
+      {
+        "@type": "Dataset",
+        "name": "Massive MIMO channel state information (CSI) dataset",
+        "description": "Channel state information data for research on AI in next-generation wireless systems.",
+        "url": "https://github.com/ocatak/MassiveMIMO-CSI-Dataset",
+        "keywords": [
+          "massive MIMO",
+          "channel state information",
+          "wireless",
+          "dataset"
+        ],
+        "creator": {
+          "@type": "Person",
+          "@id": "https://www.ozgurcatak.net/#person",
+          "name": "Ferhat Ozgur Catak",
+          "url": "https://www.ozgurcatak.net/"
+        },
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/licenses/MIT"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.ozgurcatak.net/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Software and datasets",
+            "item": "https://www.ozgurcatak.net/software.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FW8MWV7WQC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FW8MWV7WQC');
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./">Ferhat Ozgur Catak</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="./#research">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="software.html" aria-current="page">Software &amp; Data</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <p class="breadcrumb"><a href="./">Home</a> / Software and datasets</p>
+    <h1>Research software and datasets</h1>
+    <p class="lead">Ferhat Ozgur Catak created the public Mal-API-2019 Windows malware dataset and QuantumUQ, an open-source Python library for uncertainty quantification in quantum machine learning listed in the IBM Qiskit ecosystem. I publish code and data with my papers so that results can be reproduced and built on. Everything is on <a href="https://github.com/ocatak">GitHub</a>.</p>
+
+    <h2>Penetration testing and malware analysis</h2>
+    <p>Research context: <a href="penetration-testing-malware-analysis.html">Penetration testing and malware analysis</a>.</p>
+    <div class="table-scroll"><table class="stack">
+      <thead><tr><th scope="col">Project</th><th scope="col">Description</th></tr></thead>
+      <tbody>
+          <tr><td><a href="https://github.com/ocatak/malware_api_class"><strong>Mal-API-2019 (malware_api_class)</strong></a></td><td>Dataset. Windows PE malware API-call sequences from Cuckoo Sandbox, eight malware families. Cite: <a href='https://doi.org/10.7717/peerj-cs.285'>PeerJ CS 2020</a>.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/lstm_malware_detection"><strong>lstm_malware_detection</strong></a></td><td>LSTM-based sequential malware analysis using Windows executable API calls.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/apache-http-logs"><strong>apache-http-logs</strong></a></td><td>Dataset. Web server logs for detecting vulnerability scans, XSS and SQL injection. Cite: <a href='https://doi.org/10.1016/j.aci.2017.04.002'>Applied Computing and Informatics</a>.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/UiS-Vulnerable-Student-App"><strong>DAT250 SecureApp</strong></a></td><td>Intentionally vulnerable, local-only lab web application for the DAT250 course.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/dat250-secure-coding-demos"><strong>dat250-secure-coding-demos</strong></a></td><td>Twelve runnable demos of real vulnerability classes (OWASP Top 10) and the tools that catch them.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/devsecops-tutorial"><strong>devsecops-tutorial</strong></a></td><td>DevSecOps practice with a vulnerable Flask application, Docker and Jenkins.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Quantum technologies for security</h2>
+    <p>Research context: <a href="quantum-technologies-for-security.html">Quantum technologies for security</a>.</p>
+    <div class="table-scroll"><table class="stack">
+      <thead><tr><th scope="col">Project</th><th scope="col">Description</th></tr></thead>
+      <tbody>
+          <tr><td><a href="https://github.com/ocatak/QuantumUQ"><strong>QuantumUQ</strong></a></td><td>Python library for uncertainty quantification, calibration and reliability benchmarking of quantum machine learning (Qiskit, PennyLane). Listed in the IBM Qiskit ecosystem. <a href='https://pypi.org/project/quantumuq/'>PyPI</a> · <a href='https://quantumuq.readthedocs.io/'>Docs</a> · <a href='https://doi.org/10.5617/nmi.13217'>Paper</a></td></tr>
+          <tr><td><a href="https://github.com/ocatak/quantum-measurement-budget-allocation"><strong>quantum-measurement-budget-allocation</strong></a></td><td>Finite-shot generalisation bound and measurement-budget allocation in quantum learning. <a href='https://arxiv.org/abs/2608.24891'>arXiv:2608.24891</a></td></tr>
+          <tr><td><a href="https://github.com/ocatak/quantum-learning-copy-cost"><strong>quantum-learning-copy-cost</strong></a></td><td>Minimax bounds on the copy cost of learning from incompatible quantum measurements (work in progress).</td></tr>
+          <tr><td><a href="https://github.com/ocatak/qkd-fl-wireless-security"><strong>qkd-fl-wireless-security</strong></a></td><td>Quantum key distribution secured federated learning for 6G channel estimation. <a href='https://arxiv.org/abs/2603.15649'>arXiv:2603.15649</a></td></tr>
+          <tr><td><a href="https://github.com/ocatak/trustworthy-quantum-machine-learning"><strong>trustworthy-quantum-machine-learning</strong></a></td><td>Uncertainty, adversarial robustness and federated privacy for quantum machine learning.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Trustworthy AI</h2>
+    <p>Research context: <a href="trustworthy-ai.html">Trustworthy AI</a>.</p>
+    <div class="table-scroll"><table class="stack">
+      <thead><tr><th scope="col">Project</th><th scope="col">Description</th></tr></thead>
+      <tbody>
+          <tr><td><a href="https://github.com/ocatak/trustworthyai"><strong>trustworthyai</strong></a></td><td>Companion code for the book <em>Trustworthy AI: From Theory to Practice</em>.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/6g-channel-estimation-dataset"><strong>6g-channel-estimation-dataset</strong></a></td><td>Dataset. Deep-learning channel estimation for 6G, used to study adversarial attacks and defences.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/6g_security"><strong>6g_security</strong></a></td><td>Adversarial robustness experiments for AI in 6G communication systems.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/uncertainty_in_llm"><strong>uncertainty_in_llm</strong></a></td><td>Uncertainty quantification in large language models through convex hull analysis. <a href='https://doi.org/10.1007/s44163-024-00200-w'>Paper</a></td></tr>
+          <tr><td><a href="https://github.com/ocatak/BERT4MIMO-AI4Wireless"><strong>BERT4MIMO-AI4Wireless</strong></a></td><td>Transformer (BERT) model for massive MIMO channel state information prediction. <a href='https://doi.org/10.1016/j.dsp.2026.106480'>Paper</a></td></tr>
+          <tr><td><a href="https://github.com/ocatak/MassiveMIMO-CSI-Dataset"><strong>MassiveMIMO-CSI-Dataset</strong></a></td><td>Dataset. Massive MIMO channel state information for next-generation wireless research.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/attention_based_automatic_modulation_recognition"><strong>attention_based_automatic_modulation_recognition</strong></a></td><td>Attention-based deep learning models for automatic modulation recognition.</td></tr>
+          <tr><td><a href="https://github.com/ocatak/PMU-Anomaly-Detection"><strong>PMU-Anomaly-Detection</strong></a></td><td>Dueling algorithms for PMU anomaly detection in cyber-physical power systems.</td></tr>
+      </tbody>
+    </table></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Ferhat Ozgur Catak · Professor of Cyber Security · Department of Electrical Engineering and Computer Science, University of Stavanger, 4036 Stavanger, Norway</p>
+      <p><a href="mailto:f.ozgur.catak@uis.no">f.ozgur.catak@uis.no</a> · <a href="https://scholar.google.com/citations?user=qPzUoDYAAAAJ&amp;hl=en" rel="me">Google Scholar</a> · <a href="https://orcid.org/0000-0002-2434-9966" rel="me">ORCID</a> · <a href="https://github.com/ocatak" rel="me">GitHub</a> · <a href="https://www.linkedin.com/in/ozgurcatak/" rel="me">LinkedIn</a></p>
+      <p>© 2026 Ferhat Ozgur Catak · Last updated 25 November 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
