@@ -1,0 +1,54 @@
+# Ferhat Ozgur Catak
+
+> Ferhat Ozgur Catak (also written Ferhat Özgür Çatak, Ferhat Özgur Catak, F. Ozgur Catak, F. Ö. Çatak or Ozgur Catak) is a Professor of Cyber Security in the Department of Electrical Engineering and Computer Science at the University of Stavanger (UiS), Norway. His research covers three areas of cyber security: (1) penetration testing and malware analysis, (2) quantum technologies for security, and (3) trustworthy AI.
+
+Key facts:
+
+- Position: Professor of Cyber Security, University of Stavanger, Stavanger, Norway (since 2021).
+- Education: PhD in Informatics, Istanbul University (2014).
+- Earlier positions: TÜBİTAK BİLGEM, Türkiye: National Research Institute of Electronics and Cryptology (2010–2013, cryptography) and Cyber Security Institute (2013–2019, chief researcher, malware analysis and machine learning for security); NTNU Gjøvik (2019–2020, data privacy); Simula Research Laboratory, Oslo (2020–2021, uncertainty quantification in AI).
+- Recognition and service: IEEE Senior Member; Chair of the IEEE Communications Society Norway Chapter; listed in the Stanford University / Elsevier World's Top 2% Scientists list (2024).
+- Output: more than 110 publications; about 3,500 citations, h-index 32 (Google Scholar, November 2026).
+- Teaching at UiS: DAT505 Ethical Hacking (MSc), DAT250 Information and Software Security (BSc), DAT945 Secure and Robust AI Model Development (PhD), E-DAT301 Cyber Security (continuing education), DAT620 Project in Computer Science (MSc). Earlier: Ethical Hacking (Istanbul Şehir University), Malware Analysis (Bahçeşehir University), Machine Learning for Cyber Security (Gebze Technical University).
+- ORCID: 0000-0002-2434-9966
+- Contact details: https://www.ozgurcatak.net/about.html
+
+Research areas:
+
+- Penetration testing and malware analysis: ethical hacking, web application and network security testing, OWASP Top 10, DevSecOps; dynamic malware analysis (Cuckoo Sandbox), Windows API-call behaviour, metamorphic malware, deep-learning malware classification; DDoS, malicious URL and attack-scan detection. Created the public Mal-API-2019 Windows malware API-call dataset.
+- Quantum technologies for security: quantum learning theory (finite-shot generalisation, measurement-budget allocation, copy complexity under incompatible measurements), trustworthy quantum machine learning (uncertainty quantification, calibration, adversarial robustness on NISQ hardware), quantum key distribution (QKD) secured federated learning for 6G, post-quantum cryptography and crypto-agility. Author of the QuantumUQ library.
+- Trustworthy AI: adversarial machine learning (including AI for 5G/6G wireless systems), uncertainty quantification for deep learning, LLMs and vision-language models, security of LLMs and agentic AI, privacy-preserving machine learning (federated learning, homomorphic encryption, secure multi-party computation), AI for critical infrastructure. Co-author of the book "Trustworthy AI: From Theory to Practice" (2024, with Murat Kuzlu).
+
+## Pages
+
+- [Home](https://www.ozgurcatak.net/): overview of research areas, selected work, teaching
+- [Penetration testing and malware analysis](https://www.ozgurcatak.net/penetration-testing-malware-analysis.html): focus, datasets, tools and selected papers
+- [Quantum technologies for security](https://www.ozgurcatak.net/quantum-technologies-for-security.html): quantum learning theory, QuantumUQ, QKD and post-quantum cryptography
+- [Trustworthy AI](https://www.ozgurcatak.net/trustworthy-ai.html): adversarial ML, uncertainty quantification, LLM security, privacy-preserving ML, book
+- [Publications](https://www.ozgurcatak.net/publications.html): complete list with DOIs
+- [Software and datasets](https://www.ozgurcatak.net/software.html): open-source code and datasets
+- [Teaching](https://www.ozgurcatak.net/teaching.html): courses at the University of Stavanger and supervision
+- [About](https://www.ozgurcatak.net/about.html): biography, career, talks, profiles, contact
+
+## Key works
+
+- [Deep learning based sequential model for malware analysis using Windows exe API calls](https://doi.org/10.7717/peerj-cs.285): PeerJ Computer Science, 2020
+- [Mal-API-2019 dataset](https://github.com/ocatak/malware_api_class): API-call sequences of 7,107 Windows PE malware samples in eight families; created by Ferhat Ozgur Catak; data DOI [10.17632/w393cchcb7.2](https://doi.org/10.17632/w393cchcb7.2); described in arXiv:1905.01999
+- [Quantum statistical learning theory: concepts, regimes, and open problems](https://doi.org/10.1007/s11128-026-05356-1): Quantum Information Processing, 2026
+- [Measurement-budget allocation in quantum learning with finite-shot generalization guarantees](https://arxiv.org/abs/2608.24891): arXiv, 2026
+- [QuantumUQ](https://github.com/ocatak/QuantumUQ): uncertainty quantification library for quantum machine learning (Qiskit, PennyLane); [paper](https://doi.org/10.5617/nmi.13217)
+- [Trustworthy AI: From Theory to Practice](https://digitalcommons.odu.edu/engtech_books/5/): book, 2024
+- [Uncertainty quantification in large language models through convex hull analysis](https://doi.org/10.1007/s44163-024-00200-w): Discover Artificial Intelligence, 2024
+- [Security concerns on machine learning solutions for 6G networks in mmWave beam prediction](https://doi.org/10.1016/j.phycom.2022.101626): Physical Communication, 2022
+
+## Optional
+
+- [Google Scholar](https://scholar.google.com/citations?user=qPzUoDYAAAAJ)
+- [ORCID](https://orcid.org/0000-0002-2434-9966)
+- [DBLP](https://dblp.org/pid/125/2301)
+- [Wikidata](https://www.wikidata.org/wiki/Q130870279)
+- [Semantic Scholar](https://www.semanticscholar.org/author/1821027)
+- [OpenAlex](https://openalex.org/A5044259885)
+- [GitHub](https://github.com/ocatak)
+- [LinkedIn](https://www.linkedin.com/in/ozgurcatak/)
+- [University of Stavanger profile](https://www.uis.no/en/profile/3398)

@@ -1,122 +1,32 @@
-# Personal Academic Website — Ferhat Ozgur Catak
+# ozgurcatak.net
 
-Static HTML personal academic website for **Ferhat Ozgur Catak** (Ozgur), Professor of Cyber Security at the University of Stavanger (UiS). Optimized for SEO, fast load, and mobile-first UX.
+Personal academic website of **Ferhat Ozgur Catak**, Professor of Cyber Security at the University of Stavanger (UiS), Norway. Research areas: penetration testing and malware analysis, quantum technologies for security, and trustworthy AI.
+
+Plain static HTML served by GitHub Pages from the `master` branch (custom domain in `CNAME`). No build step, no frameworks; the only script is Google Analytics.
 
 ## Structure
 
 ```
-/
-  index.html          # Homepage (hero, proof strip, research vision, projects, publications, talks, teaching, activity, FAQ)
-  about.html
-  research.html
-  projects.html
-  publications.html
-  talks.html
-  teaching.html
-  contact.html
-  assets/
-    css/styles.css
-    js/main.js
-    img/
-      profile.jpg     # Your professional photo (add your image)
-      og.jpg          # Open Graph image 1200×630 (add for social previews)
-  data/
-    projects.json
-    publications.json
-    talks.json
-    activity.json
-    courses.json
-    faq.json
-  sitemap.xml
-  robots.txt
-  favicon.ico         # Add your favicon
-  README.md
+index.html                                 Home: intro, research areas, selected work, teaching
+penetration-testing-malware-analysis.html  Research area 1 (incl. Mal-API-2019 dataset)
+quantum-technologies-for-security.html     Research area 2 (incl. QuantumUQ)
+trustworthy-ai.html                        Research area 3 (incl. book)
+publications.html                          Full publication list (generated, see below)
+software.html                              Research software and datasets
+teaching.html                              Courses and supervision
+about.html                                 Bio, career, talks, profiles, contact
+404.html                                   Not-found page (used automatically by GitHub Pages)
+research.html, projects.html,
+talks.html, contact.html                   Redirects from the previous site's URLs
+llms.txt                                   Plain-text profile for AI assistants (llmstxt.org)
+robots.txt, sitemap.xml                    Crawler rules (AI crawlers explicitly allowed) and sitemap
+assets/css/style.css                       The only stylesheet (light and dark mode)
+assets/img/                                Portrait, book covers, Open Graph image, icons
+tools/update_publications.py               Publication-list updater
 ```
 
-## Running locally
+## Updating
 
-No build step is required. You can preview the site in two ways:
-
-**Option 1 — Open in browser**  
-Double-click `index.html` or open it from your browser (File → Open). The site works via `file://` because each page has inline JSON fallbacks when `fetch()` is not available.
-
-**Option 2 — Local HTTP server (recommended)**  
-Serving over HTTP lets the site load data from the `data/*.json` files and avoids `file://` limitations. From the project root:
-
-- **Python 3:**  
-  `python3 -m http.server 8000`  
-  Then open [http://localhost:8000](http://localhost:8000).
-
-- **Node.js (npx):**  
-  `npx serve`  
-  Then open the URL shown in the terminal (e.g. [http://localhost:3000](http://localhost:3000)).
-
-Use **Ctrl+C** (or **Cmd+C** on macOS) in the terminal to stop the server.
-
-## Editing content
-
-### JSON data
-
-- **`data/projects.json`** — Featured projects (QuantumUQ, Trustworthy AI book, Secure 6G, etc.). Each item can have `title`, `meta`, `description`, `tags`, `primary`, `links`.
-- **`data/publications.json`** — Publications with `title`, `venue`, `year`, `contribution`, `links`, `bibtex` (for Copy BibTeX).
-- **`data/talks.json`** — Talks with `title`, `venue`, `date`, `links`.
-- **`data/activity.json`** — Latest activity timeline: `date`, `title`, `description`.
-- **`data/courses.json`** — Courses with `code`, `name`, `outcomes` (array of strings).
-- **`data/faq.json`** — FAQ with `question` and `answer`.
-
-Each page that uses this data also has an **inline fallback** in a `<script type="application/json" id="inline-...">` block so the site works when opened as `file://` (where `fetch()` is restricted). When deployed on a host, the JS will load from the JSON files.
-
-### Setting the base URL (canonical + SEO)
-
-Before deploying, replace **`https://YOUR-BASE-URL-HERE/`** with your real base URL in:
-
-1. **All HTML files** — in `<link rel="canonical">`, `og:url`, `og:image`, `twitter:image`, and any JSON-LD `url` / `item` fields.
-2. **`sitemap.xml`** — every `<loc>`.
-3. **`robots.txt`** — the `Sitemap:` line.
-
-Example: if your site is `https://www.ozgurcatak.net/`, set base to `https://www.ozgurcatak.net/` (with trailing slash for consistency).
-
-## Deploying on GitHub Pages
-
-1. Create a repository (e.g. `username.github.io` for a user site).
-2. Replace `YOUR-BASE-URL-HERE` with your real domain (e.g. `https://www.ozgurcatak.net`) in all files above.
-3. Push the project to the repo.
-4. In **Settings → Pages**, choose source **Deploy from a branch**, branch **main** (or **master**), folder **/ (root)**.
-5. After deployment, the site will be at `https://username.github.io/`.
-
-You can also use **GitHub Actions** with a static site action, or any static host (Netlify, Vercel static, etc.).
-
-## Images
-
-- **Hero photo**: The site uses **`assets/img/profile.svg`** as a placeholder. Replace it with your own **`assets/img/profile.jpg`** (e.g. 400×400 or 600×600) and update the `src` in `index.html` from `profile.svg` to `profile.jpg`.
-- **`assets/img/og.jpg`** — Add an image **1200×630** for Open Graph / Twitter cards (social previews). Update the `og:image` and `twitter:image` meta tags in each HTML file to point to your full URL (e.g. `https://yoursite.com/assets/img/og.jpg`).
-- **Favicon**: **`favicon.svg`** is included (UiS-style “O”). You can add **`favicon.ico`** in the project root for older browsers; the HTML links to both.
-
-## Validating SEO
-
-- **Google Rich Results Test**: [https://search.google.com/test/rich-results](https://search.google.com/test/rich-results) — paste your live URL to check Person, FAQPage, BreadcrumbList.
-- **Lighthouse** (Chrome DevTools → Lighthouse): run for Performance, Accessibility, Best Practices, SEO. Aim for high scores on all.
-- **Meta and JSON-LD**: Ensure every page has a unique `<title>`, meta description, canonical, and (where applicable) BreadcrumbList and Person schema.
-
-## Dark / light mode
-
-The site defaults to **system preference** and stores the user’s choice in **localStorage** under the key `theme-preference`. The toggle in the navbar switches between `theme-dark` and `theme-light` (class on `<html>`).
-
-## Accessibility
-
-- Keyboard navigation for nav and buttons.
-- `aria-label` / `aria-current` where needed.
-- Contrast and focus states in CSS.
-- `prefers-reduced-motion` respected (no heavy animations when reduced motion is requested).
-
-## Tech stack
-
-- **Static HTML** — no React/Next.js/server.
-- **CSS** — one file, variables, Grid/Flex, no build step.
-- **JS** — vanilla (nav, theme, data load with fallback, Copy BibTeX, optional scroll reveal).
-- **Fonts** — Google Fonts (Inter, Space Grotesk) via `<link>`.
-- **Icons** — inline SVGs (no icon library dependency).
-
-## License
-
-Content and design are for the site owner. Replace placeholders (links, ORCID, Scholar, etc.) with your real URLs and data.
+- **Publications:** `python3 tools/update_publications.py` fetches all works for OpenAlex author `A5044259885` (ORCID 0000-0002-2434-9966), rewrites the list between the `PUBLICATIONS` markers in `publications.html`, and bumps its `lastmod` in `sitemap.xml`. Hide an item by adding its DOI or title to `EXCLUDE`; add an item OpenAlex lacks to `EXTRA`.
+- **Other pages:** edit the HTML directly. Each page carries JSON-LD structured data in its `<head>`; keep facts (title, counts, dates) consistent with the visible text and with `llms.txt`, and update the "Last updated" footer line and `dateModified`.
+- **Deploy:** commit and push to `master`.
